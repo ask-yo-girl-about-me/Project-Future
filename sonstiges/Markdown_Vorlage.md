@@ -58,7 +58,7 @@ __Fetter Text__
 ***Kursiver und fetter Text***
 
                 \*\*\*Kursiver und fetter Text\*\*\*
-                
+
 ___Kursiver und fetter Text___
 
                 \_\_\_Kursiver und fetter Text\_\_\_
@@ -144,14 +144,15 @@ Hier folgt ein [Link](https://example.com/ "Optionaler Linktitel").
 
 ## Fußnoten
 Im Fließtext [^1] können Sie ganz einfach Fußnoten [^2] unterbringen.
-[^1]: Hier finden Sie den Text zu der Fußnote.
-[^2]: **Fußnoten** selbst können auch *formatiert* werden.
-Und diese umfassen sogar mehrere Zeilen.</p>
 
                 Im Fließtext \[\^\1\] können Sie ganz einfach Fußnoten \[\^2\] unterbringen.
                 \[\^1\]\: Hier finden Sie den Text zu der Fußnote.
                 \[\^2\]: \*\*Fußnoten\*\* selbst können auch \*formatiert\* werden.
                 Und diese umfassen sogar mehrere Zeilen.
+                
+[^1]: Hier finden Sie den Text zu der Fußnote.
+[^2]: **Fußnoten** selbst können auch *formatiert* werden.
+Und diese umfassen sogar mehrere Zeilen.
 
 ## & und <>
 A & B
