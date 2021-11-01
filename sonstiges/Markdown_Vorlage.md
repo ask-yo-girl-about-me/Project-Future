@@ -1,0 +1,101 @@
+# Markdown: Anleitung für die einfache Auszeichnungssprache
+Cheatsheet für die Verwendung von Markdown
+
+## Wofür braucht man Markdown?
+<p>Dieses <b>Wort</b> ist fett und dieses <strong>auch</strong>.</p>
+
+Dieses \textbf{Wort} ist fett.
+
+Dieses **Wort** ist fett.
+
+## Überschriften
+
+# Überschrift 1
+## Überschrift 2
+### Überschrift 3
+#### Überschrift 4
+##### Überschrift 5
+###### Überschrift 6
+
+Überschrift 1
+=
+Überschrift 2
+-
+
+## Fett & Kursiv
+*Kursiver Text*
+_Kursiver Text_
+**Fetter Text**
+__Fetter Text__
+***Kursiver und fetter Text***
+___Kursiver und fetter Text___
+
+## Durchstreichen
+~~Dieser Text ist durchgestrichen.~~ Dieser aber nicht.
+
+## Zitate
+>Dies ist ein **eingerückter Bereich**.
+>Der Bereich geht hier weiter.
+
+>Dies ist ein weiterer **eingerückter Bereich**.
+Auch dieser Bereich geht in der nächsten Zeile weiter.
+
+Diese Zeile ist allerdings nicht mehr eingerückt.
+
+## Listen
+- Listenpunkt 1
+- Listenpunkt 2
+- Listenpunkt 3
+
+1. Listenpunkt 1
+2. Listenpunkt 2
+3. Listenpunkt 3
+
+
+## Code
+[ ] A
+[x] B
+[ ] C
+
+
+Das ist `code`.
+
+``Das ist alles `code`.``
+
+Hier steht noch Fließtext.
+  Dies ist die erste Zeile des Code-Blocks.
+     Die zweite Zeile ist noch weiter eingerückt.
+  Dies ist eine weitere Zeile des Code-Blocks.
+Hier beginnt wieder Fließtext.
+
+## Bilder & Hyperlinks
+Hier folgt ein [Link](https://example.com/ "Optionaler Linktitel").
+
+<https://example.com>
+`https://example.com
+
+![Hier ist ein Beispielbild](https://example.com/bild.jpg)
+
+[![Hier ist ein Beispielbild](https://example.com/bild.jpg)](https://example.com)
+
+## Tabellen
+
+|Spalte 1|Spalte 2|
+|--------|--------|
+|    A    |    B    |
+|    C    |    D    |
+
+## Fußnoten
+Im Fließtext [^1] können Sie ganz einfach Fußnoten [^2] unterbringen.
+[^1]: Hier finden Sie den Text zu der Fußnote.
+[^2]: **Fußnoten** selbst können auch *formatiert* werden.
+Und diese umfassen sogar mehrere Zeilen.
+
+## & und <>
+A & B
+&alpha;
+1 < 2
+<p>
+
+## Backslash-Maskierung
+Die ist ein \*Beispiel mit Sternchen\*.
