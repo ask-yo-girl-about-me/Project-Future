@@ -1,7 +1,7 @@
 ## Automatisierung
 
 # Cloud-init File
-            \`#cloud-config
+``#cloud-config``
             users:
             - name: ubuntu
                 sudo: ALL=(ALL) NOPASSWD:ALL
