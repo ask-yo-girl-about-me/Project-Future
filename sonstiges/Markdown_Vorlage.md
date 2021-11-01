@@ -90,9 +90,9 @@ Diese Zeile ist allerdings nicht mehr eingerückt.
 [x] B
 [ ] C
 
-                \[ \] A
-                \[x\] B
-                \[ ] C
+                [ ] A
+                [x] B
+                [ ] C
 
 ## Code
 Das ist `code`.
@@ -110,6 +110,7 @@ Hier beginnt wieder Fließtext.
 
 ## Bilder & Hyperlinks
 Hier folgt ein [Link](https://example.com/ "Optionaler Linktitel").
+
                 Hier folgt ein \[Link\]\(https://example.com/ \"Optionaler Linktitel\"\).
 
 <https://example.com>
