@@ -9,7 +9,7 @@ Cheatsheet für die Verwendung von Markdown
 Dieses \textbf{Wort} ist fett.
             Dieses \textbf{Wort} ist fett.
 Dieses **Wort** ist fett.
-            Dieses \*\*Wort\*\* ist fett.
+                Dieses \*\*Wort\*\* ist fett.
 
 ## Überschriften
 
@@ -40,17 +40,17 @@ Dieses **Wort** ist fett.
                 -
 
 ## Fett & Kursiv
-*Kursiver Text*<p>
+*Kursiver Text*</p>
                 \*Kursiver Text\*
-_Kursiver Text_<p>
+_Kursiver Text_</p>
                 \_Kursiver Text\_
-**Fetter Text**<p>
+**Fetter Text**</p>
                 \**Fetter Text\**
-__Fetter Text__<p>
+__Fetter Text__</p>
                 \__Fetter Text\__
-***Kursiver und fetter Text***<p>
+***Kursiver und fetter Text***</p>
                 \*\*\*Kursiver und fetter Text\*\*\*
-___Kursiver und fetter Text___<p>
+___Kursiver und fetter Text___</p>
                 \_\_\_Kursiver und fetter Text\_\_\_
 
 ## Durchstreichen
@@ -67,7 +67,7 @@ Auch dieser Bereich geht in der nächsten Zeile weiter.
 
 Diese Zeile ist allerdings nicht mehr eingerückt.
 
-\>Dies ist ein weiterer \*\*eingerückter Bereich\*\*.
+                \>Dies ist ein weiterer \*\*eingerückter Bereich\*\*.
 
 ## Listen
 - Listenpunkt 1
@@ -89,6 +89,10 @@ Diese Zeile ist allerdings nicht mehr eingerückt.
 [ ] A
 [x] B
 [ ] C
+
+                \[ \] A
+                \[x\] B
+                \[ ] C
 
 ## Code
 Das ist `code`.
