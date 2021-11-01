@@ -38,20 +38,22 @@ Dieses **Wort** ist fett.
 
 ## Fett & Kursiv
 *Kursiver Text*
-                *Kursiver Text*
+\*Kursiver Text\*
 _Kursiver Text_
-                _Kursiver Text_
+\_Kursiver Text\_
 **Fetter Text**
-                **Fetter Text**
+\**Fetter Text\**
 __Fetter Text__
-                __Fetter Text__
+\__Fetter Text\__
 ***Kursiver und fetter Text***
-                ***Kursiver und fetter Text***
- ___Kursiver und fetter Text___
-                ___Kursiver und fetter Text___
+\*\*\*Kursiver und fetter Text\*\*\*
+___Kursiver und fetter Text___
+\_\_\_Kursiver und fetter Text\_\_\_
 
 ## Durchstreichen
 ~~Dieser Text ist durchgestrichen.~~ Dieser aber nicht.
+
+\~\~Dieser Text ist durchgestrichen.\~\~ Dieser aber nicht.
 
 ## Zitate
 >Dies ist ein **eingerückter Bereich**.
@@ -62,6 +64,8 @@ Auch dieser Bereich geht in der nächsten Zeile weiter.
 
 Diese Zeile ist allerdings nicht mehr eingerückt.
 
+\>Dies ist ein weiterer \*\*eingerückter Bereich\*\*.
+
 ## Listen
 - Listenpunkt 1
 - Listenpunkt 2
@@ -70,6 +74,14 @@ Diese Zeile ist allerdings nicht mehr eingerückt.
 1. Listenpunkt 1
 2. Listenpunkt 2
 3. Listenpunkt 3
+
+                \- Listenpunkt 1
+                \- Listenpunkt 3
+                \- Listenpunkt 2
+
+                1. Listenpunkt 1
+                2. Listenpunkt 2
+                3. Listenpunkt 3
 
 
 ## Code
