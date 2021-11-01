@@ -10,6 +10,8 @@ Projekt-Future
     - Präsentiert, am Schluss, die Lösung (20`) und die erworbenen [Kompetenzen (A-C)](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - Zeit
     - 9 Lektionen
+
+[Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - - -
 
 
