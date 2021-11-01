@@ -23,7 +23,6 @@ Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_K
 
 ## Cloud-init File MySQL
                 #cloud-config
-
                 users:
                     - name: dev
                     ssh-authorized-keys:
@@ -31,41 +30,27 @@ Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_K
                     sudo: ['ALL=(ALL) NOPASSWD:ALL']
                     groups: sudo
                     shell: /bin/bash
-
                 packages:
                     - mysql-client
                     - libmysqlclient-dev
                     - mysql-server
-
                 package-update: true
                 package_upgrade: true
-
                 runcmd:
-
-                #
                 # SSH
-                #
                     - sed -i -e '/^Port/s/^.*$/Port 22/' /etc/ssh/sshd_config
                     - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
                     - sed -i -e '/^PasswordAuthentication/s/^.*$/PasswordAuthentication no/' /etc/ssh/sshd_config
                     - sed -i -e '$aAllowUsers dev' /etc/ssh/sshd_config
-
                     - sudo service ssh restart
-
-                #
                 # Firewall
-                #
-
                     # defaults
                     - sudo ufw default deny incoming
                     - sudo ufw default allow outgoing
-
                     # exceptions
                     - sudo ufw allow ssh
                     - sudo ufw allow http
                     - sudo ufw allow https
-
                     # start on boot
                     - sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
-
                     - sudo ufw enable               
