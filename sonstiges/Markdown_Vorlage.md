@@ -4,9 +4,12 @@ Cheatsheet für die Verwendung von Markdown
 ## Wofür braucht man Markdown?
 <p>Dieses <b>Wort</b> ist fett und dieses <strong>auch</strong>.</p>
 
-Dieses \textbf{Wort} ist fett.
+                Dieses <b>Wort</b> ist fett und dieses <strong>auch</strong>.
 
+Dieses \textbf{Wort} ist fett.
+            Dieses \textbf{Wort} ist fett.
 Dieses **Wort** ist fett.
+            Dieses \*\*Wort\*\* ist fett.
 
 ## Überschriften
 
@@ -38,22 +41,22 @@ Dieses **Wort** ist fett.
 
 ## Fett & Kursiv
 *Kursiver Text*<p>
-\*Kursiver Text\*
+                \*Kursiver Text\*
 _Kursiver Text_<p>
-\_Kursiver Text\_
+                \_Kursiver Text\_
 **Fetter Text**<p>
-\**Fetter Text\**
+                \**Fetter Text\**
 __Fetter Text__<p>
-\__Fetter Text\__
+                \__Fetter Text\__
 ***Kursiver und fetter Text***<p>
-\*\*\*Kursiver und fetter Text\*\*\*
+                \*\*\*Kursiver und fetter Text\*\*\*
 ___Kursiver und fetter Text___<p>
-\_\_\_Kursiver und fetter Text\_\_\_
+                \_\_\_Kursiver und fetter Text\_\_\_
 
 ## Durchstreichen
 ~~Dieser Text ist durchgestrichen.~~ Dieser aber nicht.
 
-\~\~Dieser Text ist durchgestrichen.\~\~ Dieser aber nicht.
+                \~\~Dieser Text ist durchgestrichen.\~\~ Dieser aber nicht.
 
 ## Zitate
 >Dies ist ein **eingerückter Bereich**.
@@ -83,15 +86,17 @@ Diese Zeile ist allerdings nicht mehr eingerückt.
                 2. Listenpunkt 2
                 3. Listenpunkt 3
 
-
-## Code
 [ ] A
 [x] B
 [ ] C
 
+## Code
 Das ist `code`.
+                \`code\`
 
 ``Das ist alles `code`.``
+
+                \`\`Das ist alles \`code\`.\`\`
 
 Hier steht noch Fließtext.
   Dies ist die erste Zeile des Code-Blocks.
@@ -101,6 +106,7 @@ Hier beginnt wieder Fließtext.
 
 ## Bilder & Hyperlinks
 Hier folgt ein [Link](https://example.com/ "Optionaler Linktitel").
+                Hier folgt ein \[Link\]\(https://example.com/ \"Optionaler Linktitel\"\).
 
 <https://example.com>
 `https://example.com
@@ -116,11 +122,21 @@ Hier folgt ein [Link](https://example.com/ "Optionaler Linktitel").
 |    A    |    B    |
 |    C    |    D    |
 
+                |Spalte 1|Spalte 2|
+                |--------|--------|
+                |    A    |    B    |
+                |    C    |    D    |
+
 ## Fußnoten
 Im Fließtext [^1] können Sie ganz einfach Fußnoten [^2] unterbringen.
 [^1]: Hier finden Sie den Text zu der Fußnote.
 [^2]: **Fußnoten** selbst können auch *formatiert* werden.
 Und diese umfassen sogar mehrere Zeilen.
+
+                Im Fließtext \[\^\1\] können Sie ganz einfach Fußnoten \[\^2\] unterbringen.
+                \[\^1\]\: Hier finden Sie den Text zu der Fußnote.
+                \[\^2\]: \*\*Fußnoten\*\* selbst können auch \*formatiert\* werden.
+                Und diese umfassen sogar mehrere Zeilen.
 
 ## & und <>
 A & B
