@@ -40,17 +40,27 @@ Dieses **Wort** ist fett.
                 -
 
 ## Fett & Kursiv
-*Kursiver Text*</p>
+*Kursiver Text*
                 \*Kursiver Text\*
-_Kursiver Text_</p>
+
+_Kursiver Text_
+
                 \_Kursiver Text\_
-**Fetter Text**</p>
+
+**Fetter Text**
+
                 \**Fetter Text\**
-__Fetter Text__</p>
+
+__Fetter Text__
+
                 \__Fetter Text\__
-***Kursiver und fetter Text***</p>
+
+***Kursiver und fetter Text***
+
                 \*\*\*Kursiver und fetter Text\*\*\*
-___Kursiver und fetter Text___</p>
+                
+___Kursiver und fetter Text___
+
                 \_\_\_Kursiver und fetter Text\_\_\_
 
 ## Durchstreichen
@@ -136,7 +146,7 @@ Hier folgt ein [Link](https://example.com/ "Optionaler Linktitel").
 Im Fließtext [^1] können Sie ganz einfach Fußnoten [^2] unterbringen.
 [^1]: Hier finden Sie den Text zu der Fußnote.
 [^2]: **Fußnoten** selbst können auch *formatiert* werden.
-Und diese umfassen sogar mehrere Zeilen.
+Und diese umfassen sogar mehrere Zeilen.</p>
 
                 Im Fließtext \[\^\1\] können Sie ganz einfach Fußnoten \[\^2\] unterbringen.
                 \[\^1\]\: Hier finden Sie den Text zu der Fußnote.
