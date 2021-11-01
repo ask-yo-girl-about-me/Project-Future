@@ -37,17 +37,17 @@ Dieses **Wort** ist fett.
                 -
 
 ## Fett & Kursiv
-*Kursiver Text*
+*Kursiver Text*<p>
 \*Kursiver Text\*
-_Kursiver Text_
+_Kursiver Text_<p>
 \_Kursiver Text\_
-**Fetter Text**
+**Fetter Text**<p>
 \**Fetter Text\**
-__Fetter Text__
+__Fetter Text__<p>
 \__Fetter Text\__
-***Kursiver und fetter Text***
+***Kursiver und fetter Text***<p>
 \*\*\*Kursiver und fetter Text\*\*\*
-___Kursiver und fetter Text___
+___Kursiver und fetter Text___<p>
 \_\_\_Kursiver und fetter Text\_\_\_
 
 ## Durchstreichen
