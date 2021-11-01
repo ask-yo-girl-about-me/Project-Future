@@ -1,6 +1,6 @@
 Projekt-Future
 ========
-Auftrag für Praktische Arbeit: Infrastruktur as Code
+## 01 Auftrag für Praktische Arbeit: Infrastruktur as Code
 
 - Problembeschreibung
     - Die Fachabteilung erwarten von der IT den gleichen Komfort in der Cloud.
