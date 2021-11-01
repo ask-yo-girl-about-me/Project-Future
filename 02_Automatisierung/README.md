@@ -1,7 +1,6 @@
-## Automatisierung
+# Automatisierung
 
-# Cloud-init File
-                #cloud-config
+## Cloud-init File
                 users:
                 - name: ubuntu
                     sudo: ALL=(ALL) NOPASSWD:ALL
@@ -25,5 +24,5 @@
                 - content: |
                     Cloud-init write_files
                 path: /etc/issue
-                permissions: '0644'  
-                \`
+                permissions: '0644'
+  
