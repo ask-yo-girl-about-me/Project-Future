@@ -1,7 +1,5 @@
 # Automatisierung
-
-## Cloud-init File   
-                #cloud-config installiert Webserver  
+  
 ## 01 Lernziele
 
 * BE1: Ich kann Infrastructure as Code mit Beispielen erklären
