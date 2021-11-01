@@ -1,10 +1,15 @@
 Projekt-Future
 ========
+Auftrag für Praktische Arbeit: Infrastruktur as Code
 
-![](00_Allgemein/images/Aufgabenstellung.png)
-
-Quelle: [C-Cloud](https://tbzedu.sharepoint.com/:b:/s/campus/students/ETsx_WMjJDxKjJSHetagyHoBd1YO68UE5JEM1ElEtoDI0g?e=tQr7fy)
-
+- Problembeschreibung
+    - Die Fachabteilung erwarten von der IT den gleichen Komfort in der Cloud.
+    - Die Fachabteiltung wollen selber Ihre Server aufsetzem, mit entsprechend vorbereiteten Services.
+- Aufgaben
+    - Setzt, automatisiert mit Cloud-init mindestens 2 VMs im MAAS und einer Public Cloud auf.
+    - Präsentiert, am Schluss, die Lösung (20`) und die erworbenen [Kompetenzen (A-C)](https://maas.io/how-it-works)
+- Zeit
+    - 9 Lektionen
 - - -
 
 
