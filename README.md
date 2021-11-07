@@ -1,7 +1,10 @@
 Projekt-Future
 ========
-## 01 Auftrag für Praktische Arbeit: Infrastruktur as Code
+## Inhaltsverzeichnis
+- [Grundlagen]()
 
+
+## 01 Auftrag für Praktische Arbeit: Infrastruktur as Code
 - Problembeschreibung
     - Die Fachabteilung erwarten von der IT den gleichen Komfort in der Cloud.
     - Die Fachabteiltung wollen selber Ihre Server aufsetzem, mit entsprechend vorbereiteten Services.
@@ -13,6 +16,5 @@ Projekt-Future
 
 [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - - -
-
 
 ## Fazit
