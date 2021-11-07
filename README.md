@@ -1,8 +1,26 @@
 Projekt-Future
 ========
 ## Inhaltsverzeichnis
-- [Grundlagen]()
+- [Grundlagen](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/01_Grundlage)
+    - VMs für Services einsetzen
+    - SSH Public/Privat Key erstellen/einsetzen
+    - SSH Key erstellen für Verbindung mit einer VM
+    - Linux Pakete suchen und installieren
 
+
+- [Automatisierung](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/02_Automatisierung)
+    - Infrastruktur as Code erklärung (mit Beispielen)
+    - VMs mit eigenem Cloud-Init Scripten
+    - Cloud-Init Beispiele
+    - Valide YAML Datei
+    - Ablage Cloud-Init Script in Git
+    - Git mittels dem SSH Protokoll nachführen
+    
+- [Cloud-Services](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/03_Cloud-Services)
+    - Einsatz Cloud Services
+    - Einsatz Cloud CLI Tools
+    - Lift and Reshape in die Cloud
+    - VM erstellung auf 3 verschiedenen Clouds
 
 ## 01 Auftrag für Praktische Arbeit: Infrastruktur as Code
 - Problembeschreibung
