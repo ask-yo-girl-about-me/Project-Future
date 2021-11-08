@@ -18,7 +18,7 @@ Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben
 In diesem Beispiel beziehen wir uns auf den Anbieter Maas. Grundsätzlich sind die funktionalitäten bei allen Cloud Anbietern gleich.
 
 3. VM erstellen
-
+Um eine neu VM zu erstellen gehen wir im MAAS in unseren KMV (Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernels zur Virtualisierun)[^1]
 ![Bild1](../00_Allgemein/images/01_Grundlage/1.png)
 
 4. Den gewünschten Service per Cloud-Init Deployen
@@ -47,3 +47,5 @@ In diesem Beispiel beziehen wir uns auf den Anbieter Maas. Grundsätzlich sind d
 Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
+
+[^1]: KVM Beschreibung [Wikipedie](https://de.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
