@@ -65,7 +65,7 @@ In dem folgenden Bild sieht man, dass die VM noch in bearbeitung ist.
                 packages:
                 - nginx
 
-### 4. Testing
+### 4. Testing des Service
 
 Je nach dem was für ein Service man installiert/eingerichtet hat, muss man oder kann man es auf andere Weise testen.
 
@@ -75,16 +75,27 @@ Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcom
 ![Bild7](../00_Allgemein/images/01_Grundlage/7.png)
 
 ## AE2
+Ich kann selber (SSH) Public/Private Keys erstellen und einsetzen
 
+### Erstellen von Public/Privat Key
+Um 
+
+### Automatischer SSH Key beim erstellen der VM auf der Clodu
 
 ## AF3
+Ich kann einen SSH Key erstellen und diesen für die Verbindung zur VM verwenden
 
+### 
 
 ## AE4
+Ich kann Linux Pakete suchen und installieren
 
+###
 
 ## AE5
+Ich kann Linux Befehle einsetzen und deren Funktion erklären
 
+##
 
 Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 
