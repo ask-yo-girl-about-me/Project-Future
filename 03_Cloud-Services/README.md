@@ -16,14 +16,18 @@ Ich kann Cloud CLI Tools einsetzen und habe diese mit Beispielen Dokumentiert
 
 ### Azure 
 
-Als erstes muss man sich zur Azure Cloud connecten. 
-Dies geschieht via dem Command az login
+Die Azure CLI ist ein mächtiges Tool mit dem ganz einfach mehrere Ressourcen auf einmal deployed werden können, hat man sich erstmals ein gutes Template zurechtgelegt, können zukünftige VM's so ganz einfach provisioniert werden. 
 
-![Azure1](../00_Allgemein/images/03_Azure/azure1.png)
+Alle Informationen zur Installation der Azure CLI wird [hier](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli/) beschrieben. 
 
-Nachdem wir uns mit unseren TBZ credentials angemeldet haben, können wir damit beginnen mittels CommandoZeilen Tools Ressourcen anzulegen. 
-
-Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt: 
+Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die folgenden Punkte abhandelt: 
+- Definierung aller Variablen die benötigt werden
+- Login zur Azure Cloud
+- Prüfen ob die in den Variablen definierte Subscription existiert
+- Prüfen ob der definierte RessourceGruppenName schon exisitert, falls nicht wird die Gruppe angelegt.
+- Prüfen ob die benötiten lokalen Files wie Cloud Init & SSH Publickeys im spezifizierten Ordner existieren. 
+- Erstellen der VM
+- Öffnen der benötigten Ports
 
 
                 #define Variables
