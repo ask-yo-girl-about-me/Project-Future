@@ -142,6 +142,19 @@ Anschliessend werden 4 Parameter verlangt:
 Ob die Connection zu AWS erfolgreich hergestellt wurde, kann mittels dem Command **aws sts get-caller-identity** überprüft werden: 
 ![AWS4](../00_Allgemein/images/03_AWS/aws4.png)
 
+Als nächstes müssen wir eine Security Gruppe anlegen, Security Gruppen beinhalten die In & Outbound Rules für die VM. 
+Im folgenden Beispiel erstellen wir eine Security Gruppe mit folgenden Eigenschaften: 
+- Name: ProjectGroup
+- Description: Used for the Project
+- Öffnen der Ports 22 & 80 für Inbound Rules
+
+                aws ec2 create-security-group --group-name ProjectGroup --description "Used for the Project" 
+                aws ec2 authorize-security-group-ingress --group-name ProjectGroup --protocol tcp --port 22 --cidr 0.0.0.0/0 
+                aws ec2 authorize-security-group-ingress --group-name ProjectGroup --protocol tcp --port 80 --cidr 0.0.0.0/0    
+
+
+
+
 
 
 
