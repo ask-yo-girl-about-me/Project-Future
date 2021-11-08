@@ -24,6 +24,8 @@ Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based V
 
 3. Sobald man beim gewünschten KVM ist, kann man eine neue VM erstellen (compose VM)
 
+![Bild2](../00_Allgemein/images/01_Grundlage/2.png)
+
     Beim erstellen füllt man die Pflichtfelder aus und wenn gewünscht Optionale ebenfalls ändern.
     Pflichtfelder:
     - Hostname
@@ -36,28 +38,23 @@ Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based V
     - Arbeitsspeicher RAM
     - Cores
 
-
-![Bild2](../00_Allgemein/images/01_Grundlage/2.png)
-
-
-
 ![Bild3](../00_Allgemein/images/01_Grundlage/3.png)
 
-
+3. Den gewünschten Service per Cloud-Init Deployen
+Sobald die VM die wir erstellt haben fertig gestellt wurde in bereit ist, müssen wir diese Deployen.
+Dafür wählen wir die entsprechende VM aus und gehen unter "Take Action" --> "Deploy..."
 
 ![Bild4](../00_Allgemein/images/01_Grundlage/4.png)
 
-
+Hier hat man die Möglichkeit das OS und die Version dazu auszuwählen. In unserem Falle wird dies Ubuntu 20.04 LTS sein.
+Bei diesem Punkt muss man sich noch überlegeb, ob man den Service manuell installiert oder per Cloud-Init Data/File.
 
 ![Bild5](../00_Allgemein/images/01_Grundlage/5.png)
 
-
+Wenn man dies fertig Deployd hat, muss man nurnoch abwarten bis die VM fertiggestellt wird.
+In dem folgenden Bild sieht man, dass die VM noch in bearbeitung ist.
 
 ![Bild6](../00_Allgemein/images/01_Grundlage/6.png)
-
-
-3. Den gewünschten Service per Cloud-Init Deployen
-
                 #cloud-config - Installiert den nginx Web Server
                 packages:
                 - nginx
