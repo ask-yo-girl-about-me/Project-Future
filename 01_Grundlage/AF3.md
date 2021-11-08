@@ -42,6 +42,8 @@ Beim erstellen einer VM kann man zwischen den zwei Optionen wechseln (Vorhanden 
 
 ![AF3_3](../00_Allgemein/images/01_Grundlage/AF3_3.png)
 
+___
+
 [01_Grundlagen](../01_Grundlage)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

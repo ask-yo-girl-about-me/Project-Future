@@ -3,17 +3,30 @@
 
 ## 1. Linux Pakete suchen
 
-**Installierte Pakete**
+1. **Installierte Pakete**
 
-Um eine Liste zu erstellen, die alle installierten Pakete und deren Beschreibungen enthält, führt man den Befehl aus. Die Paketliste befindet sich danach in der Datei packages_list.list.
+    Um eine Liste zu erstellen, die alle installierten Pakete und deren Beschreibungen enthält, führt man den Befehl aus. Die Paketliste befindet sich danach in der Datei packages_list.list.
 
-`COLUMNS=200 dpkg-query -l > packages_list.list`
+    `COLUMNS=200 dpkg-query -l > packages_list.list`
 
-**Wiki for Linux Pakete**
+2. **Wiki for Linux Pakete**
 
-Wenn man ein speziellen Dienst/Service installieren will, gibt man ganz einfach den Service + Linux oder direkt Ubuntu ein und man wird sehr schnell fündig.
+    Wenn man ein speziellen Dienst/Service installieren will, gibt man ganz einfach den Service + Linux oder direkt Ubuntu ein und man wird sehr schnell fündig.
 
-Hier aber ein Link mit einer grossen Library einiger Pakete. --> [PKGS.ORG](https://pkgs.org/)
+    Hier aber zwei Links mit grossen Library einiger Pakete.
+
+   - [PKGS.ORG](https://pkgs.org/)
+
+   - [Packages.Ubuntu](https://packages.ubuntu.com/)
+
+3. **Linux Pakete installieren**
+
+    `sudo apt-get install PAKETNAME`
+
+    Beispiel
+
+    `sudo apt-get install apache2`
+___
 
 [01_Grundlagen](../01_Grundlage)
 
