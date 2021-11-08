@@ -127,10 +127,11 @@ Das erstellen von einem SSH Key wurde bei Lernziel AE2 dokumentiert.
 
 ### Verwendung eines SSH Keys zur Verbindung mit einer VM
 1. Als erstes muss natürlich der SSH Key erstellt werden
-2. Danach muss der Public Key beim einrichten der Virtuellen Maschine hinterlegt werden. Je nach Cloud Anbieter kann dies unterschiedlich sein.
+2. Danach muss der Public Key beim einrichten der Virtuellen Maschine hinterlegt werden. Je nach Cloud Anbieter kann dies unterschiedlich sein. Dies wird über zwei Varianten gemacht. Entweder man fügt diesen in der Cloud unter seinem Konto hinzu oder man gibt diesen in einem Cloud-Init File mit. Die Verwendung mit dem Cloud-Init und SSH wird beim [Hier](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/02_Automatisierung) beschrieben.
 
 AWS:
 
+Unter "Einstellungen --> Network & Security --> Key Pairs" kann man ein neuen Public Key hochladen. Somit wird bei jeder manuell eingerichtete VM folgender Public Key verwendet, wenn man diesen auswähl.
 ![AF3_1](../00_Allgemein/images/01_Grundlage/AF3_1.png)
 ![AF3_2](../00_Allgemein/images/01_Grundlage/AF3_2.png)
 
