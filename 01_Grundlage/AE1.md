@@ -71,6 +71,7 @@ Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcom
 
 ![AE1_7](../00_Allgemein/images/01_Grundlage/AE1_7.png)
 
+[01_Grundlagen](../01_Grundlage)
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
 
 [^1]: KVM Beschreibung [Wikipedie](https://de.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
