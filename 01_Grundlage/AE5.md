@@ -31,13 +31,13 @@
 
     `man`
 
-8. Datei Inhalt anzeigen
+Datei Inhalt anzeigen
 
-    `cat`
+`cat`
 
-9. Speicherplatzbedarf anzeigen
+Speicherplatzbedarf anzeigen
 
-    `df`
+`df`
 
 ## 2. Liste von wichtigen Befehlen für APT[^1]
 
@@ -45,7 +45,7 @@
 
 `[sudo] apt-get [OPTIONEN] KOMMANDO [PAKET1] [PAKET2]`
 
-**APT-GET Beispiele:**
+**APT-GET Beispiele**
 
 Neueinlesen der Paketlisten
 
