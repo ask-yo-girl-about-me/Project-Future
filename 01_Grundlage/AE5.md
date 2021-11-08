@@ -1,7 +1,17 @@
 # AE5
 *Ich kann Linux Befehle einsetzen und deren Funktion erklären*
 
-## 1. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
+## 1. Einsetzen von Linux Befehlen
+Im Linux, wie auch bei andere Betriebsystemen, haben wir zwei Schnittstellen für die Benutzereingabe. Die einte läuft per Benutzeroberfläche. Dies wäre das sogenannte GUI. Alle Einstellungen welche per GUI gemacht werden, können aber auch per Kommandozeilenbefehle über ein Shell vorgenommen werden.
+
+Wir arbeiten hier hauptsächlich mit dem Shell und müssen die dementsprechenden Befehle dazu kennen.
+
+Jeder Befehl hat folgendes Grundschema:
+                BEFEHL [OPTIONEN] [ARGUMENTE]
+
+Grundsätzlich muss man nur ein Terminal öffnen und ein Belibigen (natürlich korrekt) Befehl eingeben. Je nach Ziel muss man das Grundschema welches oben aufgezeigt ist anpassen, um das erwartet Ergebniss zu erreichen.
+
+## 2. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
     
 Aktueller Verzeichnis anzeigen in dem man Arbeitet
 
@@ -39,7 +49,7 @@ Speicherplatzbedarf anzeigen
 
                 df
 
-## 2. Liste von wichtigen Befehlen für APT[^1]
+## 3. Liste von wichtigen Befehlen für APT[^1]
 
 **APT-GET Grundlage**
 
@@ -62,9 +72,6 @@ Deinstallation von einem Paket
 Installation von einem Paket
 
                 sudo apt-get install "PAKETNAME"
-
-## 3. Einsetzen von Linux Befehlen
-
 
 ___
 
