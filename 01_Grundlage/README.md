@@ -117,14 +117,22 @@ In diesem Beispiel verwenden wir zur erstellung von SSH Keys den [Bitvise SSH Cl
 ![AE2_6](../00_Allgemein/images/01_Grundlage/AE2_6.png)
 
 ### Einsetzen von SSH Keys
-
+Das einsetzen von SSH Keys wir beim nächsten Lernziel gezeigt. Dort wird anhand von einem Beispiel gezeigt, wie man per SSH Key auf eine VM verbinden kann.
 
 ## AF3
 Ich kann einen SSH Key erstellen und diesen für die Verbindung zur VM verwenden
 
 ### Erstellen von SSH Keys
+Das erstellen von einem SSH Key wurde bei Lernziel AE2 dokumentiert.
 
-GoTO [SSH-Key_erstellen](Erstellen von Public/Privat Key)
+### Verwendung eines SSH Keys zur Verbindung mit einer VM
+1. Als erstes muss natürlich der SSH Key erstellt werden
+2. Danach muss der Public Key beim einrichten der Virtuellen Maschine hinterlegt werden. Je nach Cloud Anbieter kann dies unterschiedlich sein.
+
+AWS:
+![AF3_1](../00_Allgemein/images/01_Grundlage/AE2_1.png)
+![AF3_2](../00_Allgemein/images/01_Grundlage/AE2_2.png)
+
 
 ## AE4
 Ich kann Linux Pakete suchen und installieren
