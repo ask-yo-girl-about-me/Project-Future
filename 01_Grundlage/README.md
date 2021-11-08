@@ -14,7 +14,8 @@ Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben
 - AWS Amazon Cloud
 - Azure Microsoft Cloud
 - Maas TBZ Cloud
-In diesem Beispiel beziehen wir uns auf den Anbieter Maas. Grundsätzlich sind die funktionalitäten bei allen Cloud Anbietern gleich.
+
+    In diesem Beispiel beziehen wir uns auf den Anbieter Maas. Grundsätzlich sind die funktionalitäten bei allen Cloud Anbietern gleich.
 
 2. VM erstellen
 Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernels zur Virtualisierun)[^1]
