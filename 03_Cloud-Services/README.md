@@ -9,7 +9,7 @@
 ## CE1
 Ich kann die Cloud Services einsetzen
 
-[Bild1](../00_Allgemein/images/03_Cloud-Services/.png)
+![Bild1](../00_Allgemein/images/03_Cloud-Services/.png)
 
 ## CE2
 Ich kann Cloud CLI Tools einsetzen und habe diese mit Beispielen Dokumentiert
@@ -19,7 +19,7 @@ Ich kann Cloud CLI Tools einsetzen und habe diese mit Beispielen Dokumentiert
 Als erstes muss man sich zur Azure Cloud connecten. 
 Dies geschieht via dem Command az login
 
-[Azure1](../00_Allgemein/images/03_Azure/azure1.png)
+![Azure1](../00_Allgemein/images/03_Azure/azure1.png)
 
 
 
