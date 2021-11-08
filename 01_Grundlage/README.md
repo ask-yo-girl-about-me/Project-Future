@@ -72,7 +72,7 @@ Je nach dem was für ein Service man installiert/eingerichtet hat, muss man oder
 In unserem Fall wurde ein NGINX Web Server installiert.
 Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcome to nginx!".
 
-![AE1_7](../00_Allgemein/images/01_Grundlage/7.png)
+![AE1_7](../00_Allgemein/images/01_Grundlage/AE1_7.png)
 
 ## AE2
 Ich kann selber (SSH) Public/Private Keys erstellen und einsetzen
