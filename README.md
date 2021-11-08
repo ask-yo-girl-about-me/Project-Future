@@ -32,6 +32,9 @@ Projekt-Future
 - Zeit
     - 9 Lektionen
 
+## Unsere Idee
+
+
 [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - - -
 

@@ -9,6 +9,28 @@
 
 ## AE1
 
+1. Anbieter
+Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben wir folgende drei Cloud Anbieter zur verfügung:
+- AWS Amazon Cloud
+- Azure Microsoft Cloud
+- Maas TBZ Cloud
+
+In diesem Beispiel beziehen wir uns auf den Anbieter Maas. Grundsätzlich sind die funktionalitäten bei allen Cloud Anbietern gleich.
+
+3. VM erstellen
+
+![Bild1](../00_Allgemein/images/01_Grundlage/1.png)
+
+4. Den gewünschten Service per Cloud-Init Deployen
+
+                #cloud-config - Installiert den nginx Web Server
+                packages:
+                - nginx
+
+5. Testing
+
+
+
 
 ## AE2
 
