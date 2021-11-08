@@ -119,14 +119,29 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
 Die Amazon Cloud verfügt ebenfalls über eine CLI, die Informationen zur Installation sind [hier](https://aws.amazon.com/cli/) zu finden. 
 Nachdem die CLI installiert wurde, müssen wir einen Access Key & Secret anlegen: 
 
-Wir klicken auf *My Security Credentials*
+Wir klicken auf *My Security Credentials* 
+
 ![AWS1](../00_Allgemein/images/03_AWS/aws1.png)
 
+
 Anschliessend muss ein neuer Credential angelegt werden
+
 ![AWS2](../00_Allgemein/images/03_AWS/aws2.png)
 
 Klick man auf *Show Access Key* kann man die Details des Keys sehen
 ![AWS3](../00_Allgemein/images/03_AWS/aws3.png)
+
+
+Als nächstes geht es darum sich mit der AWS Cloud zu verbinden. Dies wird mittels dem Command **aws configure** gemacht. 
+Anschliessend werden 4 Parameter verlangt: 
+- AWS Access Key ID --> Die ID des Keys den wir soeben erstellt haben.
+- AWS Secrete Access Key --> Den Secret Access Key den wir soeben angelegt haben. 
+- Default region name --> Dies definiert die Default region, in dieser Region werden die Ressourcen dann auch angelegt. In unserem Fall **eu-central-1**
+- Default Output format --> Das Default Output format definiert  wie die Values zurückkommen, in unserem Fall **text**
+
+Ob die Connection zu AWS erfolgreich hergestellt wurde, kann mittels dem Command **aws sts get-caller-identity** überprüft werden: 
+![AWS4](../00_Allgemein/images/03_AWS/aws4.png)
+
 
 
 
