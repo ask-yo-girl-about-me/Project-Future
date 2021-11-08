@@ -1,7 +1,7 @@
 # AE5
 *Ich kann Linux Befehle einsetzen und deren Funktion erklären*
 
-1. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
+## 1. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
     
 - Aktueller Verzeichnis anzeigen in dem man Arbeitet
 
@@ -39,11 +39,22 @@
 
 `df`
 
-2. Liste von wichtigen Befehlen für APT[^1]
+1. Liste von wichtigen Befehlen für APT[^1]
 
-- 
-    
-1. Einsetzen von Linux Befehlen
+**Grundlage**
+
+`[sudo] apt-get [OPTIONEN] KOMMANDO [PAKET1] [PAKET2]`
+
+**Beispiel:**
+
+Installation von einem Paket
+
+- `sudo apt-get install "PAKETNAME"`
+
+
+
+
+## 2. Einsetzen von Linux Befehlen
 
 ___
 
@@ -53,4 +64,4 @@ ___
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
 
-[^1]: Ubuntuusers APT [UBUNTUUSERS_APT](https://wiki.ubuntuusers.de/APT/) 
+[^1]: APT Befehle [UBUNTUUSERS_APT](https://wiki.ubuntuusers.de/APT/) 
