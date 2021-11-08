@@ -130,8 +130,9 @@ Das erstellen von einem SSH Key wurde bei Lernziel AE2 dokumentiert.
 2. Danach muss der Public Key beim einrichten der Virtuellen Maschine hinterlegt werden. Je nach Cloud Anbieter kann dies unterschiedlich sein.
 
 AWS:
-![AF3_1](../00_Allgemein/images/01_Grundlage/AE2_1.png)
-![AF3_2](../00_Allgemein/images/01_Grundlage/AE2_2.png)
+
+![AF3_1](../00_Allgemein/images/01_Grundlage/AF3_1.png)
+![AF3_2](../00_Allgemein/images/01_Grundlage/AF3_2.png)
 
 
 ## AE4
