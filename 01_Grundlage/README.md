@@ -19,7 +19,7 @@ Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben
 
 2. VM erstellen
 
-Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernels zur Virtualisierun)[^1]
+    Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernels zur Virtualisierun)[^1]
 
 ![Bild1](../00_Allgemein/images/01_Grundlage/1.png)
 
