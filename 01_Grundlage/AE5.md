@@ -3,43 +3,43 @@
 
 ## 1. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
     
-- Aktueller Verzeichnis anzeigen in dem man Arbeitet
+1. Aktueller Verzeichnis anzeigen in dem man Arbeitet
 
 `pwd`
 
-- Verzeichnis Inhalt anzeigen
+2. Verzeichnis Inhalt anzeigen
 
 `ls`
 
-- Verzeichnis wechseln
+3. Verzeichnis wechseln
 
 `cd`
 
-- Terminal leeren
+4. Terminal leeren
 
 `clear`
 
-- Programminfo herausfinden
+5. Programminfo herausfinden
 
 `whatis` / `whatis firefox`
 
-- Wo ist mein Programm installiert
+6.  Wo ist mein Programm installiert
 
 `which`
 
-- Mit man kann man eine Hilfe für den entsprechenden Befehl anzeigen
+7. Mit man kann man eine Hilfe für den entsprechenden Befehl anzeigen
 
 `man`
 
-- Datei Inhalt anzeigen
+8. Datei Inhalt anzeigen
 
 `cat`
 
-- Speicherplatzbedarf anzeigen
+9. Speicherplatzbedarf anzeigen
 
 `df`
 
-1. Liste von wichtigen Befehlen für APT[^1]
+## 2. Liste von wichtigen Befehlen für APT[^1]
 
 **Grundlage**
 
@@ -54,7 +54,7 @@ Installation von einem Paket
 
 
 
-## 2. Einsetzen von Linux Befehlen
+## 3. Einsetzen von Linux Befehlen
 
 ___
 
