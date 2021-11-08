@@ -39,15 +39,11 @@
 
 `df`
 
+2. Liste von wichtigen Befehlen für APT[^1]
 
-
+- 
+    
 1. Einsetzen von Linux Befehlen
-
-
-
-2. Erklärungen von Linux Befehlen
-
-
 
 ___
 
@@ -56,3 +52,5 @@ ___
 [02_Automatisierung](../02_Automatisierung)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
+
+[^1]: Ubuntuusers APT [UBUNTUUSERS_APT](https://wiki.ubuntuusers.de/APT/) 
