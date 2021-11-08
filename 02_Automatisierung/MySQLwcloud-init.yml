@@ -6,43 +6,46 @@ users:
     shell: /bin/bash
     lock_passwd: true
     plain_text_passwd: 'password'
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyqm8knfxWHHVIg72t9bfU/f30nH6Lbgkhh2G8n7pLpe4CyFiVQC6AL0WKQhpw4pLuJxrs3o9EVtmZU6WKX9W9fhM6EtDyWyuNZssV9ngHDwNptqSYircjBRJD3Wyjoe79wUmetey/Wwr5YMCSlERxX/Yrqq5+ePy/GyInEoH7MVUIdDVgbwQprxZCtowatMGBtQRqIG7n4ppuhvg3QbLU4PYMewbXIir/rt63RMR5Ph66ttKtOrhtx2R0z5I/0rUTzx5xiPg3Fzv9gX/n4gL0MudS7YFE1oz09xDScyOs0UynjC0ohzpdJfuRTWvdXynSSFHo7Y1SqWps1xR0j3q0C/czlRLsHJgvEWXYJ2/l8zC5UA9qdtUyZgyWw4t1BAipKTnh8daR9qAu+PsSKm8Jj7uNOrhVs9dh3F6YnVFBGVxwU1BJH5Ja99K7kiH1BIn3tCYrqp8AprLv/0DiBG7ntxGMPTQ3I0cxU6r5xNT8InWy/4wun/X9of58HyVn4sE= SSH-Key fuer Project Future
 # login SSH and console with password
     ssh_pwauth: true
     disable_root: false 
 # Install pakage
 packages:
     - mysql-server
+    - phpmyadmin
 package-update: true
 package_upgrade: true
-write_files:
+ write_files:
  - content: |
     CREATE USER 'futuresql'@'localhost' IDENTIFIED BY 'password';
     CREATE USER 'futuresql'@'%' IDENTIFIED BY 'password';
     GRANT ALL ON *.* TO 'futuresql'@'localhost';
     GRANT ALL ON *.* TO 'futuresql'@'%';
-    FLUSH PRIVILEGES;
+   FLUSH PRIVILEGES;
    path: /tmp/initdb.sql
    permissions: '0644' 
 runcmd:
 #MySQL
- - 'sudo mysql </tmp/initdb.sql'
-  - sudo rm /tmp/initdb.sql 
+- 'sudo mysql </tmp/initdb.sql'
+- sudo rm /tmp/initdb.sql 
   - sudo sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
   - sudo systemctl restart mysql
 # SSH
-    - sed -i -e '/^Port/s/^.*$/Port 22/' /etc/ssh/sshd_config
+- sed -i -e '/^Port/s/^.*$/Port 22/' /etc/ssh/sshd_config
     - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
     - sed -i -e '/^PasswordAuthentication/s/^.*$/PasswordAuthentication no/' /etc/ssh/sshd_config
     - sed -i -e '$aAllowUsers dev' /etc/ssh/sshd_config
     - sudo service ssh restart
 # Firewall
-    # defaults
-    - sudo ufw default deny incoming
+# defaults
+- sudo ufw default deny incoming
     - sudo ufw default allow outgoing
-    # exceptions
-    - sudo ufw allow ssh
+# exceptions
+- sudo ufw allow ssh
     - sudo ufw allow http
     - sudo ufw allow https
-    # start on boot
-    - sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
+# start on boot
+- sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
     - sudo ufw enable
