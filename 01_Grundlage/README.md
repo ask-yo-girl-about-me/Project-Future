@@ -8,6 +8,7 @@
 * [AE5: Ich kann Linux Befehle einsetzen und deren Funktion erklären](#AE5)
 
 ## AE1
+Ich kann VMs für Services einsetzen
 
 ### 1. Anbieter
 
@@ -66,7 +67,10 @@ In dem folgenden Bild sieht man, dass die VM noch in bearbeitung ist.
 
 ### 4. Testing
 
+Je nach dem was für ein Service man installiert/eingerichtet hat, muss man oder kann man es auf andere Weise testen.
 
+In unserem Fall wurde ein NGINX Web Server installiert.
+Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcome to nginx!".
 
 
 ## AE2
