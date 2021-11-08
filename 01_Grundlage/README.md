@@ -9,5 +9,4 @@
 
 Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 
-[01_Grundlagen](../01_Grundlage)
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
