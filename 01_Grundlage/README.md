@@ -10,6 +10,7 @@
 ## AE1
 
 1. Anbieter
+
 Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben wir folgende drei Cloud Anbieter zur verfügung:
 - AWS Amazon Cloud
 - Azure Microsoft Cloud
@@ -28,16 +29,17 @@ Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben
 ![Bild2](../00_Allgemein/images/01_Grundlage/2.png)
 
     Beim erstellen füllt man die Pflichtfelder aus und wenn gewünscht Optionale ebenfalls ändern.
-    Pflichtfelder:
-    - Hostname
-    - Domain
-    - Zone
-    - Ressourcen Pool
 
-    Optional:
-    - Architecture
-    - Arbeitsspeicher RAM
-    - Cores
+Pflichtfelder:
+- Hostname
+- Domain
+- Zone
+- Ressourcen Pool
+
+Optional:
+- Architecture
+- Arbeitsspeicher RAM
+- Cores
 
 ![Bild3](../00_Allgemein/images/01_Grundlage/3.png)
 
