@@ -18,11 +18,12 @@ Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben
     In diesem Beispiel beziehen wir uns auf den Anbieter Maas. Grundsätzlich sind die funktionalitäten bei allen Cloud Anbietern gleich.
 
 2. VM erstellen
+
 Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernels zur Virtualisierun)[^1]
 
 ![Bild1](../00_Allgemein/images/01_Grundlage/1.png)
 
-3. Sobald man beim gewünschten KVM ist, kann man eine neue VM erstellen (compose VM)
+    Sobald man beim gewünschten KVM ist, kann man eine neue VM erstellen (compose VM)
 
 ![Bild2](../00_Allgemein/images/01_Grundlage/2.png)
 
@@ -41,6 +42,7 @@ Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based V
 ![Bild3](../00_Allgemein/images/01_Grundlage/3.png)
 
 3. Den gewünschten Service per Cloud-Init Deployen
+
 Sobald die VM die wir erstellt haben fertig gestellt wurde in bereit ist, müssen wir diese Deployen.
 Dafür wählen wir die entsprechende VM aus und gehen unter "Take Action" --> "Deploy..."
 
@@ -55,6 +57,7 @@ Wenn man dies fertig Deployd hat, muss man nurnoch abwarten bis die VM fertigges
 In dem folgenden Bild sieht man, dass die VM noch in bearbeitung ist.
 
 ![Bild6](../00_Allgemein/images/01_Grundlage/6.png)
+
                 #cloud-config - Installiert den nginx Web Server
                 packages:
                 - nginx
