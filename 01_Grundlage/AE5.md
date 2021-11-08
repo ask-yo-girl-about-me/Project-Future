@@ -3,40 +3,39 @@
 
 1. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
     
-Aktueller Verzeichnis anzeigen in dem man Arbeitet
+- Aktueller Verzeichnis anzeigen in dem man Arbeitet
 
 `pwd`
 
-Verzeichnis Inhalt anzeigen
+- Verzeichnis Inhalt anzeigen
 
 `ls`
 
-Verzeichnis wechseln
+- Verzeichnis wechseln
 
 `cd`
 
-Terminal leeren
+- Terminal leeren
 
 `clear`
 
-
-Programminfo herausfinden
+- Programminfo herausfinden
 
 `whatis` / `whatis firefox`
 
-Wo ist mein Programm installiert
+- Wo ist mein Programm installiert
 
 `which`
 
-Mit man kann man eine Hilfe für den entsprechenden Befehl anzeigen
+- Mit man kann man eine Hilfe für den entsprechenden Befehl anzeigen
 
 `man`
 
-Datei Inhalt anzeigen
+- Datei Inhalt anzeigen
 
 `cat`
 
-Speicherplatzbedarf anzeigen
+- Speicherplatzbedarf anzeigen
 
 `df`
 
