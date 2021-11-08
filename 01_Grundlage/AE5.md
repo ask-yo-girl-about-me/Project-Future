@@ -5,65 +5,66 @@
     
 Aktueller Verzeichnis anzeigen in dem man Arbeitet
 
-`pwd`
+                pwd
 
 Verzeichnis Inhalt anzeigen
 
-`ls`
+                ls
 
 Verzeichnis wechseln
 
-`cd`
+                cd
 
 Terminal leeren
 
-`clear`
+                clear
 
 Programminfo herausfinden
 
-`whatis` / `whatis firefox`
+                whatis / whatis firefox
 
 Wo ist mein Programm installiert
 
-`which`
+                which
 
 Mit man kann man eine Hilfe für den entsprechenden Befehl anzeigen
 
-`man`
+                man
 
 Datei Inhalt anzeigen
 
-`cat`
+                cat
 
 Speicherplatzbedarf anzeigen
 
-`df`
+                df
 
 ## 2. Liste von wichtigen Befehlen für APT[^1]
 
 **APT-GET Grundlage**
 
-`[sudo] apt-get [OPTIONEN] KOMMANDO [PAKET1] [PAKET2]`
+                [sudo] apt-get [OPTIONEN] KOMMANDO [PAKET1] [PAKET2]
 
 **APT-GET Beispiele**
 
 Neueinlesen der Paketlisten
 
-`sudo apt-get update`
+                sudo apt-get update
 
 Installierte Pakete wenn möglich auf verbesserte Version aktualisieren
 
-`sudo apt-get upgrade`
+                sudo apt-get upgrade
 
 Deinstallation von einem Paket
 
-`sudo apt-get remove "PAKETNAME"`
+                sudo apt-get remove "PAKETNAME"
 
 Installation von einem Paket
 
-`sudo apt-get install "PAKETNAME"`
+                sudo apt-get install "PAKETNAME"
 
 ## 3. Einsetzen von Linux Befehlen
+
 
 ___
 
