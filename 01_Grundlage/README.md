@@ -8,7 +8,7 @@
 * [AE5: Ich kann Linux Befehle einsetzen und deren Funktion erklären](#AE5)
 
 ## AE1
-Ich kann VMs für Services einsetzen
+*Ich kann VMs für Services einsetzen*
 
 ### 1. Anbieter
 
@@ -54,12 +54,18 @@ Dafür wählen wir die entsprechende VM aus und gehen unter "Take Action" --> "D
 Hier hat man die Möglichkeit das OS und die Version dazu auszuwählen. In unserem Falle wird dies Ubuntu 20.04 LTS sein.
 Bei diesem Punkt muss man sich noch überlegeb, ob man den Service manuell installiert oder per Cloud-Init Data/File.
 
+Folgende Möglichkeiten gibt es:
+- Service nach dem Deployen manuell "ohne Cloud-Init Skript" einrichten
+- Service automatisch per Cloud-Init Skript aufsetzen lassen
+
 ![AE1_5](../00_Allgemein/images/01_Grundlage/AE1_5.png)
 
 Wenn man dies fertig Deployd hat, muss man nurnoch abwarten bis die VM fertiggestellt wird.
 In dem folgenden Bild sieht man, dass die VM noch in bearbeitung ist.
 
 ![AE1_6](../00_Allgemein/images/01_Grundlage/AE1_6.png)
+
+In diesem Beispiel verwendeter Cloud-Init Code:
 
                 #cloud-config - Installiert den nginx Web Server
                 packages:
@@ -75,9 +81,9 @@ Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcom
 ![AE1_7](../00_Allgemein/images/01_Grundlage/AE1_7.png)
 
 ## AE2
-Ich kann selber (SSH) Public/Private Keys erstellen und einsetzen
+*Ich kann selber (SSH) Public/Private Keys erstellen und einsetzen*
 
-### SSH erklärung
+### 1. SSH erklärung
 SSH beinhaltet eine Sichere Verbindung auf eine entferntes Gerät. Typisch dafür wäre ein Server, auf welcher man per remote command line zugreifft.
 Wenn man sich über das Internet auf einer Maschine anmeldet oder auf der Maschiene irgenwelche Kommands durchführt wäre es möglich, das dies jemand abhören kann.
 Genau um dies zu verhindern, verwendet man SSH mit einem Public und Privat Key. Was wir brauchen ist auf der Lokalen Maschine einen SSH Client Software und auf der Remot Maschine einen SSH Server Software vorinstalliert.
@@ -87,7 +93,7 @@ Linux und MAC Computer haben einen SSH Client schon vorinstalliert. Für Windows
 Die Maschine auf welche wir uns verbinden, enthält den "Public Key". Die Maschine mit der wir uns verbinden, also die Lokale, diese muss den Privat Key haben für den Verbindungsaufbau.
 Wenn der Privat und Public Key übereinstimmen und korrekt sind, ist der Verbindungsaufbau gewährleistet.
 
-### Erstellen von Public/Privat Key
+### 2. Erstellen von Public/Privat Key
 Um ein neuen Public oder Privat Key zu erstellen braucht es eine entsprechende Software zur erstellung.
 In diesem Beispiel verwenden wir zur erstellung von SSH Keys den [Bitvise SSH Client](https://www.bitvise.com/ssh-client-download)
 
@@ -120,29 +126,69 @@ In diesem Beispiel verwenden wir zur erstellung von SSH Keys den [Bitvise SSH Cl
 Das einsetzen von SSH Keys wir beim nächsten Lernziel gezeigt. Dort wird anhand von einem Beispiel gezeigt, wie man per SSH Key auf eine VM verbinden kann.
 
 ## AF3
-Ich kann einen SSH Key erstellen und diesen für die Verbindung zur VM verwenden
+*Ich kann einen SSH Key erstellen und diesen für die Verbindung zur VM verwenden*
 
-### Erstellen von SSH Keys
+### 1. Erstellen von SSH Keys
 Das erstellen von einem SSH Key wurde bei Lernziel AE2 dokumentiert.
 
-### Verwendung eines SSH Keys zur Verbindung mit einer VM
+### 2. Verwendung eines SSH Keys zur Verbindung mit einer VM
 1. Als erstes muss natürlich der SSH Key erstellt werden
-2. Danach muss der Public Key beim einrichten der Virtuellen Maschine hinterlegt werden. Je nach Cloud Anbieter kann dies unterschiedlich sein. Dies wird über zwei Varianten gemacht. Entweder man fügt diesen in der Cloud unter seinem Konto hinzu oder man gibt diesen in einem Cloud-Init File mit. Die Verwendung mit dem Cloud-Init und SSH wird beim [Hier](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/02_Automatisierung) beschrieben.
 
-AWS:
+2. Danach muss der Public Key beim einrichten der Virtuellen Maschine hinterlegt werden. Je nach Cloud Anbieter kann dies unterschiedlich sein. Dies wird über zwei Varianten gemacht. Entweder man fügt diesen in der Cloud unter seinem Konto hinzu oder man gibt diesen in einem Cloud-Init File mit. Die Verwendung mit dem Cloud-Init und SSH wird beim [Hier](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/02_Automatisierung) beschrieben. Wie man diese in seinem Konto hinterlegt wir hier mit den drei verschieden Cloud Anbietern AWS, Azure und MAAS aufgezeigt.
 
-Unter "Einstellungen --> Network & Security --> Key Pairs" kann man ein neuen Public Key hochladen. Somit wird bei jeder manuell eingerichtete VM folgender Public Key verwendet, wenn man diesen auswähl.
+Folgende Varianten gibt es für das Hinterlegen eines Public Keys:
+- Direkte mitgabe eines Public Key beim erstellen einer VM
+- Hinterlegen in den Einstellungen des entsprechenden Cloud Anbieters
+- Per Cloud-Init mitgeben
+
+**AWS:**
+
+SSH Schlüssel in den Einstellungen hinterlegen um beim erstellen der VMs zu verwenden:
+
 ![AF3_1](../00_Allgemein/images/01_Grundlage/AF3_1.png)
-![AF3_2](../00_Allgemein/images/01_Grundlage/AF3_2.png)
 
+![AF3_2](../00_Allgemein/images/01_Grundlage/AF3_1.2.png)
+
+Beim erstellen einer VM kann man zwischen den zwei Optionen wechseln (Vorhanden oder neuer hinterlegen):
+
+![AF3_3](../00_Allgemein/images/01_Grundlage/AF3_1.3.png)
+
+**Azure:**
+
+SSH Schlüssel in den Einstellungen hinterlegen um beim erstellen der VMs zu verwenden:
+
+![AF3_4](../00_Allgemein/images/01_Grundlage/AF3_2.png)
+
+![AF3_5](../00_Allgemein/images/01_Grundlage/AF3_2.2.png)
+
+Beim erstellen einer VM kann man zwischen den zwei Optionen wechseln (Vorhanden oder neuer hinterlegen):
+
+![AF3_6](../00_Allgemein/images/01_Grundlage/AF3_2.3.png)
+
+**MAAS:**
+
+![AF3_3](../00_Allgemein/images/01_Grundlage/AF3_3.png)
 
 ## AE4
-Ich kann Linux Pakete suchen und installieren
+*Ich kann Linux Pakete suchen und installieren*
 
-###
+### 1. Linux Pakete suchen
+
+**Installierte Pakete**
+
+Um eine Liste zu erstellen, die alle installierten Pakete und deren Beschreibungen enthält, führt man den Befehl aus. Die Paketliste befindet sich danach in der Datei packages_list.list.
+
+`COLUMNS=200 dpkg-query -l > packages_list.list`
+
+**Wiki for Linux Pakete**
+
+Wenn man ein speziellen Dienst/Service installieren will, gibt man ganz einfach den Service + Linux oder direkt Ubuntu ein und man wird sehr schnell fündig.
+
+Hier aber ein Link mit einer grossen Library einiger Pakete. --> [PKGS.ORG](https://pkgs.org/)
+
 
 ## AE5
-Ich kann Linux Befehle einsetzen und deren Funktion erklären
+*Ich kann Linux Befehle einsetzen und deren Funktion erklären*
 
 ##
 
