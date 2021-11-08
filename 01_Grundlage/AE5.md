@@ -2,7 +2,7 @@
 *Ich kann Linux Befehle einsetzen und deren Funktion erklären*
 
 ## 1. Einsetzen von Linux Befehlen
-Im Linux, wie auch bei andere Betriebsystemen, haben wir zwei Schnittstellen für die Benutzereingabe. Die einte läuft per Benutzeroberfläche. Dies wäre das sogenannte GUI. Alle Einstellungen welche per GUI gemacht werden, können aber auch per Kommandozeilenbefehle über ein Shell vorgenommen werden.
+Im Linux, wie auch bei andere Betriebsystemen, haben wir zwei Schnittstellen für die Benutzereingabe. Die einte läuft per Benutzeroberfläche. Dies wäre das sogenannte GUI. Alle Einstellungen welche per GUI gemacht werden, können aber auch per Kommandozeilenbefehle über ein Shell/Terminal vorgenommen werden.
 
 Wir arbeiten hier hauptsächlich mit dem Shell und müssen die dementsprechenden Befehle dazu kennen.
 
