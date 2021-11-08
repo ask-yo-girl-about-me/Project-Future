@@ -7,6 +7,7 @@ Im Linux, wie auch bei andere Betriebsystemen, haben wir zwei Schnittstellen fü
 Wir arbeiten hier hauptsächlich mit dem Shell und müssen die dementsprechenden Befehle dazu kennen.
 
 Jeder Befehl hat folgendes Grundschema:
+
                 BEFEHL [OPTIONEN] [ARGUMENTE]
 
 Grundsätzlich muss man nur ein Terminal öffnen und ein Belibigen (natürlich korrekt) Befehl eingeben. Je nach Ziel muss man das Grundschema welches oben aufgezeigt ist anpassen, um das erwartet Ergebniss zu erreichen.
