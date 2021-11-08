@@ -23,11 +23,11 @@ Als erstes muss der Anbieter für die VM definiert werden. In unserem Fall haben
 
 Um eine neu VM zu erstellen gehen wir im MAAS in unseren KVM (Die Kernel-based Virtual Machine ist eine Infrastruktur des Linux-Kernels zur Virtualisierun)[^1]
 
-![Bild1](../00_Allgemein/images/01_Grundlage/1.png)
+![AE1_1](../00_Allgemein/images/01_Grundlage/AE1_1.png)
 
 Sobald man beim gewünschten KVM ist, kann man eine neue VM erstellen (compose VM)
 
-![Bild2](../00_Allgemein/images/01_Grundlage/2.png)
+![AE1_2](../00_Allgemein/images/01_Grundlage/AE1_2.png)
 
 Beim erstellen füllt man die Pflichtfelder aus und wenn gewünscht Optionale ebenfalls ändern.
 
@@ -42,24 +42,24 @@ Optional:
 - Arbeitsspeicher RAM
 - Cores
 
-![Bild3](../00_Allgemein/images/01_Grundlage/3.png)
+![AE1_3](../00_Allgemein/images/01_Grundlage/AE1_3.png)
 
 ### 3. Den gewünschten Service per Cloud-Init Deployen
 
 Sobald die VM die wir erstellt haben fertig gestellt wurde in bereit ist, müssen wir diese Deployen.
 Dafür wählen wir die entsprechende VM aus und gehen unter "Take Action" --> "Deploy..."
 
-![Bild4](../00_Allgemein/images/01_Grundlage/4.png)
+![AE1_4](../00_Allgemein/images/01_Grundlage/AE1_4.png)
 
 Hier hat man die Möglichkeit das OS und die Version dazu auszuwählen. In unserem Falle wird dies Ubuntu 20.04 LTS sein.
 Bei diesem Punkt muss man sich noch überlegeb, ob man den Service manuell installiert oder per Cloud-Init Data/File.
 
-![Bild5](../00_Allgemein/images/01_Grundlage/5.png)
+![AE1_5](../00_Allgemein/images/01_Grundlage/AE1_5.png)
 
 Wenn man dies fertig Deployd hat, muss man nurnoch abwarten bis die VM fertiggestellt wird.
 In dem folgenden Bild sieht man, dass die VM noch in bearbeitung ist.
 
-![Bild6](../00_Allgemein/images/01_Grundlage/6.png)
+![AE1_6](../00_Allgemein/images/01_Grundlage/AE1_6.png)
 
                 #cloud-config - Installiert den nginx Web Server
                 packages:
@@ -72,18 +72,49 @@ Je nach dem was für ein Service man installiert/eingerichtet hat, muss man oder
 In unserem Fall wurde ein NGINX Web Server installiert.
 Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcome to nginx!".
 
-![Bild7](../00_Allgemein/images/01_Grundlage/7.png)
+![AE1_7](../00_Allgemein/images/01_Grundlage/AE1_7.png)
 
 ## AE2
 Ich kann selber (SSH) Public/Private Keys erstellen und einsetzen
 
 ### SSH erklärung
 SSH beinhaltet eine Sichere Verbindung auf eine entferntes Gerät. Typisch dafür wäre ein Server, auf welcher man per remote command line zugreifft.
-Wenn man sich über das Internet auf einer Maschine anmeldet oder auf der Maschiene irgenwelche Komands durchführt wäre es möglich, 
+Wenn man sich über das Internet auf einer Maschine anmeldet oder auf der Maschiene irgenwelche Kommands durchführt wäre es möglich, das dies jemand abhören kann.
+Genau um dies zu verhindern, verwendet man SSH mit einem Public und Privat Key. Was wir brauchen ist auf der Lokalen Maschine einen SSH Client Software und auf der Remot Maschine einen SSH Server Software vorinstalliert.
+
+Linux und MAC Computer haben einen SSH Client schon vorinstalliert. Für Windows User gilt die Arbeit mit GitBash, Windows Subsystem oder Putty.
+
+Die Maschine auf welche wir uns verbinden, enthält den "Public Key". Die Maschine mit der wir uns verbinden, also die Lokale, diese muss den Privat Key haben für den Verbindungsaufbau.
+Wenn der Privat und Public Key übereinstimmen und korrekt sind, ist der Verbindungsaufbau gewährleistet.
 
 ### Erstellen von Public/Privat Key
 Um ein neuen Public oder Privat Key zu erstellen braucht es eine entsprechende Software zur erstellung.
+In diesem Beispiel verwenden wir zur erstellung von SSH Keys den [Bitvise SSH Client](https://www.bitvise.com/ssh-client-download)
 
+1. Bitvise öffnen
+2. Unter Client Key Manager können wir neue Keys erstellen
+
+![AE2_1](../00_Allgemein/images/01_Grundlage/AE2_1.png)
+
+3. Hier klicken wir auf "Create New"
+
+![AE2_2](../00_Allgemein/images/01_Grundlage/AE2_2.png)
+
+4. Um einen neuen SSH Key zu erstellen müssen wir ein Kennwort eintragen
+
+![AE2_3](../00_Allgemein/images/01_Grundlage/AE2_3.png)
+
+5. Somit haben wir nun einen neuen SSH Key erstellt. Nun müssen wir diesen nurnoch exportieren. Darum klicken wir den entsprechenden Key aus und gehen auf "Export".
+
+![AE2_4](../00_Allgemein/images/01_Grundlage/AE2_4.png)
+
+6. Als erstes exportieren wir den "public key"
+
+![AE2_5](../00_Allgemein/images/01_Grundlage/AE2_5.png)
+
+7. Zusätzlich direkt noch den "privat key"
+
+![AE2_6](../00_Allgemein/images/01_Grundlage/AE2_6.png)
 
 ### Automatischer SSH Key beim erstellen der VM auf der Clodu
 
