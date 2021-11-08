@@ -77,8 +77,13 @@ Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcom
 ## AE2
 Ich kann selber (SSH) Public/Private Keys erstellen und einsetzen
 
+### SSH erklärung
+SSH beinhaltet eine Sichere Verbindung auf eine entferntes Gerät. Typisch dafür wäre ein Server, auf welcher man per remote command line zugreifft.
+Wenn man sich über das Internet auf einer Maschine anmeldet oder auf der Maschiene irgenwelche Komands durchführt wäre es möglich, 
+
 ### Erstellen von Public/Privat Key
-Um 
+Um ein neuen Public oder Privat Key zu erstellen braucht es eine entsprechende Software zur erstellung.
+
 
 ### Automatischer SSH Key beim erstellen der VM auf der Clodu
 
