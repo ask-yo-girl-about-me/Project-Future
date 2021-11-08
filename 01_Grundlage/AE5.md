@@ -41,18 +41,27 @@
 
 ## 2. Liste von wichtigen Befehlen für APT[^1]
 
-**Grundlage**
+**APT-GET Grundlage**
 
 `[sudo] apt-get [OPTIONEN] KOMMANDO [PAKET1] [PAKET2]`
 
-**Beispiel:**
+**APT-GET Beispiele:**
+
+Neueinlesen der Paketlisten
+
+`sudo apt-get update`
+
+Installierte Pakete wenn möglich auf verbesserte Version aktualisieren
+
+`sudo apt-get upgrade`
+
+Deinstallation von einem Paket
+
+`sudo apt-get remove "PAKETNAME"`
 
 Installation von einem Paket
 
 `sudo apt-get install "PAKETNAME"`
-
-
-
 
 ## 3. Einsetzen von Linux Befehlen
 
