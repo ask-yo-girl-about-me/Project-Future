@@ -146,11 +146,27 @@ Als nächstes müssen wir eine Security Gruppe anlegen, Security Gruppen beinhal
 Im folgenden Beispiel erstellen wir eine Security Gruppe mit folgenden Eigenschaften: 
 - Name: ProjectGroup
 - Description: Used for the Project
-- Öffnen der Ports 22 & 80 für Inbound Rules
+- Öffnen der Ports 22 (SSH) & 80 (HTTP) für Inbound Rules
 
                 aws ec2 create-security-group --group-name ProjectGroup --description "Used for the Project" 
                 aws ec2 authorize-security-group-ingress --group-name ProjectGroup --protocol tcp --port 22 --cidr 0.0.0.0/0 
-                aws ec2 authorize-security-group-ingress --group-name ProjectGroup --protocol tcp --port 80 --cidr 0.0.0.0/0    
+                aws ec2 authorize-security-group-ingress --group-name ProjectGroup --protocol tcp --port 80 --cidr 0.0.0.0/0
+
+Nun da die Security Group angelegt wurde. Kann mit der Erstellung der VM begonnen werden. 
+Der nachfolgende Command erstellt eine VM mit folgenden Parametern: 
+- --image-id --> Die Image ID ist die ID des Images in unserem Fall: Ubuntu Server ami-0629230e074c580f2
+- --security-groups-ids --> gibt an mit welcher Security Group die VM verlinkt werden soll. 
+- --instance-type --> definiert in welches pricing tier die VM installiert wird. 
+- --count --> gibt an wie viele VM's provisioniert werden sollen
+- --userdata --> Gibt den Pfad zum cloud init file an. 
+
+
+                aws ec2 run-instances --image-id ami-0629230e074c580f2 --security-group-ids ProjectGroup --instance-type t2.micro --count 1 --user-data file://C:/Temp/cloud-init.cfg
+
+
+Sobald der Command ausgeführt wurde, wird die VM provisioniert: 
+![AWS5](../00_Allgemein/images/03_AWS/aws5.png)
+
 
 
 
