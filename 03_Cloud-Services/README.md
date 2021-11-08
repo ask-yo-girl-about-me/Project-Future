@@ -114,6 +114,22 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
                 az vm open-port -g $RessourceGroupName -n $VMName --port 80,443 --priority 310
 
 
+### Amazon 
+
+Die Amazon Cloud verfügt ebenfalls über eine CLI, die Informationen zur Installation sind [hier](https://aws.amazon.com/cli/) zu finden. 
+Nachdem die CLI installiert wurde, müssen wir einen Access Key & Secret anlegen: 
+
+Wir klicken auf *My Security Credentials*
+![AWS1](../00_Allgemein/images/03_AWS/aws1.png)
+
+Anschliessend muss ein neuer Credential angelegt werden
+![AWS2](../00_Allgemein/images/03_AWS/aws2.png)
+
+Klick man auf *Show Access Key* kann man die Details des Keys sehen
+![AWS3](../00_Allgemein/images/03_AWS/aws3.png)
+
+
+
 
 
 
