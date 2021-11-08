@@ -1,16 +1,26 @@
 # Automatisierung
   
 ## Lernziele
-* BE1: Ich kann Infrastructure as Code mit Beispielen erklären
-* BE2: Ich kann VMs mit eigenen Cloud-init Scripten aufsetzen
-* BE3: Ich habe Cloud-init mit Beispielen Dokumentiert
-* BE4: Ich kann eine valide YAML Datei erstellen, z.B. mit VSCode
-* BE5: Ich kann die Cloud-init Scripte mit Dokumentation (z.B. als Markdown) in einem Git Repository ablegen
-* BE6: Ich kann ein Git Repository mittels dem SSH Protokoll nachführen
+* [BE1: Ich kann Infrastructure as Code mit Beispielen erklären](#BE1)
+* [BE2: Ich kann VMs mit eigenen Cloud-init Scripten aufsetzen](#BE2)
+* [BE3: Ich habe Cloud-init mit Beispielen Dokumentiert](#BE3)
+* [BE4: Ich kann eine valide YAML Datei erstellen, z.B. mit VSCode](#BE4)
+* [BE5: Ich kann die Cloud-init Scripte mit Dokumentation (z.B. als Markdown) in einem Git Repository ablegen](#BE5)
+* [BE6: Ich kann ein Git Repository mittels dem SSH Protokoll nachführen](#BE6)
 
 Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 
-## Cloud-init File Apache
+## BE1
+
+
+
+## BE2
+
+
+
+## BE3
+
+### Cloud-init File Apache
                 #cloud-config installiert Webserver mit simplen Text
                 packages:
                 - apache2 
@@ -22,8 +32,7 @@ Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_K
                 path: /var/www/html/index.php
                 permissions: '0644
 
-
-## Cloud-init File MySQL
+### Cloud-init File MySQL
                 #cloud-config
                 users:
                     - name: dev
@@ -55,6 +64,17 @@ Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_K
                     - sudo ufw allow https
                     # start on boot
                     - sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
-                    - sudo ufw enable               
+                    - sudo ufw enable    
+           
+## BE4
+
+
+
+## BE5
+
+
+
+## BE6
+
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

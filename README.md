@@ -22,7 +22,7 @@ Projekt-Future
     - Lift and Reshape in die Cloud
     - VM erstellung auf 3 verschiedenen Clouds
 
-## 01 Auftrag für Praktische Arbeit: Infrastruktur as Code
+## Auftrag für Praktische Arbeit: Infrastruktur as Code
 - Problembeschreibung
     - Die Fachabteilung erwarten von der IT den gleichen Komfort in der Cloud.
     - Die Fachabteiltung wollen selber Ihre Server aufsetzem, mit entsprechend vorbereiteten Services.
