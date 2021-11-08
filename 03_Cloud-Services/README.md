@@ -7,12 +7,11 @@
 * [CE4: Ich kann VMs auf mindestens 3 Cloud erstellen](#CE4)
 
 ## CE1
-Ich kann die Cloud Services einsetzen
+*Ich kann die Cloud Services einsetzen*
 
-![Bild1](../00_Allgemein/images/03_Cloud-Services/.png)
 
 ## CE2
-Ich kann Cloud CLI Tools einsetzen und habe diese mit Beispielen Dokumentiert
+*Ich kann Cloud CLI Tools einsetzen und habe diese mit Beispielen Dokumentiert*
 
 ### Azure 
 
@@ -182,10 +181,10 @@ Sobald der Command ausgeführt wurde, wird die VM provisioniert:
 
 
 ## CE3
-Ich kann mittels Lift und Reshape Services in die Cloud verschieben, mit Dokumentation
+*Ich kann mittels Lift und Reshape Services in die Cloud verschieben, mit Dokumentation*
 
 ## CE4
-Ich kann VMs auf mindestens 3 Cloud erstellen
+*Ich kann VMs auf mindestens 3 Cloud erstellen*
 
 
 Quelle: [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
