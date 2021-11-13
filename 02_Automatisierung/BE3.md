@@ -1,7 +1,7 @@
 # BE3
 *Ich habe Cloud-init mit Beispielen Dokumentiert*
 
-Wir haben zwei Cloud-init Script geschrieben. Das [erste](## Cloud-init File Apache)  installiert ganz simple eine Apache server und erstellt eine PHP Datei:
+Wir haben zwei Cloud-init Script geschrieben. Das erste installiert ganz simple eine Apache server und erstellt eine PHP Datei:
 
 ## Cloud-init File Apache
                #cloud-config installiert Webserver mit simplen PHP Text
@@ -16,7 +16,9 @@ Wir haben zwei Cloud-init Script geschrieben. Das [erste](## Cloud-init File Apa
                 path: /var/www/html/index.php
                 permissions: '0644'
 
-Das z
+Das zweite Scritp erstellt zuerst den Ubuntu-Benutzer "future". Diese ist in Mitglied der Groupe "User" und "Admin". Der Zugriff des User erfolgt mittels SSH-Key.
+Danach werden die Ubunut Packete für den "LAMP" (Linux,Apache,MySQL,PHP)[^1] Stacks installiert. Danahch wir noch ein SQL User erstellt und der MySQL-Server wird konfiguiert.
+Und zu letzt werden die Firewallregeln definiert.
 
 ## Cloud-init File MySQL
                 #cloud-config
@@ -85,3 +87,5 @@ ___
 [02_Automatisierung](../02_Automatisierung)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
+
+[^1]: LAMP Beschreibung [Wikipedia](https://de.wikipedia.org/wiki/LAMP_(Softwarepaket))
