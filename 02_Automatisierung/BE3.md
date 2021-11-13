@@ -1,51 +1,84 @@
 # BE3
 *Ich habe Cloud-init mit Beispielen Dokumentiert*
 
+Wir haben zwei Cloud-init Script geschrieben. Das [erste](## Cloud-init File Apache)  installiert ganz simple eine Apache server und erstellt eine PHP Datei:
+
 ## Cloud-init File Apache
-                #cloud-config installiert Webserver mit simplen Text
+               #cloud-config installiert Webserver mit simplen PHP Text
                 packages:
                 - apache2 
                 - php 
                 - libapache2-mod-php 
+                #PHP Text definition mit Berechtigung
                 write_files:
                 - content: |
                     <?php echo '<p>Project Future Faild Successfully</p>'; ?>
                 path: /var/www/html/index.php
-                permissions: '0644
+                permissions: '0644'
+
+Das z
 
 ## Cloud-init File MySQL
                 #cloud-config
+                #Ubuntu OS User creation
                 users:
-                    - name: dev
-                    ssh-authorized-keys:
-                        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyqm8knfxWHHVIg72t9bfU/f30nH6Lbgkhh2G8n7pLpe4CyFiVQC6AL0WKQhpw4pLuJxrs3o9EVtmZU6WKX9W9fhM6EtDyWyuNZssV9ngHDwNptqSYircjBRJD3Wyjoe79wUmetey/Wwr5YMCSlERxX/Yrqq5+ePy/GyInEoH7MVUIdDVgbwQprxZCtowatMGBtQRqIG7n4ppuhvg3QbLU4PYMewbXIir/rt63RMR5Ph66ttKtOrhtx2R0z5I/0rUTzx5xiPg3Fzv9gX/n4gL0MudS7YFE1oz09xDScyOs0UynjC0ohzpdJfuRTWvdXynSSFHo7Y1SqWps1xR0j3q0C/czlRLsHJgvEWXYJ2/l8zC5UA9qdtUyZgyWw4t1BAipKTnh8daR9qAu+PsSKm8Jj7uNOrhVs9dh3F6YnVFBGVxwU1BJH5Ja99K7kiH1BIn3tCYrqp8AprLv/0DiBG7ntxGMPTQ3I0cxU6r5xNT8InWy/4wun/X9of58HyVn4sE= SSH-Key für Project Future 
-                    sudo: ['ALL=(ALL) NOPASSWD:ALL']
-                    groups: sudo
-                    shell: /bin/bash
+                - name: future
+                sudo: ALL=(ALL) NOPASSWD:ALL
+                groups: users, admin
+                shell: /bin/bash
+                ssh_import_id:
+                - gh:gshmeidig
+                ssh_authorized_keys:
+                - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyqm8knfxWHHVIg72t9bfU/f30nH6Lbgkhh2G8n7pLpe4CyFiVQC6AL0WKQhpw4pLuJxrs3o9EVtmZU6WKX9W9fhM6EtDyWyuNZssV9ngHDwNptqSYircjBRJD3Wyjoe79wUmetey/Wwr5YMCSlERxX/Yrqq5+ePy/GyInEoH7MVUIdDVgbwQprxZCtowatMGBtQRqIG7n4ppuhvg3QbLU4PYMewbXIir/rt63RMR5Ph66ttKtOrhtx2R0z5I/0rUTzx5xiPg3Fzv9gX/n4gL0MudS7YFE1oz09xDScyOs0UynjC0ohzpdJfuRTWvdXynSSFHo7Y1SqWps1xR0j3q0C/czlRLsHJgvEWXYJ2/l8zC5UA9qdtUyZgyWw4t1BAipKTnh8daR9qAu+PsSKm8Jj7uNOrhVs9dh3F6YnVFBGVxwU1BJH5Ja99K7kiH1BIn3tCYrqp8AprLv/0DiBG7ntxGMPTQ3I0cxU6r5xNT8InWy/4wun/X9of58HyVn4sE= SSH-Key fuer Project Future    
+                # login ssh and console with password
+                ssh_pwauth: true
+                disable_root: false  
+                # Packages install  
                 packages:
-                    - mysql-client
-                    - libmysqlclient-dev
-                    - mysql-server
-                package-update: true
-                package_upgrade: true
+                - apache2 
+                - curl 
+                - wget 
+                - php 
+                - libapache2-mod-php 
+                - php-mysql 
+                - adminer
+                - mysql-server
+                # Configfiles from Services 
+                write_files:
+                # Create PHP File with a simple Text
+                - content: |
+                    <?php echo '<p>Project Future Faild Successfully</p>'; ?>
+                path: /var/www/html/index.php
+                permissions: '0644'
+                # Create User for SQL 
+                - content: |
+                    CREATE USER 'futuresql'@'localhost' IDENTIFIED BY 'password';
+                    CREATE USER 'futuresql'@'%' IDENTIFIED BY 'password';
+                    GRANT ALL ON *.* TO 'futuresql'@'localhost';
+                    GRANT ALL ON *.* TO 'futuresql'@'%';
+                    FLUSH PRIVILEGES;
+                path: /tmp/initdb.sql
+                permissions: '0644'
+                # Run Commands
                 runcmd:
-                # SSH
-                    - sed -i -e '/^Port/s/^.*$/Port 22/' /etc/ssh/sshd_config
-                    - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
-                    - sed -i -e '/^PasswordAuthentication/s/^.*$/PasswordAuthentication no/' /etc/ssh/sshd_config
-                    - sed -i -e '$aAllowUsers dev' /etc/ssh/sshd_config
-                    - sudo service ssh restart
-                # Firewall
-                    # defaults
-                    - sudo ufw default deny incoming
-                    - sudo ufw default allow outgoing
-                    # exceptions
-                    - sudo ufw allow ssh
-                    - sudo ufw allow http
-                    - sudo ufw allow https
-                    # start on boot
-                    - sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
-                    - sudo ufw enable    
+                - sudo a2enconf adminer
+                - sudo systemctl restart apache2
+                # Configuration MySQL
+                - 'sudo mysql </tmp/initdb.sql'
+                - sudo rm /tmp/initdb.sql 
+                - sudo sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
+                - sudo systemctl restart mysql
+                # Firewall Rules
+                # Default Rules
+                - sudo ufw default deny incoming
+                - sudo ufw default allow outgoing
+                # Exceptions Rules
+                - sudo ufw allow ssh
+                - sudo ufw allow http
+                - sudo ufw allow https
+                # Start on boot
+                - sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
+                - sudo ufw enable  
 
 ___
 

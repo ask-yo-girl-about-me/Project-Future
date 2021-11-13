@@ -1,8 +1,9 @@
-#cloud-config installiert Webserver mit simplen Text
+#cloud-config installiert Webserver mit simplen PHP Text
 packages:
 - apache2 
 - php 
 - libapache2-mod-php 
+#PHP Text definition mit Berechtigung
 write_files:
 - content: |
     <?php echo '<p>Project Future Faild Successfully</p>'; ?>
