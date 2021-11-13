@@ -17,6 +17,8 @@ Im MAAS Portal unter dem Menupunkt "Machines" sind die bereitserstellten VMs auf
 
 ![BE2_1](../00_Allgemein/images/02_Automatisierung_BE2/BE2_1.png)
 
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
 Als nächster Schritt kann das OS ausgewählt werden und die Option dass mit Cloud-init Scritp die VM aufgesetzt werden kann.
 
 1. Aufsetzen mit Cloud-init Script aktivieren
@@ -25,9 +27,15 @@ Als nächster Schritt kann das OS ausgewählt werden und die Option dass mit Clo
 
 ![BE2_2](../00_Allgemein/images/02_Automatisierung_BE2/BE2_2.png)
 
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
 Das Aufsetzen der VM dauert nun ein paar Minuten. Sobald die VM aufgesetzt ist, erscheint diese unter dem Menupunkt "Machines" mit dem Status Deployd.
 
 ![BE2_3](../00_Allgemein/images/02_Automatisierung_BE2/BE2_3.png)
+
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
+### VM Test
 
 Das Clodu-init Script hat auf der VM eine SQL-Server installiert mittels Webinterface von "Adminer".
 Für den Test öffnen wir nun den Browser und öffnen den Link http://10.9.38.60/adminer.
