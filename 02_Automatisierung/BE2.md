@@ -9,27 +9,27 @@ Die VM ist bereits schon erstellt gemässt Schritt [AE1](https://github.com/ask-
 
 ### VM Aufsetzen
 
-Im MAAS Portal unter dem Menupunkt "Machines" sind die bereitserstellten VMs aufgelistet.
+Im MAAS-Portal unter dem Menüpunkt "Machines" sind die bereitserstellten VMs aufgelistet.
 
 1. Bereitgestellte VM auswählen
-2. Aktions Menu öffnen
-3. "Deploy..." auswählen
+2. Aktionsmenü öffnen
+3. "Deploy..." Auswählen
 
 ![BE2_1](../00_Allgemein/images/02_Automatisierung_BE2/BE2_1.png)
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-Als nächster Schritt kann das OS ausgewählt werden und die Option dass mit Cloud-init Scritp die VM aufgesetzt werden kann.
+Als nächster Schritt kann das OS ausgewählt werden und die Option, dass mit Cloud-init Scritp die VM aufgesetzt werden kann.
 
 1. Aufsetzen mit Cloud-init Script aktivieren
-2. Nun kann das Cloud-init Script eingefüght werden
+2. Nun kann das Cloud-init Script eingefügt werden
 3. Danach mit "Start deployment for machine" weiterfahren
 
 ![BE2_2](../00_Allgemein/images/02_Automatisierung_BE2/BE2_2.png)
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-Das Aufsetzen der VM dauert nun ein paar Minuten. Sobald die VM aufgesetzt ist, erscheint diese unter dem Menupunkt "Machines" mit dem Status Deployd.
+Das Aufsetzen der VM dauert nun ein paar Minuten. Sobald die VM aufgesetzt ist, erscheint diese unter dem Menüpunkt "Machines" mit dem Status Deployd.
 
 ![BE2_3](../00_Allgemein/images/02_Automatisierung_BE2/BE2_3.png)
 __________________________________________________________________________________________________________________________________________________________________________________________________
@@ -37,10 +37,25 @@ ________________________________________________________________________________
 
 ### VM Test
 
-Das Clodu-init Script hat auf der VM eine SQL-Server installiert mittels Webinterface von "Adminer".
+Das Cloud-init Script hat auf der VM einen SQL-Server installiert mittels Webzugriff per "Adminer".
 Für den Test öffnen wir nun den Browser und öffnen den Link http://10.9.38.60/adminer.
 
 ![BE2_4](../00_Allgemein/images/02_Automatisierung_BE2/BE2_4.png)
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+Zusätzlich haben wir im Script einen User definiert der Zugriff auf den SQL-Server hat.
+
+Benutzer:   futuresql
+Passwort:   password
+
+![BE2_4](../00_Allgemein/images/02_Automatisierung_BE2/BE2_5.png)
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+Wie man in der Unteren Grafikerkennen kann, hat das Anmelden mit dem User geklappt.
+
+![BE2_4](../00_Allgemein/images/02_Automatisierung_BE2/BE2_5.png)
 __________________________________________________________________________________________________________________________________________________________________________________________________
 
 
