@@ -11,7 +11,7 @@ Die VM ist bereits schon erstellt gemässt Schritt [AE1](https://github.com/ask-
 
 Im MAAS Portal unter dem Menupunkt "Machines" sind die bereitserstellten VMs aufgelistet.
 
-![BE2_1](../00_Allgemein/images/02_Automatisierung_BE2/Be2_1.png)
+![BE2_1](../00_Allgemein/images/02_Automatisierung_BE2/BE2_1.png)
 
 [02_Automatisierung](../02_Automatisierung)
 
