@@ -32,7 +32,8 @@ If ($RGcheck -eq "false")
         Write-Output "The RessourceGroup $($RessourceGroupName) does not exist... Creating RG...  "
         az group create --name $RessourceGroupName --location westeurope --subscription $subscriptionID
     }
-else{
+else
+    {
         Write-Output "The RessourceGroup $($RessourceGroupName) does  exist!"
     }
 
