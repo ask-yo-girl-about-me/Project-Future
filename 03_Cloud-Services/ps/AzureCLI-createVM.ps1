@@ -25,15 +25,15 @@ else
     }
 
 #checking if the specified ressource group already exists
-$RGcheck = az group list --query "[?name]=='$RessourceGroupName'"
-$RGexists = $RGcheck.Length -gt 0 
+$RGcheck = az group list --query "[?name=='$RessourceGroupName']"
 
-If (!$RGexists)
+If ($RGcheck -eq "false")
     {
         Write-Output "The RessourceGroup $($RessourceGroupName) does not exist... Creating RG...  "
         az group create --name $RessourceGroupName --location westeurope --subscription $subscriptionID
     }
-else{
+else
+    {
         Write-Output "The RessourceGroup $($RessourceGroupName) does  exist!"
     }
 
