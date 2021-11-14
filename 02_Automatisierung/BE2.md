@@ -53,7 +53,7 @@ Wie man in der Unteren Grafikerkennen kann, hat das Anmelden mit dem User geklap
 
 ![BE2_4](../00_Allgemein/images/02_Automatisierung/BE2/BE2_6.png)
 
-___
+__
 
 [02_Automatisierung](../02_Automatisierung)
 
