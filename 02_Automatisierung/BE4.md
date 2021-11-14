@@ -2,7 +2,7 @@
 *BE4: Ich kann eine valide YAML Datei erstellen, z.B. mit VSCode*
 
 Die Vadierung der YAML Datei kann auf meheren Arten getestet weden.
-Wir haben die zwei folgenden möglichkeiten verfolgt:
+Wir haben die folgenden möglichkeiten verfolgt:
 
 ## YAML Datei Validierung mit Visual Studio Code
 
@@ -13,12 +13,11 @@ Die Erweiterung "YAML" überprüft das Scritp und markiert allenfals die Fehler.
 Fehler Beispiel:
 ![BE4_1](../00_Allgemein/images/02_Automatisierung/BE4/BE4_1.png)
 
-Bei obigen Fehlerbeispiel, ist auf der dritten Zeile der User zu weit eingerückt. Mit der erweiterung erkennt VSCode das ab der dritten Zeile die Hierarchie nicht mehr stimmt.
-Wen mann einen TAB einrückung weg nimmt, herscht im YAML Code wieder eine Hierarchie gemäss YAML-Code.
+Bei obigen Fehlerbeispiel, ist auf der dritten Zeile der User zu weit eingerückt. Mit der erweiterung erkennt VSCode das ab der dritten Zeile die Hierarchie im YAML-Code nicht mehr stimmt.
+Wen mann einen einrückung weg nimmt, herscht im wieder eine Hierarchie gemäss YAML-Code.
 
 Korrigertes Beispiel:
 ![BE4_1](../00_Allgemein/images/02_Automatisierung/BE4/BE4_2.png)
-
 ___
 
 [02_Automatisierung](../02_Automatisierung)
