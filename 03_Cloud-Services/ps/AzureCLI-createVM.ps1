@@ -1,5 +1,5 @@
 #define Variables
-$localfilespath = "C:\Temp" #define where the files are stored on the local computer, example C:\Temp
+$localfilespath = "C:\Temp\Test" #define where the files are stored on the local computer, example C:\Temp
 $subscriptionID = "cd850118-9efa-4191-8e32-4c8fe15bd1df" #enter the subscription ID of your Azure subscription
 $RessourceGroupName = "FirstTest" #enter the name of your RG
 $VMName = "TestX" #Name of your VM
@@ -7,7 +7,7 @@ $image = "UbuntuLTS" #the image defines the OS which is going to be installed Ce
 $size = "Standard_B1ls" #The size defines the ressource plan which is used. 
 $username = "futureuser" #The administrator username for the VM
 $sshpublickey = "$localfilespath\ProjectFuture_publickey.pub"
-$cloudinitfile = "$localfilespath\test.txt"
+$cloudinitfile = "$localfilespath\Apachecloud-init.yml"
 
 #performing login to AZ CLI
 az login
@@ -73,7 +73,7 @@ else{
 Write-Output "Creating VM..... "
 
 #create VM
-az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username --ssh-key-values $sshpublickey --public-ip-sku Standard
+az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username --ssh-key-values $sshpublickey --public-ip-sku Standard --custom-data $cloudinitfile
 
 Write-Output "VM has been provisioned"
 
