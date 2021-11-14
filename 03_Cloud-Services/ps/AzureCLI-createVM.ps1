@@ -1,8 +1,9 @@
 #define Variables
 $localfilespath = "C:\Temp\Test" #define where the files are stored on the local computer, example C:\Temp
 $subscriptionID = "cd850118-9efa-4191-8e32-4c8fe15bd1df" #enter the subscription ID of your Azure subscription
-$RessourceGroupName = "FirstTest" #enter the name of your RG
+ #enter the name of your RG
 $VMName = "TestX" #Name of your VM
+$RessourceGroupName = "RG-$($VMName)"
 $image = "UbuntuLTS" #the image defines the OS which is going to be installed CentOS / Ubuntu
 $size = "Standard_B1ls" #The size defines the ressource plan which is used. 
 $username = "futureuser" #The administrator username for the VM
