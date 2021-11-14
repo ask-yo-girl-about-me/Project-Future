@@ -82,7 +82,7 @@ Und zu letzt werden die Firewallregeln definiert.
                 - sed -i -e '/^ENABLED/s/^.*$/ENABLED=yes/' /etc/ufw/ufw.conf
                 - sudo ufw enable  
 
-__
+___
 
 [02_Automatisierung](../02_Automatisierung)
 

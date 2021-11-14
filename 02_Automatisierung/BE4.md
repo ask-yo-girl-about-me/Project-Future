@@ -19,7 +19,7 @@ Wen mann einen TAB einrückung weg nimmt, herscht im YAML Code wieder eine Hiera
 Korrigertes Beispiel:
 ![BE4_1](../00_Allgemein/images/02_Automatisierung/BE4/BE4_2.png)
 
-__
+___
 
 [02_Automatisierung](../02_Automatisierung)
 
