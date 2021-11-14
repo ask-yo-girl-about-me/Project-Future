@@ -11,7 +11,7 @@
 
 2. **Wiki for Linux Pakete**
 
-    Wenn man ein speziellen Dienst/Service installieren will, gibt man ganz einfach den Service + Linux oder direkt Ubuntu ein und man wird sehr schnell fündig.
+    Wenn man ein speziellen Dienst/Service installieren will, gibt man ganz einfach den Service + Linux oder direkt Ubuntu im Internet ein und man wird sehr schnell fündig.
 
     Hier aber zwei Links mit grossen Library einiger Pakete.
 
