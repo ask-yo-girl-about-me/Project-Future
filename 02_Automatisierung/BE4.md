@@ -18,6 +18,11 @@ Wen mann einen einrückung weg nimmt, herscht im wieder eine Hierarchie gemäss 
 
 Korrigertes Beispiel:
 ![BE4_1](../00_Allgemein/images/02_Automatisierung/BE4/BE4_2.png)
+
+## YAML Validator per Web
+
+Auf der online Website [yamllint](http://www.yamllint.com/) könnte man sein Code ebenfalls überprüfen lassen.
+
 ___
 
 [02_Automatisierung](../02_Automatisierung)
