@@ -1,8 +1,14 @@
 # BE1
 *Ich kann Infrastructure as Code mit Beispielen erklären*
 
-"Infrastructure as Code" ist eine denkweise für das Automatiseren von IT Infrastrukturen.
-Der Grundgedanke dahinter ist, ein bestehendes System zur jeder Zeit schnellst möglich mit den Installierten Komponenten und deren Konfigurationen wieder aufzusetzen.
+## Infrastrucutr as Code
+
+"Infrastructure as Code" ist eine denkweise für das Automatiseren von IT Infrastrukturen. Dabei werden wiederholbare Prozesse als Code abgebildet.
+Der Grundgedanke dahinter ist, ein bestehendes System mit den Konfigurationen zur jeder Zeit schnellst möglich mit dem kleinst möglichen Aufwand zu Installierten.
+Zu dem sollte es die IT-Mitarbeiter mit Routine arbeiten entlasten und somit Zeit für weichtigere Dinge ermöglichen.
+Es unterstüzt zu dem die ständigen Verädenrungen und Verbessrungen der Infrastrukturen. Die Lösungen können mittels Test bewiesen werden und nicht nur mit Therotischen Diskusionen.
+Firmen oder Kunden können sich schneller von Migrations oder Update Problemen erholen
+
 
 ## Beispiel 1
 
