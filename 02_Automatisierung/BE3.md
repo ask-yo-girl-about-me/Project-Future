@@ -1,9 +1,10 @@
 # BE3
 *Ich habe Cloud-init mit Beispielen Dokumentiert*
 
+## Cloud-init File Apache
+
 Wir haben zwei Cloud-init Script geschrieben. Das erste installiert ganz simple eine Apache server und erstellt eine PHP Datei:
 
-## Cloud-init File Apache
                #cloud-config installiert Webserver mit simplen PHP Text
                 packages:
                 - apache2 
@@ -16,11 +17,14 @@ Wir haben zwei Cloud-init Script geschrieben. Das erste installiert ganz simple 
                 path: /var/www/html/index.php
                 permissions: '0644'
 
+
+
+## Cloud-init File MySQL
+
 Das zweite Scritp erstellt zuerst den Ubuntu-Benutzer "future". Diese ist in Mitglied der Groupe "User" und "Admin". Der Zugriff des User erfolgt mittels SSH-Key.
 Danach werden die Ubunut Packete für den "LAMP" (Linux,Apache,MySQL,PHP)[^1] Stacks installiert. Danahch wir noch ein SQL User erstellt und der MySQL-Server wird konfiguiert.
 Und zu letzt werden die Firewallregeln definiert.
 
-## Cloud-init File MySQL
                 #cloud-config
                 #Ubuntu OS User creation
                 users:
