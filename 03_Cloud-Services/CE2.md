@@ -105,7 +105,7 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
 
 
 
-
+![AzureFinal](../00_Allgemein/images/03_AWS/finalazure.png)
 
 
 
@@ -168,6 +168,8 @@ Der nachfolgende Command erstellt eine VM mit folgenden Parametern:
 
 Sobald der Command ausgeführt wurde, wird die VM provisioniert: 
 ![AWS5](../00_Allgemein/images/03_AWS/aws5.png)
+
+![AWSFinal](../00_Allgemein/images/03_AWS/finalaws.png)
 
 ___
 
