@@ -25,7 +25,8 @@ Projekt-Future
 ## Auftrag für Praktische Arbeit: Infrastruktur as Code
 - Problembeschreibung
     - Die Fachabteilung erwarten von der IT den gleichen Komfort in der Cloud.
-    - Die Fachabteiltung wollen selber Ihre Server aufsetzem, mit entsprechend vorbereiteten Services.
+    - Die Fachabteiltung wollen selber Ihre Server aufsetzen, mit entsprechend vorbereiteten Services.
+  
 - Aufgaben
     - Setzt, automatisiert mit Cloud-init mindestens 2 VMs im MAAS und einer Public Cloud auf.
     - Präsentiert, am Schluss, die Lösung (20`) und die erworbenen [Kompetenzen (A-C)](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
@@ -34,6 +35,12 @@ Projekt-Future
 
 ## Unsere Idee
 
+Wir haben uns überlegt, der Fachabteilung folgende Dienste in der Cloud zur verfügung zu stellen.
+
+- Apache (Website)
+- MySQL (Database)
+
+Per Cloud-Init Code kann die Fachabteilung diese Dienste auch selbst mehrfach aufziehen.
 
 [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - - -
