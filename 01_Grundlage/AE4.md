@@ -20,8 +20,17 @@
    - [Packages.Ubuntu](https://packages.ubuntu.com/)
 
 3. **Linux Pakete installieren**
-
+   
     `sudo apt-get install PAKETNAME`
+
+    sudo    = 
+
+                Er ermöglicht berechtigten Benutzern, das Programm im Namen und mit den Rechten eines anderen Benutzers auszuführen. Beispielsweise um Aufgaben auszuführen, die Administratoren vorbehalten sind:
+                Programme installieren (sudo apt-get install ...)
+                Systemkonfigurationen ändern (sudo nano /etc/fstab)[1^]
+
+    apt-get = Advanced Packaging Tool
+
 
     Beispiel
 
@@ -31,3 +40,5 @@ ___
 [01_Grundlagen](../01_Grundlage)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
+
+[1^] Erklärung sudo (https://wiki.ubuntuusers.de/sudo/#root-im-Terminal)
