@@ -13,7 +13,7 @@ Firmen oder Kunden können sich schneller von Migrations oder Update Problemen e
 
 Quelle: [Blog-Stackpath](https://blog.stackpath.com/infrastructure-as-code-explainer/)
 
-## Praxis Beispiel 1
+## Verwendungs Beispiel 1
 
 Nehmen wir an, dass der Kunde "A" ein ERM System basierend auf einer SQL Datenbank in er Cloud betreibt.
 Nun wurde anfangs Woche eine neue Mitarbeiter eingestellt, der auf dem System arbeiten kann sich aber nicht wirklich mit gefahren im Internet auskennt.
@@ -22,11 +22,16 @@ Die Firma kontaktiert sehr gestresst Ihren IT-Betreuer. Der IT-Betreuer ergreift
 Nebenbei erstellt der IT-Betreuer eine Neue Cloudserver und startet die Installation mittles dem Cloud-init Script, welches all Konfigurationsinformationen des Installiertem OS und ERM System binhaltet. Inner kürzister Zeit Läuft das ERM System auf dem neuen Cloudserver. Nun löst der IT-Betreuer von Datensatz Backup noch ein Recovery aus.
 Sobald das Recovery fertig ist, kontaktiert der IT-Betreuer den Kunden und teilt Ihm die guten neuigkeiten mit. Zu guter Letzt verteilt der IT-Beutreuer den neuen Systemzugriff und der Kunde kann nach einem nicht allzulangen ausfall glücklich weiterarbeiten.
 
-## Praxis Beispiel 2
+## Verwendungs Beispiel 2
 
 Der Kunde "B" arbeitet mit dem FIBU System Verson 7. Nun will die Geschäftsleitung neu QR-Code Rechnungen einführen. Dafür wird aber die FIBU Version 9 benötigt.
 Nun kann das vorhandene Cloud-init Script auf die Neue Version angepasst werden und mittels neuem Scritp kann für den Kunden "B" ein Test VM erstellt werden. Auf der Test VM kann das FIBU Version 9 getestet und neu benötigte Konfigurationen erstellt werden. Sobald der Test fertig ist und alle neu benötigten Konfigurationen im Cloud-init Scritp erfasst sind, kann mittels Scritp die VM mit dem FIBU Version 9 immer wieder installiert werden. Zum schluss müssen nur noch die Produktivdaten Migriert werden.
 
+## Verwendungsart
+
+Infrastructure as a Code wird bei den Cloud Anbietern per Cloud-Init unterstützt. Man bereitet so sein Cloud-Init Code vor und kann somit schnell, effizient und einfach eine Infrastruktur per Code aufsetzen.
+
+Weitere Dienste dafür sind Vagrant oder TerraForm und viele weitere.
 ___
 
 [02_Automatisierung](../02_Automatisierung)
