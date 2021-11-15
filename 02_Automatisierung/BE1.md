@@ -1,6 +1,12 @@
 # BE1
 *Ich kann Infrastructure as Code mit Beispielen erklären*
 
+## Verwendungsart
+
+Infrastructure as a Code wird bei den Cloud Anbietern per Cloud-Init unterstützt. Man bereitet so sein Cloud-Init Code vor und kann somit schnell, effizient und einfach eine Infrastruktur per Code aufsetzen.
+
+Weitere Dienste dafür sind Vagrant oder TerraForm und viele weitere.
+
 ## Infrastrucutr as Code
 
 "Infrastructure as Code" ist eine denkweise für das Automatiseren von IT Infrastrukturen. Dabei werden wiederholbare Prozesse als Code abgebildet.
@@ -27,11 +33,7 @@ Sobald das Recovery fertig ist, kontaktiert der IT-Betreuer den Kunden und teilt
 Der Kunde "B" arbeitet mit dem FIBU System Verson 7. Nun will die Geschäftsleitung neu QR-Code Rechnungen einführen. Dafür wird aber die FIBU Version 9 benötigt.
 Nun kann das vorhandene Cloud-init Script auf die Neue Version angepasst werden und mittels neuem Scritp kann für den Kunden "B" ein Test VM erstellt werden. Auf der Test VM kann das FIBU Version 9 getestet und neu benötigte Konfigurationen erstellt werden. Sobald der Test fertig ist und alle neu benötigten Konfigurationen im Cloud-init Scritp erfasst sind, kann mittels Scritp die VM mit dem FIBU Version 9 immer wieder installiert werden. Zum schluss müssen nur noch die Produktivdaten Migriert werden.
 
-## Verwendungsart
 
-Infrastructure as a Code wird bei den Cloud Anbietern per Cloud-Init unterstützt. Man bereitet so sein Cloud-Init Code vor und kann somit schnell, effizient und einfach eine Infrastruktur per Code aufsetzen.
-
-Weitere Dienste dafür sind Vagrant oder TerraForm und viele weitere.
 ___
 
 [02_Automatisierung](../02_Automatisierung)

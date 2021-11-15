@@ -47,3 +47,7 @@ Per Cloud-Init Code kann die Fachabteilung diese Dienste auch selbst mehrfach au
 - - -
 
 ## Fazit
+Wir haben uns zu dritt die Aufgaben sauber aufgeteilt und somit wusste jeder was er zu tun hat. Grundsätzlich konnten wir alles sehr gut lösen.
+
+Bei der Cloud-Init Thematik stiessen wir schnell an Probleme. Nach dem wir uns aber das Wissen angeeignet haben, wurde die Probleme automatisch gelöst, wie zum Beispiel die Formatierung welche sehr wichtig ist.
+Bei den Cloud Anbitern war Azure bei den meisten bekannt. AWS hingegen war aber bei allen sehr unbekannt und brauchte mehr recherche.
