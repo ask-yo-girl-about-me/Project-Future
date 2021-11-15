@@ -25,9 +25,9 @@
 
     sudo    = 
 
-        *Er ermöglicht berechtigten Benutzern, das Programm im Namen und mit den Rechten eines anderen Benutzers auszuführen. Beispielsweise um Aufgaben auszuführen, die Administratoren vorbehalten sind:* [1^]
-        - *Programme installieren (sudo apt-get install ...)* 
-        - *Systemkonfigurationen ändern (sudo nano /etc/fstab)*
+    *Er ermöglicht berechtigten Benutzern, das Programm im Namen und mit den Rechten eines anderen Benutzers auszuführen. Beispielsweise um Aufgaben auszuführen, die Administratoren vorbehalten sind:* [1^]
+    - *Programme installieren (sudo apt-get install ...)* 
+    - *Systemkonfigurationen ändern (sudo nano /etc/fstab)*
 
     apt-get = Advanced Packaging Tool
 
