@@ -23,6 +23,8 @@ Es gibt verschiedene Cloud Services, diese wollen wir hier kurz beleuchten:
 
 ___
 
+[Nächstes Lernziel CE2](../03_Cloud-Services/CE2.md)
+
 [03_Cloud-Services](../03_Cloud-Services)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

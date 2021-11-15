@@ -88,6 +88,8 @@ Und zu letzt werden die Firewallregeln definiert.
 
 ___
 
+[Nächstes Lernziel BE4](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/02_Automatisierung/BE4.md)
+
 [02_Automatisierung](../02_Automatisierung)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

@@ -7,7 +7,7 @@ Da wir in anderen Sektionen schon dargelegt haben wie wir die VM's anlegen, werd
 
 [Beispiel Amazon](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/03_Cloud-Services/CE2.md#amazon)
 
-[Beispile MaaS](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/01_Grundlage/AE1.md)
+[Beispiel MaaS](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/01_Grundlage/AE1.md)
 
 
 

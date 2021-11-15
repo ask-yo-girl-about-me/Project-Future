@@ -12,7 +12,7 @@ Jeder Befehl hat folgendes Grundschema:
 
 Grundsätzlich muss man nur ein Terminal öffnen und ein Belibigen (natürlich korrekt) Befehl eingeben. Je nach Ziel muss man das Grundschema welches oben aufgezeigt ist anpassen, um das erwartet Ergebniss zu erreichen.
 
-## 2. Liste von Nützlichen Linux Befehlen mit Erklärung dazu
+## 2. Liste von nützlichen Linux Befehlen mit Erklärung dazu
     
 Aktueller Verzeichnis anzeigen in dem man Arbeitet
 

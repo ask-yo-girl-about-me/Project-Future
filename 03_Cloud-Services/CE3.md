@@ -53,6 +53,8 @@ Der On prem SQL DB Server wird zu einer Azure SQL Database (PAAS) migriert.
 
 ___
 
+[Nächstes Lernziel CE4](../03_Cloud-Services/CE4.md)
+
 [03_Cloud-Services](../03_Cloud-Services)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
