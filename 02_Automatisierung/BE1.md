@@ -1,12 +1,6 @@
 # BE1
 *Ich kann Infrastructure as Code mit Beispielen erklären*
 
-## Verwendungsart
-
-Infrastructure as a Code wird bei den Cloud Anbietern per Cloud-Init unterstützt. Man bereitet so sein Cloud-Init Code vor und kann somit schnell, effizient und einfach eine Infrastruktur per Code aufsetzen.
-
-Weitere Dienste dafür sind Vagrant oder TerraForm und viele weitere.
-
 ## Infrastrucutr as Code
 
 "Infrastructure as Code" ist eine denkweise für das Automatiseren von IT Infrastrukturen. Dabei werden wiederholbare Prozesse als Code abgebildet.
@@ -18,6 +12,12 @@ Firmen oder Kunden können sich schneller von Migrations oder Update Problemen e
 ![IaaC](../00_Allgemein/images/02_Automatisierung/BE1/infrastructure-as-code.png)
 
 Quelle: [Blog-Stackpath](https://blog.stackpath.com/infrastructure-as-code-explainer/)
+
+## Verwendungsart
+
+Infrastructure as a Code wird bei den Cloud Anbietern per Cloud-Init unterstützt. Man bereitet so sein Cloud-Init Code vor und kann somit schnell, effizient und einfach eine Infrastruktur per Code aufsetzen.
+
+Weitere Dienste dafür sind Vagrant oder TerraForm und viele weitere.
 
 ## Verwendungs Beispiel 1
 
