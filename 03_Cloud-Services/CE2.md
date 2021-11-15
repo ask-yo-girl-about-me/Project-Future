@@ -46,15 +46,17 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
 
                 #checking if the specified ressource group already exists
                 $RGcheck = az group list --query "[?name=='$RessourceGroupName']"
+                $RGcheck = $RGcheck.Length -gt 2
 
-                If ($RGcheck -eq "false")
+
+                If ($RGcheck -like "False")
                     {
                         Write-Output "The RessourceGroup $($RessourceGroupName) does not exist... Creating RG...  "
                         az group create --name $RessourceGroupName --location westeurope --subscription $subscriptionID
                     }
                 else
                     {
-                        Write-Output "The RessourceGroup $($RessourceGroupName) does  exist!"
+                        Write-Output "The RessourceGroup $($RessourceGroupName) does exist!"
                     }
 
 
@@ -93,13 +95,19 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
                 Write-Output "Creating VM..... "
 
                 #create VM
-                az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username --ssh-key-values $sshpublickey --public-ip-sku Standard --custom-data $cloudinitfile
+                az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username  --public-ip-sku Standard --custom-data $cloudinitfile --ssh-key-values $sshpublickey
 
                 Write-Output "VM has been provisioned"
 
                 Write-Output "Opening required ports"
                 #open ports
                 az vm open-port -g $RessourceGroupName -n $VMName --port 80,443 --priority 310
+
+
+
+
+
+
 
 
 

@@ -76,7 +76,7 @@ else
 Write-Output "Creating VM..... "
 
 #create VM
-az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username  --public-ip-sku Standard --custom-data $cloudinitfile
+az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username  --public-ip-sku Standard --custom-data $cloudinitfile --ssh-key-values $sshpublickey
 
 Write-Output "VM has been provisioned"
 
