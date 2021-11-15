@@ -18,13 +18,13 @@ Folgende Varianten gibt es für das Hinterlegen eines Public Keys:
 
 SSH Schlüssel in den Einstellungen hinterlegen um beim erstellen der VMs zu verwenden:
 
-![AF3_1](../00_Allgemein/images/01_Grundlage/AF3_1.png)
+![AE3_1](../00_Allgemein/images/01_Grundlage/AF3_1.png)
 
-![AF3_2](../00_Allgemein/images/01_Grundlage/AF3_1.2.png)
+![AE3_2](../00_Allgemein/images/01_Grundlage/AF3_1.2.png)
 
 Beim erstellen einer VM kann man zwischen den zwei Optionen wechseln (Vorhanden oder neuer hinterlegen):
 
-![AF3_3](../00_Allgemein/images/01_Grundlage/AF3_1.3.png)
+![AE3_3](../00_Allgemein/images/01_Grundlage/AF3_1.3.png)
 
 **Azure:**
 
@@ -32,15 +32,15 @@ SSH Schlüssel in den Einstellungen hinterlegen um beim erstellen der VMs zu ver
 
 ![AF3_4](../00_Allgemein/images/01_Grundlage/AF3_2.png)
 
-![AF3_5](../00_Allgemein/images/01_Grundlage/AF3_2.2.png)
+![AE3_5](../00_Allgemein/images/01_Grundlage/AF3_2.2.png)
 
 Beim erstellen einer VM kann man zwischen den zwei Optionen wechseln (Vorhanden oder neuer hinterlegen):
 
-![AF3_6](../00_Allgemein/images/01_Grundlage/AF3_2.3.png)
+![AE3_6](../00_Allgemein/images/01_Grundlage/AF3_2.3.png)
 
 **MAAS:**
 
-![AF3_3](../00_Allgemein/images/01_Grundlage/AF3_3.png)
+![AE3_3](../00_Allgemein/images/01_Grundlage/AF3_3.png)
 
 ___
 
