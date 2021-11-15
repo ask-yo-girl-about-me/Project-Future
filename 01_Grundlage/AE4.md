@@ -31,10 +31,10 @@
 
     **apt-get** = Advanced Packaging Tool
 
-
     Beispiel
 
     `sudo apt-get install apache2`
+    
 ___
 
 [01_Grundlagen](../01_Grundlage)
