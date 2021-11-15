@@ -35,7 +35,7 @@ Nun kann das vorhandene Cloud-init Script auf die Neue Version angepasst werden 
 
 ___
 
-[BE2](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/02_Automatisierung/BE2.md)
+[Nächstes Lernziel BE2](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/02_Automatisierung/BE2.md)
 
 [02_Automatisierung](../02_Automatisierung)
 
