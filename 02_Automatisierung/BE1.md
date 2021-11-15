@@ -11,6 +11,8 @@ Firmen oder Kunden können sich schneller von Migrations oder Update Problemen e
 
 ![IaaC](../00_Allgemein/images/02_Automatisierung/BE1/infrastructure-as-code.png)
 
+Quelle:[Blog-Stackpath](https://blog.stackpath.com/infrastructure-as-code-explainer/)
+
 ## Praxis Beispiel 1
 
 Nehmen wir an, dass der Kunde "A" ein ERM System basierend auf einer SQL Datenbank in er Cloud betreibt.
