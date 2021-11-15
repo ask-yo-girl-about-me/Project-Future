@@ -3,7 +3,7 @@
 
 ## Was ist YAML
 
-*YML Dateien werden von Entwicklern verwendet, da sie Quellcode enthalten, der in der Programmiersprache YAML (YAML Ain't Markup Language) geschrieben wurde. ... Daher können YML Dateien mit vielen anderen Dateien verwendet werden, die Quellcode in verschiedenen Sprachen wie C, C#, C++, Java, PHP und anderen enthalten.* [^1]
+*YAML Dateien werden von Entwicklern verwendet, da sie Quellcode enthalten, der in der Programmiersprache YAML (YAML Ain't Markup Language) geschrieben wurde. ... Daher können YAML Dateien mit vielen anderen Dateien verwendet werden, die Quellcode in verschiedenen Sprachen wie C, C#, C++, Java, PHP und anderen enthalten.* [^1]
 
 Die Vadierung der YAML Datei kann auf meheren Arten getestet weden.
 Wir haben die folgenden möglichkeiten verfolgt:
