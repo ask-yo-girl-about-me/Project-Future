@@ -18,15 +18,16 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
 
 
                 #define Variables
-                $localfilespath = "C:\Temp" #define where the files are stored on the local computer, example C:\Temp
+                $localfilespath = "C:\Temp\Test" #define where the files are stored on the local computer, example C:\Temp
                 $subscriptionID = "cd850118-9efa-4191-8e32-4c8fe15bd1df" #enter the subscription ID of your Azure subscription
-                $RessourceGroupName = "FirstTest" #enter the name of your RG
+                #enter the name of your RG
                 $VMName = "TestX" #Name of your VM
+                $RessourceGroupName = "RG-$($VMName)"
                 $image = "UbuntuLTS" #the image defines the OS which is going to be installed CentOS / Ubuntu
                 $size = "Standard_B1ls" #The size defines the ressource plan which is used. 
                 $username = "futureuser" #The administrator username for the VM
                 $sshpublickey = "$localfilespath\ProjectFuture_publickey.pub"
-                $cloudinitfile = "$localfilespath\test.txt"
+                $cloudinitfile = "$localfilespath\Apachecloud-init.yml"
 
                 #performing login to AZ CLI
                 az login
@@ -44,15 +45,15 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
                     }
 
                 #checking if the specified ressource group already exists
-                $RGcheck = az group list --query "[?name]=='$RessourceGroupName'"
-                $RGexists = $RGcheck.Length -gt 0 
+                $RGcheck = az group list --query "[?name=='$RessourceGroupName']"
 
-                If (!$RGexists)
+                If ($RGcheck -eq "false")
                     {
                         Write-Output "The RessourceGroup $($RessourceGroupName) does not exist... Creating RG...  "
                         az group create --name $RessourceGroupName --location westeurope --subscription $subscriptionID
                     }
-                else{
+                else
+                    {
                         Write-Output "The RessourceGroup $($RessourceGroupName) does  exist!"
                     }
 
@@ -92,13 +93,19 @@ Dazu haben wir für die Azure Cloud ein PowerShell Skript erstellt, welches die 
                 Write-Output "Creating VM..... "
 
                 #create VM
-                az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username --ssh-key-values $sshpublickey --public-ip-sku Standard
+                az vm create --name $VMName --resource-group $RessourceGroupName --subscription $subscriptionID --image $image --size $size --admin-username $username --ssh-key-values $sshpublickey --public-ip-sku Standard --custom-data $cloudinitfile
 
                 Write-Output "VM has been provisioned"
 
                 Write-Output "Opening required ports"
                 #open ports
                 az vm open-port -g $RessourceGroupName -n $VMName --port 80,443 --priority 310
+
+
+
+
+
+
 
 
 ## Amazon 
