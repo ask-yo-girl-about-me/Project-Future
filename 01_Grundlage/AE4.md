@@ -29,7 +29,7 @@
     - *Programme installieren (sudo apt-get install ...)* 
     - *Systemkonfigurationen ändern (sudo nano /etc/fstab)*
 
-    **apt-get*** = Advanced Packaging Tool
+    **apt-get** = Advanced Packaging Tool
 
 
     Beispiel
