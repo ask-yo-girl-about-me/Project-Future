@@ -163,6 +163,8 @@ Sobald der Command ausgeführt wurde, wird die VM provisioniert:
 
 ___
 
+[Nächstes Lernziel CE3](../03_Cloud-Services/CE3.md)
+
 [03_Cloud-Services](../03_Cloud-Services)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
