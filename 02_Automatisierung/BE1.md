@@ -33,8 +33,9 @@ Sobald das Recovery fertig ist, kontaktiert der IT-Betreuer den Kunden und teilt
 Der Kunde "B" arbeitet mit dem FIBU System Verson 7. Nun will die Geschäftsleitung neu QR-Code Rechnungen einführen. Dafür wird aber die FIBU Version 9 benötigt.
 Nun kann das vorhandene Cloud-init Script auf die Neue Version angepasst werden und mittels neuem Scritp kann für den Kunden "B" ein Test VM erstellt werden. Auf der Test VM kann das FIBU Version 9 getestet und neu benötigte Konfigurationen erstellt werden. Sobald der Test fertig ist und alle neu benötigten Konfigurationen im Cloud-init Scritp erfasst sind, kann mittels Scritp die VM mit dem FIBU Version 9 immer wieder installiert werden. Zum schluss müssen nur noch die Produktivdaten Migriert werden.
 
-
 ___
+
+[BE2](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/02_Automatisierung/BE2.md)
 
 [02_Automatisierung](../02_Automatisierung)
 
