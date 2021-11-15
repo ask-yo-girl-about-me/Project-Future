@@ -73,6 +73,8 @@ Somit greiffen wir per Webbrowser darauf zu. Erwartet wird ein HTML Site "Welcom
 
 ___
 
+[Nächstes Lernziel AE2](../01_Grundlage/AE2.md)
+
 [01_Grundlagen](../01_Grundlage)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
