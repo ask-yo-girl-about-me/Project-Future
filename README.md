@@ -33,6 +33,8 @@ Projekt-Future
 - Zeit
     - 9 Lektionen
 
+[Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
+
 ## Unsere Idee
 
 Wir haben uns überlegt, der Fachabteilung folgende Dienste in der Cloud zur verfügung zu stellen.
@@ -42,7 +44,6 @@ Wir haben uns überlegt, der Fachabteilung folgende Dienste in der Cloud zur ver
 
 Per Cloud-Init Code kann die Fachabteilung diese Dienste auch selbst mehrfach aufziehen.
 
-[Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - - -
 
 ## Fazit
