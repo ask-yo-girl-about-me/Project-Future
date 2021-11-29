@@ -1,7 +1,7 @@
 # DE1
 *Ich kann Metal as a Service mit Beispielen erklären*
 
-**Beispiel**
+## Beispiel
 
 Metal as a Service, kurz MAAS, bezeichnet das Verfahren um bare metal Hardware verwenden zu können.
 Die Idee von MAAS ist es diese Hardware unter einer elastischen Oberfläche zu vereinen.
