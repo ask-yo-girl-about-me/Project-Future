@@ -1,9 +1,9 @@
-# DE1
-*Ich kann Metal as a Service mit Beispielen erklären*
+# DE4
+*Ich kann eine abgesicherte Multicloud Umgebung aufsetzen*
 
 ___
 
-[Nächstes Lernziel DE2](../04_Private-Cloud/DE2.md)
+[Nächstes Lernziel EE1](../04_Private-Cloud/EE1.md)
 
 [04_Private-Cloud](../04_Private-Cloud)
 

@@ -1,9 +1,9 @@
-# DE1
-*Ich kann Metal as a Service mit Beispielen erklären*
+# DE2
+*Ich kann weitergehende Konzepte von Maas.io einsetzen, wie Region Controller, VLANs, Monitoring etc.*
 
 ___
 
-[Nächstes Lernziel DE2](../04_Private-Cloud/DE2.md)
+[Nächstes Lernziel DE3](../04_Private-Cloud/DE3.md)
 
 [04_Private-Cloud](../04_Private-Cloud)
 

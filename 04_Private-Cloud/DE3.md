@@ -1,9 +1,9 @@
-# DE1
-*Ich kann Metal as a Service mit Beispielen erklären*
+# DE3
+*Ich kann VPN mittels Metadata konfigurieren*
 
 ___
 
-[Nächstes Lernziel DE2](../04_Private-Cloud/DE2.md)
+[Nächstes Lernziel DE4](../04_Private-Cloud/DE4.md)
 
 [04_Private-Cloud](../04_Private-Cloud)
 
