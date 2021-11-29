@@ -22,6 +22,14 @@ Projekt-Future
     - Lift and Reshape in die Cloud
     - VM erstellung auf 3 verschiedenen Clouds
 
+- [Private-Cloud](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/04_Private-Cloud)
+    - Metal as a Service erklären
+    - Einsatz von weitergehende Konzepte wie Region Controller, VLANS, etc.
+    - Einsatz von VPN mittels Metadata konfigurieren
+    - Konfiguration von abgesicherte Multicloud
+    - Einsatz Service Discovery Umsetzung
+    - Eisatz Presistenz und Sicherung der Daten
+
 ## Auftrag für Praktische Arbeit: Infrastruktur as Code
 - Problembeschreibung
     - Die Fachabteilung erwarten von der IT den gleichen Komfort in der Cloud.
