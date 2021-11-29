@@ -1,9 +1,9 @@
-# DE1
-*Ich kann Metal as a Service mit Beispielen erklären*
+# EE1
+*Ich kann die Service Discovery Umsetzungen einsetzen und dokumentieren*
 
 ___
 
-[Nächstes Lernziel DE2](../04_Private-Cloud/DE2.md)
+[Nächstes Lernziel FE1](../04_Private-Cloud/FE1.md)
 
 [04_Private-Cloud](../04_Private-Cloud)
 

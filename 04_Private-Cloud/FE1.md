@@ -1,9 +1,7 @@
-# DE1
-*Ich kann Metal as a Service mit Beispielen erklären*
+# FE1
+*Ich kann Persistenz und Sicherung der Daten implementieren und dokumentieren*
 
 ___
-
-[Nächstes Lernziel DE2](../04_Private-Cloud/DE2.md)
 
 [04_Private-Cloud](../04_Private-Cloud)
 
