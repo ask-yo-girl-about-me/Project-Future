@@ -5,6 +5,14 @@
 
 *VPN steht für "Virtual Private Network" und beschreibt die Möglichkeit eine geschützte Netzwerkverbindung unter Nutzung öffentlicher Netzwerke aufzubauen. VPNs verschlüsseln Ihren Internetverkehr und verschleiern Ihre Online-Identität. ... Die Verschlüsselung findet dabei in Echtzeit statt.* [^1]
 
+Vorteile:
+- Sichere Verschlüsselung
+- Verschleierung Ihres Aufenthaltsorts
+- Zugriff auf regionale Inhalte
+- Sicherer Datentransfer
+
+Abbild von unserer Anlage:
+
 ![Netzwerkabbild](./../00_Allgemein/images/04_DE3/Netzwerkabbild.png)
 
 ## Installation VPN Wire Guard
