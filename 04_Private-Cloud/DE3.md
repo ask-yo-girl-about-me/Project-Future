@@ -4,7 +4,7 @@
 ## VPN Bezeichnung
 Erklärung
 
-[Netzwerkabbild](./../00_Allgemein/images/04_DE3/Netzwerkabbild.png)
+![Netzwerkabbild](./../00_Allgemein/images/04_DE3/Netzwerkabbild.png)
 
 ## Installation VPN Wire Guard
 
