@@ -12,7 +12,7 @@ Vorteile:
 - Sicherer Datentransfer
 
 Abbild VPN Overview:
-![Netzwerkabbild_VPN-Overview](./../00_Allgemein/images/04_DE3/Virtual_Private_Network_overview.png)
+![Netzwerkabbild_VPN-Overview](./../00_Allgemein/images/04_DE3/VPN_overview.png)
 
 Abbild von unserer Anlage:
 
