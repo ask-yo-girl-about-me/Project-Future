@@ -82,10 +82,9 @@ Das ganze wurde durch einen Ping getestet:
 
 Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.60`
 
-VM Azure / IP 10.1.38.60 `ping 10.1.38.2`
-
-
 ![PingTest1](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_1.png)
+
+VM Azure / IP 10.1.38.60 `ping 10.1.38.2`
 
 ![PingTest2](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_2.png)
 
