@@ -43,7 +43,50 @@ Dies wurde durch den Modulleiter vorbereitet.
 
 ## Einrichtung VPN per Cloud-init
 
-![PingTest](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping.png)
+Wir haben auf der Azure Cloud, AWS Cloud und auf dem MAAs eine neue Virtuelle Maschine erstellt mit unserem Cloud-init File.
+
+[Cloud-init_VPN.yml](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/04_Private-Cloud/Cloud-init/Cloud-init_VPN.yml)
+
+                #cloud-config
+                users:
+                - name: ubuntu
+                    sudo: ALL=(ALL) NOPASSWD:ALL
+                    groups: users, admin
+                    home: /home/ubuntu
+                    shell: /bin/bash
+                    lock_passwd: false
+                    plain_text_passwd: 'password'        
+                # login ssh and console with password
+                ssh_pwauth: true
+                disable_root: false    
+                packages:
+                - wireguard
+                write_files:
+                - content: |
+                    [Interface]
+                    Address = 10.1.38.20/24
+                    PrivateKey = iAzmaXeVF4GFHDGhsRvYU2coI98ky0py91NDrZCqo1g=
+                    [Peer]
+                    PublicKey = 5mgqUiC9rkUqDkbw5VIzDDfhNldLAubivWyeun2ODxA=
+                    Endpoint = cloud.tbz.ch:51901
+                    AllowedIPs = 10.1.38.0/24
+                    PersistentKeepalive = 25
+                path: /etc/wireguard/wg0.conf
+                permissions: '0640'
+                runcmd:
+                - sudo systemctl enable wg-quick@wg0.service
+                - sudo systemctl start wg-quick@wg0.service
+
+
+Das ganze wurde durch einen Ping getestet:
+
+Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.60`
+VM Azure / IP 10.1.38.60 `ping 10.1.38.2`
+
+
+![PingTest1](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_1.png)
+
+![PingTest2](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_2.png)
 
 ## Einrichtung VPN per Metadata
 
@@ -88,9 +131,6 @@ Da bei AWS und Azure dies intern zur verfügung steht, muss dies beim MAAS über
 Dazu braucht es eine Preseed Datei.
 
 Das ganze wurde durch das lernMAAS vom Modul schon vorbereitet und somit muss man dies nicht selber einrichten.
-
-
-
 
 ___
 
