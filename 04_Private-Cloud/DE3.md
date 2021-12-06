@@ -41,6 +41,8 @@ Dies wurde durch den Modulleiter vorbereitet.
 
 7. `sudo systemctl start wg quick@wg0.service`       
 
+
+
 ## Einrichtung VPN per Cloud-init
 
 Wir haben auf der Azure Cloud, AWS Cloud und auf dem MAAs eine neue Virtuelle Maschine erstellt mit unserem Cloud-init File. Beim MAAS muss einfach ein Name definiert werden der nicht mit dem Namensschema vom Pressed/Curtins vom LernMAAS.
