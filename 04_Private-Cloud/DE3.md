@@ -71,9 +71,11 @@ Um auf IMDS zuzugreifen, erstellt man eine VM über Azure Ressource Manager oder
 ### AWS
 
 Erzeugen Sie zunächst ein Token mit dem folgenden Befehl.
+
                 TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"
 
 Verwenden Sie dann das Token, um mit dem folgenden Befehl Metadatenelemente der obersten Ebene zu erzeugen.
+
                 curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/
 
 
@@ -82,6 +84,9 @@ Verwenden Sie dann das Token, um mit dem folgenden Befehl Metadatenelemente der 
 ### MAAS
 
 Da bei AWS und Azure dies intern zur verfügung steht, muss dies beim MAAS über [Curtins](https://curtin.readthedocs.io/en/latest/topics/config.html) gemacht werden.
+Dazu braucht es eine Preseed Datei.
+
+Das ganze wurde durch das lernMAAS vom Modul schon vorbereitet und somit muss man dies nicht selber einrichten.
 
 
 
