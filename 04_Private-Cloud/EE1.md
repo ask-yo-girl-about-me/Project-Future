@@ -11,6 +11,11 @@ Wir haben dazu die [Beispielapplikation](https://gitlab.com/ch-tbz-hf/Stud/cnt/-
 
 ![EE1](../00_Allgemein/images/04_DE3/EE1.1.png)
 
+Da der Name unserer VM auf 09 endet, kriegt sie auch die IP [http://10.1.38.9/ ](http://10.1.38.9/)
+
+Somit können wir über diese IP auf den Apache connecten. Durch die Service Discover wurden die 3 Datenbanken discovered und werden nun so anegzeigt. 
+![EE2](../00_Allgemein/images/04_DE3/EE1.2.png)
+
 ___
 
 [Nächstes Lernziel FE1](../04_Private-Cloud/FE1.md)
