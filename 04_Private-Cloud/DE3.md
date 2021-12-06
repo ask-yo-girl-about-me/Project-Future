@@ -43,7 +43,7 @@ Dies wurde durch den Modulleiter vorbereitet.
 
 ## Einrichtung VPN per Cloud-init
 
-Wir haben auf der Azure Cloud, AWS Cloud und auf dem MAAs eine neue Virtuelle Maschine erstellt mit unserem Cloud-init File.
+Wir haben auf der Azure Cloud, AWS Cloud und auf dem MAAs eine neue Virtuelle Maschine erstellt mit unserem Cloud-init File. Beim MAAS muss einfach ein Name definiert werden der nicht mit dem Namensschema vom Pressed/Curtins vom LernMAAS.
 
 [Cloud-init_VPN.yml](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/04_Private-Cloud/Cloud-init/Cloud-init_VPN.yml)
 
@@ -87,6 +87,18 @@ Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.60`
 VM Azure / IP 10.1.38.60 `ping 10.1.38.2`
 
 ![PingTest2](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_2.png)
+
+Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.62`
+
+![PingTest1](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_2.png)
+
+VM Azure / IP 10.1.38.62 `ping 10.1.38.2`
+
+![PingTest2](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_3.png)
+
+Damit dies aber funktionierte mussten wir Testweise die Sicherheitsregenln anpassen.
+
+![AWS_Security](./../00_Allgemein/images/04_Privat-Cloud/DE3_AWS_Security.png)
 
 ## Einrichtung VPN per Metadata
 
