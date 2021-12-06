@@ -65,6 +65,13 @@ Catalog:
                 path: /var/www/html/index.html
                 permissions: '0644'   
 
+![EE1](../00_Allgemein/images/04_Privat-Cloud/EE1.1.png)
+
+Da der Name unserer VM auf 09 endet, kriegt sie auch die IP [http://10.1.38.9/ ](http://10.1.38.9/)
+
+Somit können wir über diese IP auf den Apache connecten. Durch die Service Discover wurden die 3 Datenbanken discovered und werden nun so anegzeigt. 
+
+![EE2](../00_Allgemein/images/04_Privat-Cloud/EE1.2.png)
 
 # Portmapping - port-based-routing
 *Eine Portweiterleitung ist die Weiterleitung einer Verbindung, die über ein Rechnernetz auf einem bestimmten Port eingeht, zu einem anderen Computer.*
@@ -78,13 +85,46 @@ Wir haben uns aber in der Übung auf den Reverse Proxy bezogen.
 # Reverse Proxy 
 Ein Reverse-Proxy ist ein Proxy in einem Rechnernetz, der Ressourcen für einen externen Client von einem oder mehreren internen Servern holt. Die Umsetzung der Adresse ist atypisch und der Richtung des Aufrufes entgegengesetzt (deutsch „umgekehrter Proxy“).Die wahre Adresse des internen Zielsystems bleibt dem externen Client verborgen. Das unterscheidet ihn vom typischen (Forward-)Proxy, der mehreren Clients eines internen (in sich abgeschlossenen) Netzes den Zugriff auf ein externes Netz gewährt.[^2]
 
-![EE1](../00_Allgemein/images/04_Privat-Cloud/EE1.1.png)
+Nun kann man das neue Cloud-init File für den Apache-09 Server mit diesem ersetzten:
 
-Da der Name unserer VM auf 09 endet, kriegt sie auch die IP [http://10.1.38.9/ ](http://10.1.38.9/)
+Somit hat man nun ein Revere Proxy der auf die Server Order, Customer und Catalog zeigt.
 
-Somit können wir über diese IP auf den Apache connecten. Durch die Service Discover wurden die 3 Datenbanken discovered und werden nun so anegzeigt. 
-
-![EE2](../00_Allgemein/images/04_Privat-Cloud/EE1.2.png)
+                #cloud-config
+                packages:
+                - apache2
+                write_files:
+                - content: |
+                    <html>
+                    <body>
+                    <h1>My Application</h1>
+                    <ul>
+                    <li><a href="/order">Order</a></li>
+                    <li><a href="/customer">Customer</a></li>
+                    <li><a href="/catalog">Catalog</a></li>
+                    </ul>
+                    </body>
+                    </html>
+                path: /var/www/html/index.html
+                permissions: '0644'  
+                - content: |
+                    ProxyRequests Off
+                    <Proxy *>
+                        Order deny,allow
+                        Allow from all
+                    </Proxy>
+                    ProxyPass /order http://order         
+                    ProxyPassReverse /order http://order 
+                    ProxyPass /customer http://customer         
+                    ProxyPassReverse /customer http://customer  
+                    ProxyPass /catalog http://catalog         
+                    ProxyPassReverse /catalog http://catalog 
+                path: /etc/apache2/sites-enabled/001-reverseproxy.conf
+                permissions: '0644'  
+                runcmd:
+                - sudo a2enmod proxy
+                - sudo a2enmod proxy_html
+                - sudo a2enmod proxy_http
+                - sudo service apache2 restart 
 
 ___
 
