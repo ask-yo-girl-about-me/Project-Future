@@ -43,7 +43,7 @@ Dies wurde durch den Modulleiter vorbereitet.
 
 ## Einrichtung VPN per Cloud-init
 
-[PingTest](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping.png)
+![PingTest](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping.png)
 
 ## Einrichtung VPN per Metadata
 
