@@ -81,6 +81,7 @@ Wir haben auf der Azure Cloud, AWS Cloud und auf dem MAAs eine neue Virtuelle Ma
 Das ganze wurde durch einen Ping getestet:
 
 Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.60`
+
 VM Azure / IP 10.1.38.60 `ping 10.1.38.2`
 
 
