@@ -47,7 +47,7 @@ Dies wurde durch den Modulleiter vorbereitet.
 
 Wir haben auf der Azure Cloud, AWS Cloud und auf dem MAAs eine neue Virtuelle Maschine erstellt mit unserem Cloud-init File. Beim MAAS muss einfach ein Name definiert werden der nicht mit dem Namensschema vom Pressed/Curtins vom LernMAAS.
 
-[Cloud-init_VPN.yml](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/04_Private-Cloud/Cloud-init/Cloud-init_VPN.yml)
+[Cloud-init_VPN_Azure.yml](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/04_Private-Cloud/Cloud-init/Cloud-init_VPN.yml)
 
                 #cloud-config
                 users:
