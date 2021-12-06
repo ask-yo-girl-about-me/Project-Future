@@ -3,7 +3,7 @@
 
 ## Beispiel
 
-Metal as a Service, kurz MAAS, bezeichnet das Verfahren um bare metal Hardware verwenden zu können.
+Metal as a Service, kurz MAAS, bezeichnet ist das Verfahren um bare metal Hardware verwenden zu können.
 Die Idee von MAAS ist es diese Hardware unter einer elastischen Oberfläche zu vereinen.
 Der Vorteil dieses Verfahrens ist es das die Hardware nicht einzeln gemanaged werden muss, sondern das die Hardware ähnlich wie in der Cloud unter einem Mantel gemanaged werden kann. 
 
