@@ -71,12 +71,12 @@ Catalog:
 
 *Die eingehenden Datenpakete werden hierbei per Destination NAT und die ausgehenden Pakete per Source NAT maskiert (die Ziel- und Quelladressen ersetzt), um die Anfrage an den tatsächlichen Server und dessen Antwort an den ursprünglichen Client weiterzuleiten. Für Server und Client entsteht so der Anschein, die eingehenden Pakete stammten von dem Computer, der die Portweiterleitung betreibt.*
 
-*Port Forwarding wird oft dazu benutzt, FTP, Web-Server oder andere Server-basierende Anwendungen hinter einem NAT-Gateway zu betreiben.*[1^]
+*Port Forwarding wird oft dazu benutzt, FTP, Web-Server oder andere Server-basierende Anwendungen hinter einem NAT-Gateway zu betreiben.*[^1]
 
 Wir haben uns aber in der Übung auf den Reverse Proxy bezogen.
 
 # Reverse Proxy 
-Ein Reverse-Proxy ist ein Proxy in einem Rechnernetz, der Ressourcen für einen externen Client von einem oder mehreren internen Servern holt. Die Umsetzung der Adresse ist atypisch und der Richtung des Aufrufes entgegengesetzt (deutsch „umgekehrter Proxy“).Die wahre Adresse des internen Zielsystems bleibt dem externen Client verborgen. Das unterscheidet ihn vom typischen (Forward-)Proxy, der mehreren Clients eines internen (in sich abgeschlossenen) Netzes den Zugriff auf ein externes Netz gewährt.[2^]
+Ein Reverse-Proxy ist ein Proxy in einem Rechnernetz, der Ressourcen für einen externen Client von einem oder mehreren internen Servern holt. Die Umsetzung der Adresse ist atypisch und der Richtung des Aufrufes entgegengesetzt (deutsch „umgekehrter Proxy“).Die wahre Adresse des internen Zielsystems bleibt dem externen Client verborgen. Das unterscheidet ihn vom typischen (Forward-)Proxy, der mehreren Clients eines internen (in sich abgeschlossenen) Netzes den Zugriff auf ein externes Netz gewährt.[^2]
 
 
 
@@ -95,6 +95,6 @@ ___
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
 
-[1^] Portmapping[Wikipedia](https://de.wikipedia.org/wiki/Portweiterleitung)
+[^1]: Portmapping [Wikipedia](https://de.wikipedia.org/wiki/Portweiterleitung)
 
-[2^] Revers Proxy[Wikipedia](https://de.wikipedia.org/wiki/Reverse_Proxy)
+[^2]: Revers-Proxy [Wikipedia](https://de.wikipedia.org/wiki/Reverse_Proxy)
