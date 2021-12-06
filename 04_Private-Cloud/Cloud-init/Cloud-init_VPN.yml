@@ -1,0 +1,29 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    lock_passwd: false
+    plain_text_passwd: 'password'        
+# login ssh and console with password
+ssh_pwauth: true
+disable_root: false    
+packages:
+  - wireguard
+write_files:
+ - content: |
+    [Interface]
+    Address = 10.1.38.20/24
+    PrivateKey = iAzmaXeVF4GFHDGhsRvYU2coI98ky0py91NDrZCqo1g=
+    [Peer]
+    PublicKey = 5mgqUiC9rkUqDkbw5VIzDDfhNldLAubivWyeun2ODxA=
+    Endpoint = cloud.tbz.ch:51901
+    AllowedIPs = 10.1.38.0/24
+    PersistentKeepalive = 25
+   path: /etc/wireguard/wg0.conf
+   permissions: '0640'
+runcmd:
+  - sudo systemctl enable wg-quick@wg0.service
+  - sudo systemctl start wg-quick@wg0.service
