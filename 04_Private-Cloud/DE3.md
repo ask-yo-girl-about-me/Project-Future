@@ -92,7 +92,7 @@ Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.62`
 
 ![PingTest1](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_3.png)
 
-VM Azure / IP 10.1.38.62 `ping 10.1.38.2`
+VM AWS / IP 10.1.38.62 `ping 10.1.38.2`
 
 ![PingTest2](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_4.png)
 
