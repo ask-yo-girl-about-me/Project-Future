@@ -1,8 +1,9 @@
 # DE3
 *Ich kann VPN mittels Metadata konfigurieren*
 
-## VPN Bezeichnung
-Erklärung
+## Einleitung VPN
+
+**VPN steht für "Virtual Private Network" und beschreibt die Möglichkeit eine geschützte Netzwerkverbindung unter Nutzung öffentlicher Netzwerke aufzubauen. VPNs verschlüsseln Ihren Internetverkehr und verschleiern Ihre Online-Identität. ... Die Verschlüsselung findet dabei in Echtzeit statt.**
 
 ![Netzwerkabbild](./../00_Allgemein/images/04_DE3/Netzwerkabbild.png)
 
