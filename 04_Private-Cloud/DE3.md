@@ -12,11 +12,11 @@ Vorteile:
 - Sicherer Datentransfer
 
 Abbild VPN Overview:
-![Netzwerkabbild_VPN-Overview](./../00_Allgemein/images/04_DE3/DE3_VPN_overview.png)
+![Netzwerkabbild_VPN-Overview](./../00_Allgemein/images/04_Privat-Cloud/DE3_VPN_overview.png)
 
 Abbild von unserer Anlage:
 
-![Netzwerkabbild_TBZ-Cloud](./../00_Allgemein/images/04_DE3/DE3_Netzwerkabbild.png)
+![Netzwerkabbild_TBZ-Cloud](./../00_Allgemein/images/04_Privat-Cloud/DE3_Netzwerkabbild.png)
 
 ## Installation VPN Wire Guard
 
