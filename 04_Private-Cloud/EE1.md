@@ -78,13 +78,12 @@ Wir haben uns aber in der Übung auf den Reverse Proxy bezogen.
 # Reverse Proxy 
 Ein Reverse-Proxy ist ein Proxy in einem Rechnernetz, der Ressourcen für einen externen Client von einem oder mehreren internen Servern holt. Die Umsetzung der Adresse ist atypisch und der Richtung des Aufrufes entgegengesetzt (deutsch „umgekehrter Proxy“).Die wahre Adresse des internen Zielsystems bleibt dem externen Client verborgen. Das unterscheidet ihn vom typischen (Forward-)Proxy, der mehreren Clients eines internen (in sich abgeschlossenen) Netzes den Zugriff auf ein externes Netz gewährt.[^2]
 
-
-
 ![EE1](../00_Allgemein/images/04_Privat-Cloud/EE1.1.png)
 
 Da der Name unserer VM auf 09 endet, kriegt sie auch die IP [http://10.1.38.9/ ](http://10.1.38.9/)
 
 Somit können wir über diese IP auf den Apache connecten. Durch die Service Discover wurden die 3 Datenbanken discovered und werden nun so anegzeigt. 
+
 ![EE2](../00_Allgemein/images/04_Privat-Cloud/EE1.2.png)
 
 ___
