@@ -3,7 +3,7 @@
 
 ## Einleitung VPN
 
-*VPN steht für "Virtual Private Network" und beschreibt die Möglichkeit eine geschützte Netzwerkverbindung unter Nutzung öffentlicher Netzwerke aufzubauen. VPNs verschlüsseln Ihren Internetverkehr und verschleiern Ihre Online-Identität. ... Die Verschlüsselung findet dabei in Echtzeit statt.* [1]
+*VPN steht für "Virtual Private Network" und beschreibt die Möglichkeit eine geschützte Netzwerkverbindung unter Nutzung öffentlicher Netzwerke aufzubauen. VPNs verschlüsseln Ihren Internetverkehr und verschleiern Ihre Online-Identität. ... Die Verschlüsselung findet dabei in Echtzeit statt.* [^1]
 
 ![Netzwerkabbild](./../00_Allgemein/images/04_DE3/Netzwerkabbild.png)
 
@@ -44,4 +44,4 @@ ___
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
 
-[^1]: [VPN Erklärung](https://www.kaspersky.de/resource-center/definitions/what-is-a-vpn)
+[^1]: Was ist VPN und wie funktioniert es? [Kaspersky](https://www.kaspersky.de/resource-center/definitions/what-is-a-vpn)
