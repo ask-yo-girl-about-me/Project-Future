@@ -4,7 +4,7 @@
 
 ___
 
-[Monitoring](../04_Private-Cloud/DE2_VPN.md)
+[Monitoring](../04_Private-Cloud/DE2_Monitoring.md)
 
 [Lernziel DE2](../04_Private-Cloud/DE2.md)
 
