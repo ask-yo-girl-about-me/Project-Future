@@ -1,6 +1,8 @@
 # DE2
 *Ich kann weitergehende Konzepte von Maas.io einsetzen, wie Region Controller, VLANs, Monitoring etc.*
 
+Gemäss Lehrer müsste dies vor Ort mit weitere HW gemacht werden. Da wir nicht mehr vor Ort sind, haben wir das ganze einfach Dokumentiert.
+
 ## Region Controller
 
 Der Region controller ist das herzstück jeder MAAS Umgebung. Der Region Controller kann via Web Interface & Rest API angesteuert werden. 
