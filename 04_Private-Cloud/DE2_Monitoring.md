@@ -93,7 +93,7 @@ Sobald man alles bereitgestellt hat, ist die Grafana-Benutzeroberfläche über P
 
 Das Repository bietet auch einige Beispiel-Dashboards, die die häufigsten Anwendungsfälle für Diagramme abdecken. Diese sind unter grafana/dashboards verfügbar. Man kan diese über die Grafana-Benutzeroberfläche oder die API importieren.
 
-Das kanze sieht dann so aus:
+Das ganze sieht dann so aus:
 
 [Prometheus](http://10.1.38.8:9090/graph)
 
