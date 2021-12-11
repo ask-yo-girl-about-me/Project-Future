@@ -4,6 +4,8 @@
 
 ___
 
+[Monitoring](../04_Private-Cloud/DE2_Monitoring.md)
+
 [Lernziel DE2](../04_Private-Cloud/DE2.md)
 
 [04_Private-Cloud](../04_Private-Cloud)
