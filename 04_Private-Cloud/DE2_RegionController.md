@@ -83,7 +83,7 @@ Quelle: [How to manage regions (deb/3.0/UI)](https://maas.io/docs/deb/3.0/ui/reg
 
 ___
 
-[VPN](../04_Private-Cloud/DE2_VLANs.md)
+[VLANs](../04_Private-Cloud/DE2_VLANs.md)
 
 [Lernziel DE2](../04_Private-Cloud/DE2.md)
 
