@@ -78,23 +78,16 @@ Auf der letzten Zeile, mountet die VM das Verzeichnis /data/storage des Racks Se
 Wenn wir uns jetzt mit dem Rack Server verbinden, dort im Verzeichnis /data/storage eine Datei anlegen, muss diese via Reverse Proxy sichtbar sein.
 
 Beispiel Datei:
+
                 ssh ubuntu@10.0.45.8
-
                 cat <<%EOF% >/data/storage/test.html
-
                     <html>
-
                     <body>
-
                     <h1>Testseite</h1>
-
                     <p>Ist auf dem Rackserver gespeichert, wird aber 
-                    
                     mittels VM order angesprochen.</p>
                     </body>
-
                     </html>
-                    
                 %EOF%
 
 Um das ganze zu testen geht man wie folgt vor:
