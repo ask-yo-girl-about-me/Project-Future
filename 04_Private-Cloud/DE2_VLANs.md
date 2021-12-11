@@ -28,13 +28,26 @@ Die VLANs können über den Tab Subnets über Add angelegt werden. Erfasst werde
 
 Die so definierten VLANs können dann den VMs über den Tab Network mittels Add alias or VLAN zugewiesen werden.
 
+Hier wird nun das Subnet 10.3.41.0/24 erstellt. 
+
 ![VLAN-Einrichten 1](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan1.png)
+
+Hier werden die VLANs erstellt. Gemäss Beispiel im Bild die Nummer 12.
 
 ![VLAN-Einrichten 2](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan2.png)
 
+Nun wird das Subnet dem vorherig erstellten VLAN zugewiesen.
+
 ![VLAN-Einrichten 3](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan3.png)
 
+Nach dem Subnet zuweisen, muss das VLAN noch editiert werden. Die IP Adressen Ranges muss definiert werden.
+
 ![VLAN-Einrichten 4](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan4.png)
+
+Sobald diese Schritte erfolgreich durchgespielt wird, sieht man hier eine übersicht davon.
+
+![VLAN-Einrichten 5](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan5.png)
+
 ___
 
 [Monitoring](../04_Private-Cloud/DE2_Monitoring.md)
