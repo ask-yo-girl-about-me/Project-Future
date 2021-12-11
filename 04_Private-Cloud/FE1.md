@@ -95,6 +95,8 @@ Um das ganze zu testen geht man wie folgt vor:
 Aufruf des Reverse Proxy, bzw. der Order VM
                 http://<IP Reverse Proxy/order/data/test.hml
 
+![Testing](../00_Allgemein/images/04_Privat-Cloud)
+
 ---
 **INFO**
 
