@@ -22,6 +22,19 @@ Bei tagged VLANs können mehrere VLANs über einen einzelnen Switch-Port genutzt
 
 ![VLAN-Topologie](../00_Allgemein/images/04_Privat-Cloud/DE2_vlantagged.png)
 
+## Einrichten VLANs auf dem MAAS
+
+Die VLANs können über den Tab Subnets über Add angelegt werden. Erfasst werden muss ein Name (fett) und eine eindeutige Nummer zwischen 2 - 4094. Anschliessend sind die Subnetze, zu den VLAN zu erfassen.
+
+Die so definierten VLANs können dann den VMs über den Tab Network mittels Add alias or VLAN zugewiesen werden.
+
+![VLAN-Einrichten 1](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan1)
+
+![VLAN-Einrichten 2](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan2)
+
+![VLAN-Einrichten 3](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan3)
+
+![VLAN-Einrichten 4](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan4)
 ___
 
 [Monitoring](../04_Private-Cloud/DE2_Monitoring.md)
