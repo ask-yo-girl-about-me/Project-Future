@@ -3,7 +3,7 @@
 
 [Region Controller](../04_Private-Cloud/DE2_RegionController.md)
 
-[VPN](../04_Private-Cloud/DE2_VPN.md)
+[VLANs](../04_Private-Cloud/DE2_VLANs.md)
 
 [Monitoring](../04_Private-Cloud/DE2_Monitoring.md)
 ___
