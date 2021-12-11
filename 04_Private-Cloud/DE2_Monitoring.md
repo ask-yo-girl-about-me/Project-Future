@@ -97,7 +97,7 @@ Das kanze sieht dann so aus:
 
 [Prometheus](http://10.1.38.8:9090/graph)
 
-![Prometheus](../00_Allgemein/images/04_Privat-Cloud/DE3_mon.png)
+![Prometheus](../00_Allgemein/images/04_Privat-Cloud/DE2_mon.png)
 
 ___
 
