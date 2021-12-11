@@ -9,6 +9,7 @@ Sie können VLANs grundsätzlich auf zwei Arten implementieren:
 - Als Tagged VLANs
 
 **Portbasierte VLANs**
+
 Mit portbasierten VLANs unterteilen Sie einen einzelnen physischen Switch einfach auf mehrere logische Switche. Im folgenden Beispiel teilen wir einen physischen 8-Port Switch (Switch A) auf zwei logische Switches auf:
 
 ![VLAN-Topologie](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan.png)
