@@ -100,7 +100,7 @@ Aufruf des Reverse Proxy, bzw. der Order VM
 ---
 **INFO**
 
-Hinweis: um die NFS Verbindung auch nach dem Reboot der VM verfügbar zu haben, sollte der Mount in die Datei /etc/fstab, in der VM, eingetragen werden.
+Hinweis: um die NFS Verbindung auch nach dem Reboot der VM verfügbar zu haben, sollte der Mount in die Datei `/etc/fstab`, in der VM, eingetragen werden.
 
 ---
 
