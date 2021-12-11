@@ -1,7 +1,7 @@
 # DE2
 *Ich kann weitergehende Konzepte von Maas.io einsetzen, wie Region Controller, VLANs, Monitoring etc.*
 
-[Rack Controller](../04_Private-Cloud/DE2_RegionController.md)
+[Region Controller](../04_Private-Cloud/DE2_RegionController.md)
 
 [VPN](../04_Private-Cloud/DE2_VPN.md)
 
