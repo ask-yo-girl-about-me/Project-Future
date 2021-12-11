@@ -6,6 +6,35 @@
 Der Region controller ist das herzstück jeder MAAS Umgebung. Der Region Controller kann via Web Interface & Rest API angesteuert werden. 
 Der Region Controller ist in einem HA Environment auch dafür zuständig das im Falle eines Rack Ausfalls der Cutover auf ein anderes Rack gemacht werden könnte. 
 
+Die MAAS-Postgres-Datenbank wird ebenfalls vom Region Controller verwaltet. Zu den typischen Aufgaben auf Regionsebene gehören die Anforderung, dass ein Rack-Controller einen Rechner bootet, und die Bereitstellung des ephemeren Ubuntu-Images, das für die Inbetriebnahme oder das Einschreiben eines Rechners benötigt wird.
+
+### PostgreSQL für die Region Controllers einrichten
+
+Es kann eine beliebige Anzahl von API-Servern (Region-Controller) vorhanden sein, solange jeder mit derselben PostgreSQL-Datenbank verbunden ist und die erforderliche Anzahl von Verbindungen zulässt.
+
+Auf dem Primären Datenbankhost muss die Datei `/etc/postgresql/9.5/main/pg_hba.conf` bearbeitet werden. Um so den eventuellen sekundären API-Server zu erlauben, die primäre PostgreSQL-Datenbank zu kontaktieren.
+
+Hier muss man folgenden Zeile eingefügt werden:
+
+*Wo bei folgendes `$SECONDARY_API_SERVER_IP` durch die IP-Adresse des Rechners, auf dem sich der sekundäre API-Server befinden ersetz wird.*
+
+`host maasdb maas $SECONDARY_API_SERVER_IP/32 md5`
+
+Nun muss man die Einstellungen speichern per restart der Datenbank:
+
+`sudo systemctl restart postgresql`
+
+---
+**INFO**
+
+Die primären Datenbank- und API-Server befinden sich häufig auf demselben Host.
+
+---
+
+
+
+
+
 ## VLAN
 
 Ein VLAN wird eingesetzt um verschiedene ports in einem Netz voneinander zu trennen. 
