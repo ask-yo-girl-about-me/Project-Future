@@ -89,13 +89,24 @@ Als nächstes wird Prometheus als Source definiert:
 
 Mittels Save & Test können wir einfach testen ob das geklappt hat. 
 
-### Dashboard & Queries
+### Dashboard & Queries & Alerting
 
 Nun können wir damit beginnen unser Dashboard mit Graphs zu befüllen. 
 Die Queries dazu können ganz einfach dem Prometheus Editor entnehmen. 
 
 ![DE2.3](../00_Allgemein/images/04_Privat-Cloud/DE2.3.png)
 
+Eine AlertRule kann dann wie folgt definiert werden: 
+
+![DE2.4](../00_Allgemein/images/04_Privat-Cloud/DE2.4.png)
+
+1. Hier wird der Name definiert und wie oft die Rule evaluiert wird. 
+2. Hier wird definiert was genau geprüft werden soll
+3. Hier wird der Receiver der Mail angegeben
+4. Hier wird der Text der Mail definiert
+
+Das Dashboard sieht dann am Schluss so aus: 
+![DE2.5](../00_Allgemein/images/04_Privat-Cloud/DE2.5.png)
 
 ___
 
