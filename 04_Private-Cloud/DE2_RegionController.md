@@ -10,7 +10,7 @@ Der Region Controller ist in einem HA Environment auch dafür zuständig das im 
 
 Die MAAS-Postgres-Datenbank wird ebenfalls vom Region Controller verwaltet. Zu den typischen Aufgaben auf Regionsebene gehören die Anforderung, dass ein Rack-Controller einen Rechner bootet, und die Bereitstellung des ephemeren Ubuntu-Images, das für die Inbetriebnahme oder das Einschreiben eines Rechners benötigt wird.
 
-![RegionController](00_Allgemein/images/04_Privat-Cloud/DE2.regioncontroller.jpg)
+![RegionController](../00_Allgemein/images/04_Privat-Cloud/DE2.regioncontroller.jpg)
 
 ### PostgreSQL für die Region Controllers einrichten (regiond)
 
