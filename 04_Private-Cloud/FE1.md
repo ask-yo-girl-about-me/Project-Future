@@ -147,7 +147,14 @@ Die Varialbe `BORG_RSH` legt fest, wie wir auf die entfernten VMs zugreifen und 
                 export BORG_PASSPHRASE=""       # wir verzichten auf ein weiteres Password
                 export REPO_AZURE=ssh://ubuntu@10.6.38.99:22/home/ubuntu/backup 
 
-Sobald man die Umgebungsvariablen erstellt hat, kann man Backup Repositorie initialisieren.
+---
+**INFO**
+
+Beim ersellen vom SSH Key wurde der defaul name verwendet. Darum ist beim ersten export nur ssh ohne Pfad verwendet worden. Somit wird er den defaul ssh key nehmen. Wenn nicht der defaul verwendet wurde muss man dies dort noch angeben.
+
+---
+
+Sobald man die Umgebungsvariablen erstellt hat, kann man das Backup Repositorie initialisieren.
 
                 # keyfile: stores the (encrypted) key into ~/.config/borg/keys/
                 borg init $REPO_AZURE -e keyfile
