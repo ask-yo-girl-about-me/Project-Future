@@ -104,6 +104,69 @@ Hinweis: um die NFS Verbindung auch nach dem Reboot der VM verfügbar zu haben, 
 
 ---
 
+## BorgBackup
+
+BorgBackup (kurz: Borg) ist ein deduplizierendes Backup-Programm. Optional unterstützt es Komprimierung und authentifizierte Verschlüsselung.
+Das Hauptziel von Borg ist es, eine effiziente und sichere Möglichkeit zur Datensicherung bereitzustellen. Die verwendete Datendeduplizierungstechnik macht Borg für tägliche Backups geeignet, da nur Änderungen gespeichert werden. Durch die authentifizierte Verschlüsselungstechnik ist Borg auch für Backups auf nicht vertrauenswürdige Ziele geeignet (z.B. Cloud Speicher).
+
+## BorgBackup Installieren / Einrichten
+
+Als erstes setzen wir eine Virtuelle Maschine in der Azure auf. Dort verwenden wir das Cloud-Init vom Lernziel DE4.
+
+[Cloud-Init VPN Azure für Borg](../04_Private-Cloud/Cloud-init/Cloud-init_VPN_Azure_BorgBak.yml)
+
+Sobald die VM fertig eingerichtet ist, verbinden wir uns per BitVise auf unser MAAS.
+
+Dort werden folgende Befehle ausgeführt:
+
+                ping 10.1.38.55 # VM in der Azure Cloud
+                ssh 10.1.38.55
+                sudo apt-get install -y borgbackup
+                mkdir backup
+                exit
+
+Wenn die Verbindung klappt und das installieren erfolgreich durchlaufen ist, erstellen wir nun einen SSH-Key auf unserem MAAS. Dies wird wie folgt gemacht:
+
+Erstellen eines Schlüssels:
+
+`ssh-keygen`
+
+Danach kopieren wir den Key auf die Virtuelle Maschine in Azure:
+
+`ssh-copy-id 10.1.38.55`
+
+Nun können wir uns per SSH Key auf unsere Maschine verbinden und müssten kein Kennwort mehr eingeben.
+
+Durch das Setzen der wichtigsten Argumente als Umgebungsvariablen können wir uns Tiparbeit sparen.
+
+Die Varialbe `BORG_RSH` legt fest, wie wir auf die entfernten VMs zugreifen und mit welchem SSH-Key. Dieser ist Anzupassen, wenn nicht der Standard Key (siehe MS Teams) verwendet wird.
+`BORG_PASSPHRASE` legt als weiteres Sicherheitskriterium ein optionales Password fest.
+`REPO_AZURE` legt die Ziel-VMs fest.
+
+                export BORG_RSH="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o BatchMode=yes -o LogLevel=error"
+                export BORG_PASSPHRASE=""       # wir verzichten auf ein weiteres Password
+                export REPO_AZURE=ssh://ubuntu@10.6.38.99:22/home/ubuntu/backup 
+
+---
+**INFO**
+
+Beim ersellen vom SSH Key wurde der defaul name verwendet. Darum ist beim ersten export nur ssh ohne Pfad verwendet worden. Somit wird er den defaul ssh key nehmen. Wenn nicht der defaul verwendet wurde muss man dies dort noch angeben.
+
+---
+
+Sobald man die Umgebungsvariablen erstellt hat, kann man das Backup Repositorie initialisieren.
+
+                # keyfile: stores the (encrypted) key into ~/.config/borg/keys/
+                borg init $REPO_AZURE -e keyfile
+
+Anschliessend kann der eigentliche Backup Vorgang erfolgen. backup01 steht dabei für den Namen des Backups.
+
+                borg create -svp -C lz4 $REPO_AZURE::backup01 /data
+
+Die Backups und deren Inhalte können wir uns anzeigen lassen:                
+
+                borg list $REPO_AZURE
+
 ___
 
 [04_Private-Cloud](../04_Private-Cloud)
