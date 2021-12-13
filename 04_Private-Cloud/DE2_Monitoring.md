@@ -41,67 +41,40 @@ Statt der Umgebungsvariable, könnt Ihr "ubuntu" verwenden.
 
                 maas ubuntu maas set-config name=prometheus_enabled value=true
 
-## Konfiguration Prmetheus
+## Konfiguration Prometheus
 
-Sobald der Endpunkt `/metrics` in den MAAS-Diensten verfügbar ist, kann Prometheus so konfiguriert werden, dass es Metrikwerte von diesen abruft. Man kann diesen konfigurieren, indem man eine Stanza wie die folgende zur 
-Prometheus-Konfiguration hinzufügt:
+Nach dem durchführen der oben gennanten Schritte, konnten wir den Metrics Tab auf dem Maas erreichen. 
 
-            - job_name: maas
-                static_configs:
-                  - targets:
-                   - <maas-host1-IP>:5239  # for regiond
-                   - <maas-host1-IP>:5249  # for rackd
-                   - <maas-host2-IP>:5239  # regiond-only
-                   - <maas-host3-IP>:5249  # rackd-only
 
-Wenn die MAAS-Installation mehrere Knoten umfasst, muss die Zieleinträge entsprechend angepasst werden, um die auf den einzelnen Knoten bereitgestellten Dienste abzugleichen.
+              http://10.1.38.8:5240/MAAS/metrics
+              
+Allerdings war der Prometheus Client unter **http://10.1.38.8:9090** nicht erreichbar. 
+Auch der Service war nicht gelistet unter **service prometheus status** 
 
-Wenn Sie MAAS-Statistiken aktiviert wurde, muss man einen zusätzlichen Prometheus-Job in die Konfiguration aufnehmen:
+Also haben wir den kompletten Prometheus client installiert 
 
-            - job_name: maas
-                metrics_path: /MAAS/metrics
-                static_configs:
-                  - targets:
-                   - <maas-host-IP>:5240
+              sudo apt install prometheus
 
----
-**INFO**
+Anschliessend war dann die Prometheus Oberfläche auch verfügbar.
+Wir haben dann mittels nano noch das Maas ins Prometheus Monitoring aufgenommen: 
 
-Im Falle eines Multi-Host-Einsatzes reicht es aus, eine einzelne IP für jeden der MAAS-Hosts, auf denen regiond läuft, hinzuzufügen.
 
----
+             sudo nano /etc/prometheus/prometheus.yml
+            
+              
+             - job_name: maas
+               static_configs:
+                - targets:
+                  - 10.1.38.8:5239  # for regiond
+                  - 10.1.38.8:5249  # for rackd
+                  - 10.1.38.8:5239  # regiond-only
+                  - 10.1.38.8:5249  # rackd-only
 
-## Einsatz von Prometheus und Grafana
+Annschliessend war dann das MAAS Teil des Prometheus Monitorings: 
 
-Grafana und Prometheus lassen sich problemlos mit Juju bereitstellen.
+![DE2.1](../00_Allgemein/images/04_Privat-Cloud/DE2.1.png)
 
-Das MAAS-Performance-Repository bietet ein Beispiel für ein Deploy-Stack-Skript, mit dem der Stack auf LXD-Containern bereitgestellt und konfiguriert werden kann.
-
-Zunächst müssen Sie Juju über installieren:
-
-                sudo snap install --classic juju
-
-Dann können Sie das Skript aus dem Repo ausführen:
-
-                grafana/deploy-stack <10.1.38.8>
-
-Um den Fortschritt der Bereitstellung zu verfolgen, führen Sie Folgendes aus:
-
-                watch -c juju status --color
-
-Sobald man alles bereitgestellt hat, ist die Grafana-Benutzeroberfläche über Port 3000 mit den Anmeldeinformationen admin/grafana zugänglich. Die Prometheus-Benutzeroberfläche ist auf Port 9090 verfügbar.
-
-Das Repository bietet auch einige Beispiel-Dashboards, die die häufigsten Anwendungsfälle für Diagramme abdecken. Diese sind unter grafana/dashboards verfügbar. Man kan diese über die Grafana-Benutzeroberfläche oder die API importieren.
-
-Prometheus-Benutzeroberfläche   = http://10.1.38.8:9090
-
-Grafana-Benutzeroberfläche      = http://10.1.38.8:3000
-
-Das ganze sieht dann so aus:
-
-[Prometheus](http://10.1.38.8:9090/graph)
-
-![Prometheus](../00_Allgemein/images/04_Privat-Cloud/DE2_mon.png)
+W
 
 ___
 
