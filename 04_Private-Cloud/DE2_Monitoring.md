@@ -74,7 +74,28 @@ Annschliessend war dann das MAAS Teil des Prometheus Monitorings:
 
 ![DE2.1](../00_Allgemein/images/04_Privat-Cloud/DE2.1.png)
 
-W
+## Grafana
+
+Nun müssen wir Grafana noch installieren, dies wurde mit folgenden Commands gemacht, [Quelle](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-grafana-on-ubuntu-18-04)
+
+Nachdem Grafana installiert wurde, können wir uns via: **http://10.1.38.8:3000** auf die Weboberfläche verbinden. 
+Nach dem ersten Login muss ein neues Passwort gesetzt werden. 
+
+### Prometheus als Data Source definieren
+
+Als nächstes wird Prometheus als Source definiert: 
+
+![DE2.2](../00_Allgemein/images/04_Privat-Cloud/DE2.2.png)
+
+Mittels Save & Test können wir einfach testen ob das geklappt hat. 
+
+### Dashboard & Queries
+
+Nun können wir damit beginnen unser Dashboard mit Graphs zu befüllen. 
+Die Queries dazu können ganz einfach dem Prometheus Editor entnehmen. 
+
+![DE2.3](../00_Allgemein/images/04_Privat-Cloud/DE2.3.png)
+
 
 ___
 
