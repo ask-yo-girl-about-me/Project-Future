@@ -89,10 +89,6 @@ VM Azure / IP 10.1.38.60 `ping 10.1.38.2`
 
 ![PingTest2](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_2.png)
 
-Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.62`
-
-![PingTest1](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_3.png)
-
 [Cloud-init_VPN_AWS.yml](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/04_Private-Cloud/Cloud-init/Cloud-init_VPN_AWS.yml)
 
                 #cloud-config
@@ -125,6 +121,9 @@ Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.62`
                 - sudo systemctl enable wg-quick@wg0.service
                 - sudo systemctl start wg-quick@wg0.service
 
+Notebook Schmidli / IP 10.1.38.2 `ping 10.1.38.62`
+
+![PingTest1](./../00_Allgemein/images/04_Privat-Cloud/DE3_Ping_3.png)
 
 VM AWS / IP 10.1.38.62 `ping 10.1.38.2`
 
