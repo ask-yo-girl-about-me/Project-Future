@@ -111,7 +111,7 @@ Das Hauptziel von Borg ist es, eine effiziente und sichere Möglichkeit zur Date
 
 ## BorgBackup Installieren / Einrichten
 
-Als erstes setzen wir eine Virtuelle Maschine in der AWS auf. Dort verwenden wir das Cloud-Init vom Lernziel DE4.
+Als erstes setzen wir eine Virtuelle Maschine in der Azure auf. Dort verwenden wir das Cloud-Init vom Lernziel DE4.
 
 [Cloud-Init VPN Azure für Borg](../04_Private-Cloud/Cloud-init/Cloud-init_VPN_Azure_BorgBak.yml)
 
@@ -141,12 +141,11 @@ Durch das Setzen der wichtigsten Argumente als Umgebungsvariablen können wir un
 
 Die Varialbe `BORG_RSH` legt fest, wie wir auf die entfernten VMs zugreifen und mit welchem SSH-Key. Dieser ist Anzupassen, wenn nicht der Standard Key (siehe MS Teams) verwendet wird.
 `BORG_PASSPHRASE` legt als weiteres Sicherheitskriterium ein optionales Password fest.
-`REPO_AZURE` und `REPO_AWS` legen die Ziel-VMs fest.
+`REPO_AZURE` legt die Ziel-VMs fest.
 
                 export BORG_RSH="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o BatchMode=yes -o LogLevel=error"
                 export BORG_PASSPHRASE=""       # wir verzichten auf ein weiteres Password
                 export REPO_AZURE=ssh://ubuntu@10.6.38.99:22/home/ubuntu/backup 
-                export REPO_AWS=ssh://ubuntu@10.6.38.98:22/home/ubuntu/backup
 
 Sobald man die Umgebungsvariablen erstellt hat, kann man Backup Repositorie initialisieren.
 
