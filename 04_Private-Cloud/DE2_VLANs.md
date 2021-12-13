@@ -50,7 +50,7 @@ Sobald diese Schritte erfolgreich durchgespielt wird, sieht man unter der Regist
 
 Das zuweisen des VLANs einer VM muss vor dem Deployment gemacht werden. Dies kann unter den VM-Einstellungen in der Registerkarter Network konfiguriert werden. Beim Physikalischen-Adapter kann unter "Action" die Option "Add-VLAN" ausgewählt werden. Nun kann man das gewünschte VLAN zuweisen, dabei ist es wichtig, dass wir eine Statische IP-Adresse verteilen, da keine DHCP-Rolle auf dem VLAN existiert.
 
-![VLAN-Einrichten 6](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan6.png)
+![VLAN-Einrichten 6](../00_Allgemein/images/04_Privat-Cloud/DE2_vlan6.jpg)
 
 Für den Test habe wir (siehe Bild unten) links das Terminal von der VM "xyz-11-kunden" und rechts das Terminal von der VM "xyz-10-Lieferanten". Bei beiden ist die VLAN Konfiguration ersichtlich, sobald man den Netzwerkstatus mit dem Befehl "ifconfig" abruft. Auf dem linken Terminal (VM "xyz-11-kunden) ist ebenfalls ersichtlich das die VM "xyz-10-Lieferanten" per ping über VLAN erreichbar ist.
 
