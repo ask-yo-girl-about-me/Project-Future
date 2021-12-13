@@ -41,28 +41,41 @@ Statt der Umgebungsvariable, könnt Ihr "ubuntu" verwenden.
 
                 maas ubuntu maas set-config name=prometheus_enabled value=true
 
-## Konfiguration Prmetheus
+## Konfiguration Prometheus
 
-Sobald der Endpunkt `/metrics` in den MAAS-Diensten verfügbar ist, kann Prometheus so konfiguriert werden, dass es Metrikwerte von diesen abruft. Man kann diesen konfigurieren, indem man eine Stanza wie die folgende zur 
-Prometheus-Konfiguration hinzufügt:
+Nach dem durchführen der oben gennanten Schritte, konnten wir den Metrics Tab auf dem Maas erreichen. 
 
-            - job_name: maas
-                static_configs:
-                  - targets:
-                   - <maas-host1-IP>:5239  # for regiond
-                   - <maas-host1-IP>:5249  # for rackd
-                   - <maas-host2-IP>:5239  # regiond-only
-                   - <maas-host3-IP>:5249  # rackd-only
+
+              http://10.1.38.8:5240/MAAS/metrics
+              
+Allerdings war der Prometheus Client unter **http://10.1.38.8:9090** nicht erreichbar. 
+Auch der Service war nicht gelistet unter **service prometheus status** 
+
+Also haben wir den kompletten Prometheus client installiert 
+
+              sudo apt install prometheus
+
+Anschliessend war dann die Prometheus Oberfläche auch verfügbar.
+Wir haben dann mittels nano noch das Maas ins Prometheus Monitoring aufgenommen: 
+
+
+             sudo nano /etc/prometheus/prometheus.yml
+            
+              
+             - job_name: maas
+               static_configs:
+                - targets:
+                  - 10.1.38.8:5239  # for regiond
+                  - 10.1.38.8:5249  # for rackd
+                  - 10.1.38.8:5239  # regiond-only
+                  - 10.1.38.8:5249  # rackd-only
+
+Annschliessend war dann das MAAS Teild es Prometheus Monitorings: 
+![DE2.1](../00_Allgemein/images/04_Privat-Cloud/DE2.1.png)
 
 Wenn die MAAS-Installation mehrere Knoten umfasst, muss die Zieleinträge entsprechend angepasst werden, um die auf den einzelnen Knoten bereitgestellten Dienste abzugleichen.
 
-Wenn Sie MAAS-Statistiken aktiviert wurde, muss man einen zusätzlichen Prometheus-Job in die Konfiguration aufnehmen:
 
-            - job_name: maas
-                metrics_path: /MAAS/metrics
-                static_configs:
-                  - targets:
-                   - <maas-host-IP>:5240
 
 ---
 **INFO**
