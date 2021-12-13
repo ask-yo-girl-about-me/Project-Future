@@ -109,11 +109,6 @@ Hinweis: um die NFS Verbindung auch nach dem Reboot der VM verfügbar zu haben, 
 BorgBackup (kurz: Borg) ist ein deduplizierendes Backup-Programm. Optional unterstützt es Komprimierung und authentifizierte Verschlüsselung.
 Das Hauptziel von Borg ist es, eine effiziente und sichere Möglichkeit zur Datensicherung bereitzustellen. Die verwendete Datendeduplizierungstechnik macht Borg für tägliche Backups geeignet, da nur Änderungen gespeichert werden. Durch die authentifizierte Verschlüsselungstechnik ist Borg auch für Backups auf nicht vertrauenswürdige Ziele geeignet (z.B. Cloud Speicher).
 
-export BORG_RSH="ssh -i ~/.ssh/id_public -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o BatchMode=yes -o LogLevel=error"
-export BORG_PASSPHRASE=""       # wir verzichten auf ein weiteres Password
-export REPO_AZURE=ssh://ubuntu@10.6.38.99:22/home/ubuntu/backup 
-export REPO_AWS=ssh://ubuntu@10.6.38.98:22/home/ubuntu/backup
-
 ## BorgBackup Installieren / Einrichten
 
 Als erstes setzen wir eine Virtuelle Maschine in der AWS auf. Dort verwenden wir das Cloud-Init vom Lernziel DE4.
