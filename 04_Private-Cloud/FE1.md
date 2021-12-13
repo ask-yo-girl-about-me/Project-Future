@@ -159,14 +159,21 @@ Sobald man die Umgebungsvariablen erstellt hat, kann man das Backup Repositorie 
                 # keyfile: stores the (encrypted) key into ~/.config/borg/keys/
                 borg init $REPO_AZURE -e keyfile
 
-Anschliessend kann der eigentliche Backup Vorgang erfolgen. backup01 steht dabei für den Namen des Backups.
+Anschliessend kann der eigentliche Backup Vorgang erfolgen. `backup01` steht dabei für den Namen des Backups.
 
                 borg create -svp -C lz4 $REPO_AZURE::backup01 /data
+
+Das ganze sieht im Terminal dan wie folgt aus:
+
+![BorgBackup](../00_Allgemein/images/04_Privat-Cloud/FE1_borg_1.png)
 
 Die Backups und deren Inhalte können wir uns anzeigen lassen:                
 
                 borg list $REPO_AZURE
 
+Das ganze sieht im Terminal dan wie folgt aus:
+
+![BorgBackup](../00_Allgemein/images/04_Privat-Cloud/FE1_borg_2.png)
 ___
 
 [04_Private-Cloud](../04_Private-Cloud)
