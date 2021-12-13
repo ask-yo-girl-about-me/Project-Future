@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    lock_passwd: false
+    plain_text_passwd: 'password' 
+# login ssh and console with password
+ssh_pwauth: true
+disable_root: false 

@@ -12,6 +12,7 @@ ssh_pwauth: true
 disable_root: false    
 packages:
   - wireguard
+  - net-tools
 write_files:
  - content: |
     [Interface]
