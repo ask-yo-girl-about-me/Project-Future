@@ -119,8 +119,8 @@ Sobald die VM fertig eingerichtet ist, verbinden wir uns per BitVise auf unser M
 
 Dort werden folgende Befehle ausgeführt:
 
-                ping 10.6.38.99 # VM in der Azure Cloud
-                ssh 10.6.38.99
+                ping 10.1.38.55 # VM in der Azure Cloud
+                ssh 10.1.38.55
                 sudo apt-get install -y borgbackup
                 mkdir backup
                 exit
