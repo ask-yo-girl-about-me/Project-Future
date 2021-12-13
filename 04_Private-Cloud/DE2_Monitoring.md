@@ -70,51 +70,11 @@ Wir haben dann mittels nano noch das Maas ins Prometheus Monitoring aufgenommen:
                   - 10.1.38.8:5239  # regiond-only
                   - 10.1.38.8:5249  # rackd-only
 
-Annschliessend war dann das MAAS Teild es Prometheus Monitorings: 
+Annschliessend war dann das MAAS Teil des Prometheus Monitorings: 
+
 ![DE2.1](../00_Allgemein/images/04_Privat-Cloud/DE2.1.png)
 
-Wenn die MAAS-Installation mehrere Knoten umfasst, muss die Zieleinträge entsprechend angepasst werden, um die auf den einzelnen Knoten bereitgestellten Dienste abzugleichen.
-
-
-
----
-**INFO**
-
-Im Falle eines Multi-Host-Einsatzes reicht es aus, eine einzelne IP für jeden der MAAS-Hosts, auf denen regiond läuft, hinzuzufügen.
-
----
-
-## Einsatz von Prometheus und Grafana
-
-Grafana und Prometheus lassen sich problemlos mit Juju bereitstellen.
-
-Das MAAS-Performance-Repository bietet ein Beispiel für ein Deploy-Stack-Skript, mit dem der Stack auf LXD-Containern bereitgestellt und konfiguriert werden kann.
-
-Zunächst müssen Sie Juju über installieren:
-
-                sudo snap install --classic juju
-
-Dann können Sie das Skript aus dem Repo ausführen:
-
-                grafana/deploy-stack <10.1.38.8>
-
-Um den Fortschritt der Bereitstellung zu verfolgen, führen Sie Folgendes aus:
-
-                watch -c juju status --color
-
-Sobald man alles bereitgestellt hat, ist die Grafana-Benutzeroberfläche über Port 3000 mit den Anmeldeinformationen admin/grafana zugänglich. Die Prometheus-Benutzeroberfläche ist auf Port 9090 verfügbar.
-
-Das Repository bietet auch einige Beispiel-Dashboards, die die häufigsten Anwendungsfälle für Diagramme abdecken. Diese sind unter grafana/dashboards verfügbar. Man kan diese über die Grafana-Benutzeroberfläche oder die API importieren.
-
-Prometheus-Benutzeroberfläche   = http://10.1.38.8:9090
-
-Grafana-Benutzeroberfläche      = http://10.1.38.8:3000
-
-Das ganze sieht dann so aus:
-
-[Prometheus](http://10.1.38.8:9090/graph)
-
-![Prometheus](../00_Allgemein/images/04_Privat-Cloud/DE2_mon.png)
+W
 
 ___
 
