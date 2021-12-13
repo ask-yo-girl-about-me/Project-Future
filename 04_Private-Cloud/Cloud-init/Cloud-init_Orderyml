@@ -1,0 +1,18 @@
+#cloud-config
+packages:
+  - apache2 
+  - nfs-client
+write_files:
+ - content: |
+    <html>
+     <body>
+      <h1>Order</h1>
+      <p><a href="/order/data/test.html">Daten</a></p>
+     </body>
+    </html>
+   path: /var/www/html/index.html
+   permissions: '0644'
+runcmd:
+  - sudo mkdir /var/www/html/data
+  - sudo chown ubuntu:ubuntu /var/www/html/data
+  - sudo mount -t nfs 10.0.45.8:/data/storage /var/www/html/data
