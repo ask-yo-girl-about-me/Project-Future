@@ -168,6 +168,7 @@ Mit dem entsprechenden Docker-Account einloggen und anschliessend nochmals das D
         $ docker image push marcellocalisto/webapp_one:1.0
 
 ``$ docker login --username=leandrogoetzer ``  *Username + Passwort vom Docker-Account*
+
 ``$ docker image push leandrogoetzer/webapp_one:1.0``  *Image zu Dockerhub "pushen"*
 
 Auf dem Screenshot wird festgehalten, dass das Passwort **unverschlüsselt** im Verzeichnis /home/ubuntu/.docker/config.json abgelegt wird. 
@@ -180,6 +181,7 @@ In diesem Abschnitt überprüfen wir, ob Images mit gewissen Namensgesbungen (in
         $ docker image inspect <ID>
 
 ``$ docker image ls | grep -i leandro``  *Checken, ob Images mit dem Namen "leandro" vorhanden sind*
+
 ``$ docker image inspect <ID>``  *Image-Details inspizieren*
 
 Auf dem Screenshot sieht man, dass zwei Images vorhanden sind. Ich habe noch ein zweites Image mit einem leicht abgeänderten Inhalt erstellt. Zu einem späteren Zeitpunkt wird anhand dieser beiden Images ein "Rolling Upgrade" unter Kubernetes demonstriert. Wir fokussieren uns aber im Moment auf das Image "One".
