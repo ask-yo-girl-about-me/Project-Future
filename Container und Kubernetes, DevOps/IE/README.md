@@ -80,38 +80,39 @@ Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "
 
 Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinhüpfen
 
-*Unterverzeichnis "TEMP_Docker" erstellen*
+``$ mkdir TEMP_Docker`` *Unterverzeichnis "TEMP_Docker" erstellen*
 
-        '$ mkdir TEMP_Docker'
+
 
 *Ins Unterverzeichnis "TEMP_Docker" wechseln* 
 
-        '$ cd TEMP_Docker'   
+``$ cd TEMP_Docker``
 
 *Repo klonen*
 
-        $ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git   
+``$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git``
 
 *ins Repo-Unterverzeichnis hüpfen*
 
-        $ cd Container-CAL-webapp-v1/ 
+``$ cd Container-CAL-webapp-v1/``
 
-Ins Unterverzeichnis "APP" hüpfen
+*Ins Unterverzeichnis "APP" hüpfen*
 
-        $ cd APP    
+``$ cd APP``    
 
-Inhalt des Dockerfiles anschauen
+*Inhalt des Dockerfiles anschauen*
 
-        $ less Dockerfile  
+``$ less Dockerfile``  
 
-Nochmals sicherstellen, dass Docker installiert ist (Notwendig)
+*Nochmals sicherstellen, dass Docker installiert ist (Notwendig)*
 
-        $ docker --version  
-
-Im Verzeichnis APP gibt es folgende Files:
+``$ docker --version `` 
 
 
-views   Verzeichnis mit home.pug-File (Content Webseite)
+*Im Verzeichnis APP gibt es folgende Files:*
+
+*Verzeichnis mit home.pug-File (Content Webseite)*
+        views   
 Im home.pug-File kann der Inhalt der Webseite geändert werden
 
 
