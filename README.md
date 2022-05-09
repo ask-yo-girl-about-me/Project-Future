@@ -46,11 +46,11 @@ Projekt-Future
 Projekt-Future Container und Kubernetes, DevOps
 ========
 ## Inhaltsverzeichnis
-- [HE](/01_Kompetenzen/HE/)
+- [HE](/Container%20und%20Kubernetes%2C%20DevOps/HE/HE.md)
 
     Container Technologien = HE1: Ich kann die Technologien hinter Container mit Beispielen erklären
 
-- [IE](/01_Kompetenzen/IE/)
+- [IE](/Container%20und%20Kubernetes%2C%20DevOps/IE/IE.md)
 
     Container Umgebungen = IE1: Ich kann Container Laufzeitumgebungen für verschiedene Anwendungsfälle aufsetzen
 
@@ -58,11 +58,11 @@ Projekt-Future Container und Kubernetes, DevOps
 
     Container Registry = IE3: Ich kann unterschiedliche Container Registries verwenden
 
-- [JE](/01_Kompetenzen/JE/)
+- [JE](/Container%20und%20Kubernetes%2C%20DevOps/JE/JE.md)
 
     Architektur = JE1: Ich kann Microservices erstellen
 
-- [KE](/01_Kompetenzen/KE/)
+- [KE](/Container%20und%20Kubernetes%2C%20DevOps/KE/KE.md)
    
     Kubernetes = KE1: Ich kann die Merkmale von Kubernetes erklären
 
@@ -71,7 +71,7 @@ Projekt-Future Container und Kubernetes, DevOps
     Kubernetes Ressourcen = KE3: Ich kann Kubernetes Ressourcen deren Einsatzzweck zuordnen
 
 
-- [LE](/01_Kompetenzen/LE/)
+- [LE](/Container%20und%20Kubernetes%2C%20DevOps/LE/LE.md)
 
     Continuous Integration / Delivery = LE1: Ich kann Continuous Integration / Delivery einsetzen
 
