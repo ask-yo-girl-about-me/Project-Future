@@ -76,7 +76,7 @@ Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "
 - Container und Image manipulieren (stoppen, starten, löschen)
 - Atom oder Sublime Text etc...
 
-**Vorbereitung**
+## Vorbereitung
 
 Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinhüpfen
 
@@ -110,8 +110,16 @@ Im ``home.pug-File`` kann der Inhalt der Webseite geändert werden
 
 ``package.json``   Manifest
 
-
 Das sind sämtliche Files, die es für diese einfache Web-App benötigt.
+
+## Content erstellen / anpassen
+
+Es können nun in den oben aufgeführten Files Anpassungen oder Änderungen durchgeführt werden.
+Wenn diese Einträge und das Coden des Web-contents abgeschlossen sind, kann daraus ein neues Docker-Image erstellt werden. Dieser Schritt wird wie folgt durchgeführt:
+
+## Neues Docker-Image bauen
+
+        $ docker image build -t marcellocalisto/webapp_one:1.0 .
 
 # Container Registry
 
