@@ -43,7 +43,7 @@ Projekt-Future
 
 [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 
-# Projekt-Future Container und Kubernetes, DevOps
+Projekt-Future Container und Kubernetes, DevOps
 ========
 ## Inhaltsverzeichnis
 - [HE](/01_Kompetenzen/HE/)
