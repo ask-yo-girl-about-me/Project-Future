@@ -1,6 +1,6 @@
 Projekt-Future
 ========
-## Inhaltsverzeichnis
+## Inhaltsverzeichnis 
 - [Grundlagen](https://github.com/ask-yo-girl-about-me/Project-Future/tree/main/01_Grundlage)
     - VMs für Services einsetzen
     - SSH Public/Privat Key erstellen/einsetzen
@@ -40,6 +40,40 @@ Projekt-Future
     - Präsentiert, am Schluss, die Lösung (20`) und die erworbenen [Kompetenzen (A-C)](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 - Zeit
     - 9 Lektionen
+
+[Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
+
+# Projekt-Future Container und Kubernetes, DevOps
+========
+## Inhaltsverzeichnis
+- [HE](/01_Kompetenzen/HE/)
+
+    Container Technologien = HE1: Ich kann die Technologien hinter Container mit Beispielen erklären
+
+- [IE](/01_Kompetenzen/IE/)
+
+    Container Umgebungen = IE1: Ich kann Container Laufzeitumgebungen für verschiedene Anwendungsfälle aufsetzen
+
+    Container Images = IE2: Ich kann Container Images erstellen
+
+    Container Registry = IE3: Ich kann unterschiedliche Container Registries verwenden
+
+- [JE](/01_Kompetenzen/JE/)
+
+    Architektur = JE1: Ich kann Microservices erstellen
+
+- [KE](/01_Kompetenzen/KE/)
+   
+    Kubernetes = KE1: Ich kann die Merkmale von Kubernetes erklären
+
+    Kubernetes Installation = KE2: Ich kann einen Kubernetes Cluster installieren
+
+    Kubernetes Ressourcen = KE3: Ich kann Kubernetes Ressourcen deren Einsatzzweck zuordnen
+
+
+- [LE](/01_Kompetenzen/LE/)
+
+    Continuous Integration / Delivery = LE1: Ich kann Continuous Integration / Delivery einsetzen
 
 [Kompetenz Matrix](https://gitlab.com/ch-tbz-hf/Stud/cnt/-/tree/main/1_Kompetenzmatrix#matrix)
 
