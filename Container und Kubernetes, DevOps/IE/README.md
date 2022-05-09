@@ -63,6 +63,10 @@ In Container Registries werden Images abgelegt und verteilt
 Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügbarer Images zur Verfügung stehen, aber auch "offizielle" Images.
 Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht.
 
+## Wie kommen wir zu Images?
+- Von vertrauenswürdigen Registry herunterladen ( docker pull/ run
+- Selber Erstellen
+
 ## Einfache Web-App in einen Container  verfrachten
 
 **Wie kann diese einfache Web-App erstellt, angepasst und genutzt werden:**
@@ -175,7 +179,7 @@ Auf dem Screenshot wird festgehalten, dass das Passwort **unverschlüsselt** im 
 Es ist jetzt allerdings auch ersichtlich, dass beim zweiten Versuch **keine** Fehlermeldung (Zugriffsverweigerung) mehr erscheint. Das Hochladen in die Registry (Dockerhub) hat diesmal funktioniert.
 
 ## Neues Docker-Image überprüfen / inspizieren
-In diesem Abschnitt überprüfen wir, ob Images mit gewissen Namensgesbungen (in diesem Fall "Calisto") lokal abgelegt sind. Zusätzlich wird gezeigt, wie ein lokales Image inspiziert werden kann (sehr umfangreiche Informationen)
+In diesem Abschnitt überprüfen wir, ob Images mit gewissen Namensgesbungen (in diesem Fall "Leandro") lokal abgelegt sind. Zusätzlich wird gezeigt, wie ein lokales Image inspiziert werden kann (sehr umfangreiche Informationen)
 
         $ docker image ls | grep -i leandro
         $ docker image inspect <ID>
@@ -222,7 +226,7 @@ In diesem Abschnitt widmen wir uns weiteren Manipulationen von Containern. Auch 
         $ docker container ls -a | grep -i leandro
         $ docker container run -d --name cal-web01 -p 8080:8080 leandrogoetzer/webapp_one:1.0
 
-``$ docker container ls -a | grep -i leandro`` *Checken, ob Container mit dem Namen "Calisto" läuft*
+``$ docker container ls -a | grep -i leandro`` *Checken, ob Container mit dem Namen "Leandro" läuft*
 
 ``$ docker container run -d --name cal-web01 -p 8080:8080`` *leandrogoetzer/webapp_one:1.0  Container starten*
 
@@ -258,4 +262,9 @@ In diesem Abschnitt widmen wir uns weiteren Manipulationen von Containern. Auch 
 ``10.4.43.32:8080`` *Auf Host Browser starten und IP:Port des Webdienstes (Container) eingeben*
 
 # Container Registry
+
+In Container Registries werden Images abgelegt und verteilt
+
+Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügbarer Images zur Verfügung stehen, aber auch "offizielle" Images [Docker](https://hub.docker.com/).
+Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht.
 
