@@ -148,7 +148,7 @@ Nun wir das Image erzeugt (6 Schritte, wie im Dockerfile vorgesehen. Die "interm
 
 - ``1.0`` *Tag*
 
--``f3a0d6a9c988`` *Image-ID*
+- ``f3a0d6a9c988`` *Image-ID*
 
 - ``195MB`` *Size*
 
