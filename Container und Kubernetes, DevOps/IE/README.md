@@ -80,13 +80,33 @@ Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "
 
 Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinhüpfen
 
-'$ mkdir TEMP_Docker'  **Unterverzeichnis "TEMP_Docker" erstellen**
-'$ cd TEMP_Docker'   **Ins Unterverzeichnis "TEMP_Docker" wechseln**
-$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git   Repo klonen
-$ cd Container-CAL-webapp-v1/  ins Repo-Unterverzeichnis hüpfen
-$ cd APP   Ins Unterverzeichnis "APP" hüpfen 
-$ less Dockerfile  Inhalt des Dockerfiles anschauen
-$ docker --version  Nochmals sicherstellen, dass Docker installiert ist (Notwendig)
+*Unterverzeichnis "TEMP_Docker" erstellen*
+
+        '$ mkdir TEMP_Docker'
+
+*Ins Unterverzeichnis "TEMP_Docker" wechseln* 
+
+        '$ cd TEMP_Docker'   
+
+*Repo klonen*
+
+        $ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git   
+
+*ins Repo-Unterverzeichnis hüpfen*
+
+        $ cd Container-CAL-webapp-v1/ 
+
+Ins Unterverzeichnis "APP" hüpfen
+
+        $ cd APP    
+
+Inhalt des Dockerfiles anschauen
+
+        $ less Dockerfile  
+
+Nochmals sicherstellen, dass Docker installiert ist (Notwendig)
+
+        $ docker --version  
 
 Im Verzeichnis APP gibt es folgende Files:
 
