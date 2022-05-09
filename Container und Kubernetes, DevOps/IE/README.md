@@ -189,8 +189,9 @@ Nun überprüfen wir noch, ob aus diesem Image ein funktionierender Container er
 
         $ docker container marcellocalisto/webapp_one:1.0
 
-``$ docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one``  *klappt nicht, da Tag fehlt"*
-``$ docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one:1.0``  *Funktioniert"*
+``$ docker container run -d --name cal-web -p 8080:8080 leandrogoetzer/webapp_one``  *klappt nicht, da Tag fehlt"*
+
+``$ docker container run -d --name cal-web -p 8080:8080 leandrogoetzer/webapp_one:1.0``  *Funktioniert"*
 
 Auf dem Screenshot ist zu sehen, dass erst der zweite Versuch klappt. Beim starten eines Containers muss in diesem Fall auch der Tag angegeben werden (wurde auch so beim Erstellen des Images eingegeben)
 
@@ -220,7 +221,9 @@ In diesem Abschnitt widmen wir uns weiteren Manipulationen von Containern. Auch 
         $ docker container run -d --name cal-web01 -p 8080:8080 leandrogoetzer/webapp_one:1.0
 
 ``$ docker container ls -a | grep -i leandro`` *Checken, ob Container mit dem Namen "Calisto" läuft*
+
 ``$ docker container run -d --name cal-web01 -p 8080:8080`` *leandrogoetzer/webapp_one:1.0  Container starten*
+
 ``$ docker container inspect 055`` *Container mit der ID 055* inspizieren*
 
 
@@ -249,7 +252,7 @@ In diesem Abschnitt widmen wir uns weiteren Manipulationen von Containern. Auch 
 Überprüfen, ob der Webdienst nach dem löschen des Containers wirklich nicht mehr über Port 8080 erreichbar ist
 
         IP-Adresse:8080
-        
+
 ``10.4.43.32:8080`` *Auf Host Browser starten und IP:Port des Webdienstes (Container) eingeben*
 
 # Container Registry
