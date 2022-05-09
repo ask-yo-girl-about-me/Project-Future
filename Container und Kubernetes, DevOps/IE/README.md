@@ -82,50 +82,33 @@ Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinh�
 
 ``$ mkdir TEMP_Docker`` *Unterverzeichnis "TEMP_Docker" erstellen*
 
+``$ cd TEMP_Docker`` *Ins Unterverzeichnis "TEMP_Docker" wechseln* 
 
+``$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git`` *Repo klonen*
 
-*Ins Unterverzeichnis "TEMP_Docker" wechseln* 
+``$ cd Container-CAL-webapp-v1/`` *ins Repo-Unterverzeichnis hüpfen*
 
-``$ cd TEMP_Docker``
+``$ cd APP`` *Ins Unterverzeichnis "APP" hüpfen*
 
-*Repo klonen*
+``$ less Dockerfile`` *Inhalt des Dockerfiles anschauen*
 
-``$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git``
+``$ docker --version `` *Nochmals sicherstellen, dass Docker installiert ist (Notwendig)*
 
-*ins Repo-Unterverzeichnis hüpfen*
+ ---
 
-``$ cd Container-CAL-webapp-v1/``
+*Im Verzeichnis ``APP``  gibt es folgende Files:*
 
-*Ins Unterverzeichnis "APP" hüpfen*
+``views`` *Verzeichnis mit home.pug-File (Content Webseite)*
+         
+Im ``home.pug-File`` kann der Inhalt der Webseite geändert werden
 
-``$ cd APP``    
+``app.js``   Node-js-App - App-config (Port etc..)
 
-*Inhalt des Dockerfiles anschauen*
+``bootstrap.css``   Style
 
-``$ less Dockerfile``  
+``Dockerfile``   Image-Layers (OS, ergänzende SW-Deployment + Portweiterleitung)
 
-*Nochmals sicherstellen, dass Docker installiert ist (Notwendig)*
-
-``$ docker --version `` 
-
-
-*Im Verzeichnis APP gibt es folgende Files:*
-
-*Verzeichnis mit home.pug-File (Content Webseite)*
-        views   
-Im home.pug-File kann der Inhalt der Webseite geändert werden
-
-
-app.js   Node-js-App - App-config (Port etc..)
-
-
-bootstrap.css   Style
-
-
-Dockerfile   Image-Layers (OS, ergänzende SW-Deployment + Portweiterleitung)
-
-
-package.json   Manifest
+``package.json``   Manifest
 
 
 Das sind sämtliche Files, die es für diese einfache Web-App benötigt.
