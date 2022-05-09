@@ -154,7 +154,7 @@ Nun wir das Image erzeugt (6 Schritte, wie im Dockerfile vorgesehen. Die "interm
 
 ## Neues Docker-Image hochladen auf Docker-Hub
 
-        $ docker image push marcellocalisto/webapp_one:1.0
+        $ docker image push leandrogoetzer/webapp_one:1.0
 
 ``$ docker image push leandrogoetzer/webapp_one:1.0``  *Image zu Dockerhub "pushen"*
 
@@ -162,10 +162,10 @@ Falls anschliessend eine Fehlermeldung (Zugriffsverweigerung) komm, liegt dies d
 
 ## Registrieren auf Docker-Hub
 
-Mit dem entsprechenden Docker-Account einloggen und anschliessend nochmals das Docker-Image zum Repository "pushen". In diesem Fall benutze ich meinen eigenen Account. Ersetze meinen Namen (marcellocalisto) mit Deinem persönlichen Docker-Accountname.
+Mit dem entsprechenden Docker-Account einloggen und anschliessend nochmals das Docker-Image zum Repository "pushen". In diesem Fall benutze ich meinen eigenen Account. Ersetze meinen Namen (leandrogoetzer) mit Deinem persönlichen Docker-Accountname.
 
-        $ docker login --username=marcellocalisto
-        $ docker image push marcellocalisto/webapp_one:1.0
+        $ docker login --username=leandrogoetzer
+        $ docker image push leandrogoetzer/webapp_one:1.0
 
 ``$ docker login --username=leandrogoetzer ``  *Username + Passwort vom Docker-Account*
 
@@ -189,7 +189,7 @@ Auf dem Screenshot sieht man, dass zwei Images vorhanden sind. Ich habe noch ein
 ## Docker Container starten
 Nun überprüfen wir noch, ob aus diesem Image ein funktionierender Container erzeugt werden kann. In diesem Tutorial führen wir dazu einen imperativen Befehl mit div. Parametern aus. Jeder Teil des Kommandos wird unten ausführlich erklärt
 
-        $ docker container marcellocalisto/webapp_one:1.0
+        $ docker container leandrogoetzer/webapp_one:1.0
 
 ``$ docker container run -d --name cal-web -p 8080:8080 leandrogoetzer/webapp_one``  *klappt nicht, da Tag fehlt"*
 
