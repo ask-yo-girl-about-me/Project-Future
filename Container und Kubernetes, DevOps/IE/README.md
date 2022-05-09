@@ -11,6 +11,8 @@
 
 # Container Umgebungen
 
+Container Laufzeitumgebungen (Runtimes) werden auf jeden Nodes eines Container Clusters installiert. 
+
 # Container Images
 
 ## Erklärung
