@@ -80,35 +80,35 @@ Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "
 
 Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinhüpfen
 
-``$ mkdir TEMP_Docker`` *Unterverzeichnis "TEMP_Docker" erstellen*
+- ``$ mkdir TEMP_Docker`` *Unterverzeichnis "TEMP_Docker" erstellen*
 
-``$ cd TEMP_Docker`` *Ins Unterverzeichnis "TEMP_Docker" wechseln* 
-
-``$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git`` *Repo klonen*
-
-``$ cd Container-CAL-webapp-v1/`` *ins Repo-Unterverzeichnis hüpfen*
-
-``$ cd APP`` *Ins Unterverzeichnis "APP" hüpfen*
-
-``$ less Dockerfile`` *Inhalt des Dockerfiles anschauen*
-
-``$ docker --version `` *Nochmals sicherstellen, dass Docker installiert ist (Notwendig)*
+- ``$ cd TEMP_Docker`` *Ins Unterverzeichnis "TEMP_Docker" wechseln* 
+ 
+- ``$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git`` *Repo klonen*
+ 
+- ``$ cd Container-CAL-webapp-v1/`` *ins Repo-Unterverzeichnis hüpfen*
+ 
+- ``$ cd APP`` *Ins Unterverzeichnis "APP" hüpfen*
+ 
+- ``$ less Dockerfile`` *Inhalt des Dockerfiles anschauen*
+ 
+- ``$ docker --version `` *Nochmals sicherstellen, dass Docker installiert ist (Notwendig)*
 
  ---
 
 *Im Verzeichnis ``APP``  gibt es folgende Files:*
 
-``views`` *Verzeichnis mit home.pug-File (Content Webseite)*
+- ``views`` *Verzeichnis mit home.pug-File (Content Webseite)*
          
 Im ``home.pug-File`` kann der Inhalt der Webseite geändert werden
 
-``app.js``   Node-js-App - App-config (Port etc..)
+- ``app.js``   Node-js-App - App-config (Port etc..)
 
-``bootstrap.css``   Style
+- ``bootstrap.css``   Style
 
-``Dockerfile``   Image-Layers (OS, ergänzende SW-Deployment + Portweiterleitung)
+- ``Dockerfile``   Image-Layers (OS, ergänzende SW-Deployment + Portweiterleitung)
 
-``package.json``   Manifest
+- ``package.json``   Manifest
 
 Das sind sämtliche Files, die es für diese einfache Web-App benötigt.
 
@@ -119,7 +119,40 @@ Wenn diese Einträge und das Coden des Web-contents abgeschlossen sind, kann dar
 
 ## Neues Docker-Image bauen
 
-        $ docker image build -t marcellocalisto/webapp_one:1.0 .
+        $ docker image build -t leandrogoetzer/webapp_one:1.0 .
+
+`` $ docker image build -t leandrogoetzer/webapp_one:1.0 .`` *Erstelle ein neues Image in diesem Verzeichnis*
+
+Nun wir das Image erzeugt (6 Schritte, wie im Dockerfile vorgesehen. Die "intermediate container" werden temporär erstellt und verwendet, um einen dieser Schritte gem. Dockerfile umzusetzen (danach werden diese wieder gelöscht)
+
+- ``leandrogoetzer`` *Docker-Account (Verwende hier Deinen eigenen Docker-Account)*
+
+
+- ``webapp_one`` *Image-Name*
+
+
+- ``1.0`` *Image-Version*
+
+
+- ``.`` *Verzeichnis (in diesem Fall das aktuelle Verzeichnis)*
+
+## Neues Docker-Image überprüfen
+
+        $ docker image ls
+
+- ``$ docker image ls``  *Überprüfen, ob Image vorhanden ist*
+
+- ``leandrogoetzer/webapp_one 1.`` *Docker-Image (Repository-Name)*
+
+- ``leandrogoetzer/webapp_two 2.`` *Docker-Image (Repository-Name)*
+
+- ``1.0`` *Tag*
+
+-``f3a0d6a9c988`` *Image-ID*
+
+- ``195MB`` *Size*
+
+
 
 # Container Registry
 
