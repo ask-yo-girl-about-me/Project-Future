@@ -152,7 +152,105 @@ Nun wir das Image erzeugt (6 Schritte, wie im Dockerfile vorgesehen. Die "interm
 
 - ``195MB`` *Size*
 
+## Neues Docker-Image hochladen auf Docker-Hub
 
+        $ docker image push marcellocalisto/webapp_one:1.0
+
+``$ docker image push marcellocalisto/webapp_one:1.0``  *Image zu Dockerhub "pushen"*
+
+Falls anschliessend eine Fehlermeldung (Zugriffsverweigerung) komm, liegt dies daran, weil man sich noch mit seinem Docker-Account auf Dockerhub registrieren/einloggen muss.
+
+## Registrieren auf Docker-Hub
+
+Mit dem entsprechenden Docker-Account einloggen und anschliessend nochmals das Docker-Image zum Repository "pushen". In diesem Fall benutze ich meinen eigenen Account. Ersetze meinen Namen (marcellocalisto) mit Deinem persönlichen Docker-Accountname.
+
+        $ docker login --username=marcellocalisto
+        $ docker image push marcellocalisto/webapp_one:1.0
+
+``$ docker login --username=leandrogoetzer ``  *Username + Passwort vom Docker-Account*
+``$ docker image push leandrogoetzer/webapp_one:1.0``  *Image zu Dockerhub "pushen"*
+
+Auf dem Screenshot wird festgehalten, dass das Passwort **unverschlüsselt** im Verzeichnis /home/ubuntu/.docker/config.json abgelegt wird. 
+Es ist jetzt allerdings auch ersichtlich, dass beim zweiten Versuch **keine** Fehlermeldung (Zugriffsverweigerung) mehr erscheint. Das Hochladen in die Registry (Dockerhub) hat diesmal funktioniert.
+
+## Neues Docker-Image überprüfen / inspizieren
+In diesem Abschnitt überprüfen wir, ob Images mit gewissen Namensgesbungen (in diesem Fall "Calisto") lokal abgelegt sind. Zusätzlich wird gezeigt, wie ein lokales Image inspiziert werden kann (sehr umfangreiche Informationen)
+
+        $ docker image ls | grep -i leandro
+        $ docker image inspect <ID>
+
+``$ docker image ls | grep -i leandro``  *Checken, ob Images mit dem Namen "leandro" vorhanden sind*
+``$ docker image inspect <ID>``  *Image-Details inspizieren*
+
+Auf dem Screenshot sieht man, dass zwei Images vorhanden sind. Ich habe noch ein zweites Image mit einem leicht abgeänderten Inhalt erstellt. Zu einem späteren Zeitpunkt wird anhand dieser beiden Images ein "Rolling Upgrade" unter Kubernetes demonstriert. Wir fokussieren uns aber im Moment auf das Image "One".
+
+## Docker Container starten
+Nun überprüfen wir noch, ob aus diesem Image ein funktionierender Container erzeugt werden kann. In diesem Tutorial führen wir dazu einen imperativen Befehl mit div. Parametern aus. Jeder Teil des Kommandos wird unten ausführlich erklärt
+
+        $ docker container marcellocalisto/webapp_one:1.0
+
+``$ docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one``  *klappt nicht, da Tag fehlt"*
+``$ docker container run -d --name cal-web -p 8080:8080 marcellocalisto/webapp_one:1.0``  *Funktioniert"*
+
+Auf dem Screenshot ist zu sehen, dass erst der zweite Versuch klappt. Beim starten eines Containers muss in diesem Fall auch der Tag angegeben werden (wurde auch so beim Erstellen des Images eingegeben)
+
+Hier noch Angaben zu den jeweiligen Parametern:
+
+- -d Im Detach-Modus starten
+
+
+- --name Name des Containers - frei wählbar. In diesem Fall **cal-web**
+
+
+- 8080:8080 HostPort:ContainerPort - Forwarding des Ports
+
+## Webdienst überprüfen
+
+Überprüfen, ob der Webdienst nach dem starten des Containers wirklich über Port 8080 erreichbar ist
+
+        IP-Adresse:8080
+
+``10.4.43.32:8080``  *Auf Host Browser starten und IP:Port des Webdienstes (Container) eingeben*
+
+## Container Manipulationen (starten / überprüfen / stoppen / löschen)
+
+In diesem Abschnitt widmen wir uns weiteren Manipulationen von Containern. Auch wenn oben bereits dokumentiert, wird hier zwecks Verständlichkeit nochmals gezeigt, wie ein Container im erweiterten Kontext gestartet wird. Es besteht jederzeit die Möglichkeit, diesen zu stoppen und jederzeit wieder zu starten. Falls nicht mehr benötigt, kann er (auch temporär) gelöscht werden.
+
+        $ docker container ls -a | grep -i leandro
+        $ docker container run -d --name cal-web01 -p 8080:8080 leandrogoetzer/webapp_one:1.0
+
+``$ docker container ls -a | grep -i leandro`` *Checken, ob Container mit dem Namen "Calisto" läuft*
+``$ docker container run -d --name cal-web01 -p 8080:8080`` *leandrogoetzer/webapp_one:1.0  Container starten*
+``$ docker container inspect 055`` *Container mit der ID 055* inspizieren*
+
+
+
+## Container-Manipulationen mit der Container-ID
+
+        $ docker container stop <Container-ID>
+        $ docker container stop <Container-ID>
+        $ ocker container rm <Container-ID>
+
+
+
+## Container-Manipulationen mit dem Container-Namen
+
+        $ docker container stop <Container-Name>
+        $ docker container stop <Container-Name>
+        $ ocker container rm <Container-Name>
+ 
+        $ docker container ls -a | grep -i calisto  Checken, ob Container mit dem Namen "Calisto" läuft
+        $ docker container stop 055  Container mit der ID 055* stoppen
+        $ docker container start 055  Container mit der ID 055* starten
+        $ docker container stop cal-web01  Container mit dem Containernamen "cal-web01 stoppen
+        $ docker container rm 055  Container mit der ID 055* löschen
+
+## Webdienst überprüfen
+Überprüfen, ob der Webdienst nach dem löschen des Containers wirklich nicht mehr über Port 8080 erreichbar ist
+
+        IP-Adresse:8080
+        
+``10.4.43.32:8080`` *Auf Host Browser starten und IP:Port des Webdienstes (Container) eingeben*
 
 # Container Registry
 
