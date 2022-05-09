@@ -156,7 +156,7 @@ Nun wir das Image erzeugt (6 Schritte, wie im Dockerfile vorgesehen. Die "interm
 
         $ docker image push marcellocalisto/webapp_one:1.0
 
-``$ docker image push marcellocalisto/webapp_one:1.0``  *Image zu Dockerhub "pushen"*
+``$ docker image push leandrogoetzer/webapp_one:1.0``  *Image zu Dockerhub "pushen"*
 
 Falls anschliessend eine Fehlermeldung (Zugriffsverweigerung) komm, liegt dies daran, weil man sich noch mit seinem Docker-Account auf Dockerhub registrieren/einloggen muss.
 
