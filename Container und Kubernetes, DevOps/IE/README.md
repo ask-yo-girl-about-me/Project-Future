@@ -12,6 +12,9 @@
 # Container Umgebungen
 
 Container Laufzeitumgebungen (Runtimes) werden auf jeden Nodes eines Container Clusters installiert. 
+In den einzelnen Umgebungen befinden sich keine kompletten Betriebssysteme wie das bei virtuellen Maschinen der Fall ist, sondern nur das Hostsystem welches die benötigten Komponenten der jeweiligen Applikation enthalten. Dies führt dazu das Container einiges weniger an Ressourcen benötigen. 
+In der Laufzeitumgebung enthalten sind also nur die benötigten Ressourcen & das Hostsystem. 
+
 
 # Container Images
 
