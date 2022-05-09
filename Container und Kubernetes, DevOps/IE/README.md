@@ -244,7 +244,7 @@ In diesem Abschnitt widmen wir uns weiteren Manipulationen von Containern. Auch 
         $ docker container stop <Container-Name>
         $ ocker container rm <Container-Name>
  
-        $ docker container ls -a | grep -i calisto  Checken, ob Container mit dem Namen "Calisto" läuft
+        $ docker container ls -a | grep -i leandro  Checken, ob Container mit dem Namen "Leandro" läuft
         $ docker container stop 055  Container mit der ID 055* stoppen
         $ docker container start 055  Container mit der ID 055* starten
         $ docker container stop cal-web01  Container mit dem Containernamen "cal-web01 stoppen
