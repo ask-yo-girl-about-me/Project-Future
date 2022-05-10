@@ -1,4 +1,4 @@
-# Projekt-Future Container und Kubernetes, DevOps
+Projekt-Future Container und Kubernetes, DevOps
 ========
 ## Inhaltsverzeichnis
 - [LE](/01_Kompetenzen/LE/)
