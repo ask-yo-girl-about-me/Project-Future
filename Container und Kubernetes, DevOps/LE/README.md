@@ -5,7 +5,7 @@ Projekt-Future Container und Kubernetes, DevOps
 
     Continuous Integration / Delivery = LE1: Ich kann Continuous Integration / Delivery einsetzen
 
-### Ich kenne Continous Integration
+### Continous Integration
 
 Die Continous Integration ist ein Begriff aus der Software-Entwicklung, welcher die fortlaufenden Weiterentwicklung und Zusammenführung von Komponenten zu einer Anwendung beschreibt. 
 Das Ziel dieses Prozesses ist die Steigerung der Softwarequalität. 
@@ -23,3 +23,6 @@ Sobald diese Test abgeschlossen wurden, muss der neue Release noch approved werd
 Kurz gesagt die Continous delivery geht noch einen Schritt weiter als die Continous Integration indem der Code automatisch ins Test System deployed wird. Zusätzlich werden automatisch Tests des neuen Codes durchgeführt um die neue Version für den Release vorzubereiten. 
 
 ![Continous Integration & Delivery](https://d1.awsstatic.com/product-marketing/DevOps/continuous_integration.4f4cddb8556e2b1a0ca0872ace4d5fe2f68bbc58.png)
+
+### Hands on Continous Integration / Delivery 
+
