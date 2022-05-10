@@ -64,10 +64,10 @@ Das Installieren haben wir mit dem folgenden Cloud-init Scritp durchgeführt:
                 - sudo microk8s config >/home/ubuntu/.kube/config
                 - sudo chown -f -R ubuntu /home/ubuntu/.kube
                 - sudo snap install kubectl --classic   
-                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml
+                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/dashboard-skip-login-no-ingress.yaml
                 - su - ubuntu -c "git clone https://gitlab.com/ch-tbz-hf/Stud/cnt.git"
                 - sudo mkdir /data
                 - sudo chown ubuntu:ubuntu /data
                 - su - ubuntu -c "cp -rp cnt/2_Unterrichtsressourcen/K/jupyter /data"
-                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lernkube/master/data/DataVolume.yaml
-                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/jupyter/jupyter-base-microk8s.yaml    
+                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/DataVolume.yaml
+                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/jupyter-base-microk8s.yaml  
