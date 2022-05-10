@@ -69,14 +69,14 @@ Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügba
 Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht.
 
 ## Wie kommen wir zu Images?
-- Von vertrauenswürdigen Registry herunterladen ( docker pull/ run
+- Von vertrauenswürdigen Registry herunterladen ( docker pull/ run )
 - Selber Erstellen
 
 ## Einfache Web-App in einen Container  verfrachten
 
 **Wie kann diese einfache Web-App erstellt, angepasst und genutzt werden:**
 
-- Dieses Repository clonen
+- Dieses Repository Klonen
 - Content anpassen
 - Docker-Image erstellen und in die Registry pushen
 - Docker-Image laufen lassen (Container)
@@ -87,19 +87,41 @@ Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "
 
 ## Vorbereitung
 
+Zuerst brauchen wir eine VM welche Docker installiert hat.
+Dies wird direkt mit folgendem Cloud-init File vom Unterricht gemacht.
+
+                #cloud-config
+                users:
+                - name: ubuntu
+                sudo: ALL=(ALL) NOPASSWD:ALL
+                groups: users, admin
+                home: /home/ubuntu
+                shell: /bin/bash
+                lock_passwd: false
+                plain_text_passwd: 'password'        
+                # login ssh and console with password
+                ssh_pwauth: true
+                disable_root: false    
+                packages:
+                - docker.io
+                runcmd:
+                - sudo usermod -aG docker ubuntu 
+
+
+
 Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinhüpfen
 
 - ``$ mkdir TEMP_Docker`` *Unterverzeichnis "TEMP_Docker" erstellen*
 
 - ``$ cd TEMP_Docker`` *Ins Unterverzeichnis "TEMP_Docker" wechseln* 
  
-- ``$ git clone https://gitlab.com/ser-cal/Container-CAL-webapp_v1.git`` *Repo klonen*
+- ``$ git clone https://github.com/ask-yo-girl-about-me/Project-Future.git`` *Repo klonen*
  
 - ``$ cd Container-CAL-webapp-v1/`` *ins Repo-Unterverzeichnis hüpfen*
  
 - ``$ cd APP`` *Ins Unterverzeichnis "APP" hüpfen*
  
-- ``$ less Dockerfile`` *Inhalt des Dockerfiles anschauen*
+- ``$ less Dockerfile`` *Inhalt des Dockerfiles anschauen (Mit Ctrl+X und F2 verlässt man die Ansicht)*
  
 - ``$ docker --version `` *Nochmals sicherstellen, dass Docker installiert ist (Notwendig)*
 
@@ -272,4 +294,14 @@ In Container Registries werden Images abgelegt und verteilt
 
 Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügbarer Images zur Verfügung stehen, aber auch "offizielle" Images [Docker](https://hub.docker.com/).
 Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht.
+
+1. Vorhanden Docker Repos verwenden
+
+Auf [Docker](https://hub.docker.com/) gehen, Repository suchen und ``docker pull`` machen.
+
+2. Eigenes Docker Repo erstellen und verwenden
+
+Entweder wie oben eigenes Repo erstellen über eine VM, oder über die Docker Applikation die nötigen Dateien hochladen und auf der VM ein ``docker pull`` durchführen.
+
+3. Azure Repos
 
