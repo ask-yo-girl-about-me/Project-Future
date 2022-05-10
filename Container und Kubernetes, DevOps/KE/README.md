@@ -65,9 +65,17 @@ Das Installieren haben wir mit dem folgenden Cloud-init Scritp durchgeführt:
                 - sudo chown -f -R ubuntu /home/ubuntu/.kube
                 - sudo snap install kubectl --classic   
                 - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/dashboard-skip-login-no-ingress.yaml
-                - su - ubuntu -c "git clone https://gitlab.com/ch-tbz-hf/Stud/cnt.git"
+                - su - ubuntu -c "git clone https://github.com/ask-yo-girl-about-me/Project-Future"
                 - sudo mkdir /data
                 - sudo chown ubuntu:ubuntu /data
-                - su - ubuntu -c "cp -rp cnt/2_Unterrichtsressourcen/K/jupyter /data"
+                - su - ubuntu -c "cp -rp Project-Future/tree/main/Container%20und%20Kubernetes%2C%20DevOps/KE/Jupiter /data"
                 - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/DataVolume.yaml
-                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/jupyter-base-microk8s.yaml  
+                - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/ask-yo-girl-about-me/Project-Future/main/Container%20und%20Kubernetes%2C%20DevOps/KE/webapp/jupyter-base-microk8s.yaml 
+
+Nach dem die VM fertig deployt ist, kann man mit den folgenden Links auf das Kubernetes und Jupiter Webinterface zugreifen:
+
+- Kubernetes:   http://10.1.38.36:8443 
+- Jupiter:      http://10.1.38.36:32188
+
+Nun haben wir eine einzelnen VM mit Kubernetes. Um damit ein Cluster zu erstellen können mehrere VM noch hinzugefügt werden.
+
