@@ -360,6 +360,7 @@ Notieren Sie sich den Registrierungsnamen und den Wert des Anmeldeservers, bei d
 Bevor Sie Push- und Pullvorgänge für Containerimages ausführen können, müssen Sie sich bei der Registrierungsinstanz anmelden. [Melden Sie sich auf dem lokalen Computer bei der Azure CLI an](https://docs.microsoft.com/de-DE/cli/azure/get-started-with-azure-cli), und führen Sie dann den Befehl [az acr login](https://docs.microsoft.com/de-DE/cli/azure/acr#az_acr_login) aus. Geben Sie beim Anmelden bei der Azure CLI nur den Namen der Registrierungsressource an. Verwenden Sie nicht den vollqualifizierten Namen des Anmeldeservers.
 
 Azure CLI
+
                 az acr login --name <registry-name>
 
 Azure CLI
