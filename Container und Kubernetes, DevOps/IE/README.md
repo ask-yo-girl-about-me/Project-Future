@@ -368,5 +368,26 @@ Azure CLI
 
 Der Befehl gibt nach Abschluss des Vorgangs Login Succeeded zurück.
 
-Pushen eines Image in die Registrierung
+**Pushen eines Image in die Registrierung**
+
 Um ein Image mithilfe von Push an Ihre Azure Container Registry-Instanz übertragen zu können, benötigen Sie zunächst ein Image. Wenn Sie noch nicht über lokale Containerimages verfügen, führen Sie den folgenden docker pull-Befehl aus, um ein vorhandenes öffentliches Image abzurufen. In diesem Beispiel wird das Image hello-world aus Microsoft Container Registry gepullt.
+
+                docker pull mcr.microsoft.com/hello-world
+
+Bevor Sie ein Image mithilfe von Push in Ihre Registrierung übertragen können, müssen Sie es mit dem vollqualifizierten Namen des Anmeldeservers Ihrer Registrierungsinstanz markieren. Der Name des Anmeldeservers wird im Format <registrierungsname>.azurecr.io (nur Kleinbuchstaben) angegeben (Beispiel: mycontainerregistry.azurecr.io).
+
+Markieren Sie das Image mithilfe des Befehls [docker tag](https://docs.docker.com/engine/reference/commandline/tag/). Ersetzen Sie <login-server> durch den Anmeldeservernamen Ihrer ACR-Instanz.
+
+                docker tag mcr.microsoft.com/hello-world <login-server>/hello-world:v1
+
+Beispiel:
+
+                docker tag mcr.microsoft.com/hello-world registryforcnt.azurecr.io/hello-world:v1
+
+Nun können Sie das Image mit docker push per Pushvorgang an die Registrierungsinstanz übertragen. Ersetzen Sie <login-server> durch den Anmeldeservernamen Ihrer Registrierungsinstanz. In diesem Beispiel wird das Repository hello-world mit dem Image hello-world:v1 erstellt.
+
+                docker push <login-server>/hello-world:v1
+
+Nachdem das Image in Ihre Containerregistrierung gepusht wurde, entfernen Sie das Image hello-world:v1 aus Ihrer lokalen Docker-Umgebung. (Beachten Sie, dass der Befehl docker rmi nicht das Image aus dem Repository hello-world in Ihrer Azure-Containerregistrierung entfernt.)
+
+                docker rmi <login-server>/hello-world:v1
