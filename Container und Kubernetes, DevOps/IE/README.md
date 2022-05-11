@@ -295,13 +295,78 @@ In Container Registries werden Images abgelegt und verteilt
 Die Standard-Registry ist der Docker Hub, auf dem tausende öffentlich verfügbarer Images zur Verfügung stehen, aber auch "offizielle" Images [Docker](https://hub.docker.com/).
 Viele Organisationen und Firmen nutzen eigene Registries, um kommerzielle oder "private" Images zu hosten, aber auch um den Overhead zu vermeiden, der mit dem Herunterladen von Images über das Internet einhergeht.
 
-1. Vorhanden Docker Repos verwenden
+Eine Container-Registry ist ein Repository oder eine Sammlung von Repositories, in denen Container-Images für Kubernetes, DevOps und die containerbasierte Anwendungsentwicklung gespeichert werden. 
 
-Auf [Docker](https://hub.docker.com/) gehen, Repository suchen und ``docker pull`` machen.
+Es gibt zwei Arten von Container-Registries: **öffentliche und private**. 
 
-2. Eigenes Docker Repo erstellen und verwenden
+**Öffentliche Registries** eignen sich hervorragend für **Einzelpersonen oder kleine Teams**, die ihre Registry so **schnell** wie möglich einrichten möchten. Sie bieten lediglich **grundlegende Funktionen** und sind **einfach** zu verwenden. 
 
-Entweder wie oben eigenes Repo erstellen über eine VM, oder über die Docker Applikation die nötigen Dateien hochladen und auf der VM ein ``docker pull`` durchführen.
+Neue und kleinere Unternehmen können Standard- und Open Source-Images als Basis nutzen und nach Bedarf erweitern. Bei diesem Prozess können jedoch **Sicherheitsprobleme** in Bereichen wie **Patching, Datenschutz und Zugriffskontrolle** auftreten. 
 
-3. Azure Repos
+**Private Registries** bieten die Möglichkeit, **Sicherheit und Datenschutz** in den Image Storage von unternehmensfähigen Containern zu integrieren, die entweder remote oder lokal gehostet werden. Das jeweilige Unternehmen kann dann entweder eine **eigene Container-Registry entwickeln und bereitstellen** oder **einen kommerziell unterstützten privaten Registry-Service verwenden**. *Diese privaten Registries bieten häufig erweiterte Sicherheitsfunktionen und technischen Support*.
 
+## Docker Registrys
+
+### Basic commands
+
+Start your registry
+                docker run -d -p 5000:5000 --name registry registry:2
+
+Pull (or build) some image from the hub
+                docker pull ubuntu
+
+Tag the image so that it points to your registry
+                docker image tag ubuntu localhost:5000/myfirstimage
+
+Push it
+                docker push localhost:5000/myfirstimage
+
+Pull it back
+                docker pull localhost:5000/myfirstimage
+
+Now stop your registry and remove all data
+                docker container stop registry && docker container rm -v registry
+
+Quelle: [Docker Registry](https://docs.docker.com/registry/) [About Docker Registry](https://docs.docker.com/registry/introduction/)
+
+### Azure
+
+Hier wir mit Azure aufgezeigt, wie man die Azure-Containerregistrierung einrichtet und nutzt.
+
+**Anmelden bei Azure**
+
+Melden Sie sich unter [Azure Portal](https://portal.azure.com) beim Azure-Portal an.
+
+**Erstellen einer Containerregistrierung**
+
+Klicken Sie auf Ressource erstellen>Container>Container Registry.
+
+![Bild1](/Container%20und%20Kubernetes%2C%20DevOps/IE/IE2/Azure-Containerregistrierung/1.png)
+
+Geben Sie auf der Registerkarte Grundlagen Werte für Ressourcengruppe und Registrierungsname ein. Der Registrierungsname muss innerhalb von Azure eindeutig sein und zwischen 5 und 50 alphanumerische Zeichen enthalten. Erstellen Sie im Rahmen dieser Schnellstartanleitung eine neue Ressourcengruppe namens myResourceGroup am Standort *Region*, und wählen Sie für SKU die Option „Basic“ aus.
+
+![Bild2](/Container%20und%20Kubernetes%2C%20DevOps/IE/IE2/Azure-Containerregistrierung/2.png)
+
+Übernehmen Sie für die übrigen Einstellungen die Standardwerte. Wählen Sie dann Überprüfen + erstellen aus. Überprüfen Sie die Einstellungen, und wählen Sie anschließend Erstellen aus. 
+
+Wenn die Meldung Bereitstellung erfolgreich erscheint, wählen Sie die Containerregistrierung im Portal aus.
+
+![Bild3](/Container%20und%20Kubernetes%2C%20DevOps/IE/IE2/Azure-Containerregistrierung/3.png)
+
+Notieren Sie sich den Registrierungsnamen und den Wert des Anmeldeservers, bei dem es sich um einen vollqualifizierten Namen handelt, der auf azurecr.io in der Azure-Cloud endet. Sie verwenden diese Werte in den folgenden Schritten bei den Push- und Pullvorgängen für Images mit Docker.
+
+**Anmelden bei der Registrierung**
+
+Bevor Sie Push- und Pullvorgänge für Containerimages ausführen können, müssen Sie sich bei der Registrierungsinstanz anmelden. [Melden Sie sich auf dem lokalen Computer bei der Azure CLI an](https://docs.microsoft.com/de-DE/cli/azure/get-started-with-azure-cli), und führen Sie dann den Befehl [az acr login](https://docs.microsoft.com/de-DE/cli/azure/acr#az_acr_login) aus. Geben Sie beim Anmelden bei der Azure CLI nur den Namen der Registrierungsressource an. Verwenden Sie nicht den vollqualifizierten Namen des Anmeldeservers.
+
+Azure CLI
+                az acr login --name <registry-name>
+
+Azure CLI
+
+                az acr login --name registryforcnt
+
+Der Befehl gibt nach Abschluss des Vorgangs Login Succeeded zurück.
+
+Pushen eines Image in die Registrierung
+Um ein Image mithilfe von Push an Ihre Azure Container Registry-Instanz übertragen zu können, benötigen Sie zunächst ein Image. Wenn Sie noch nicht über lokale Containerimages verfügen, führen Sie den folgenden docker pull-Befehl aus, um ein vorhandenes öffentliches Image abzurufen. In diesem Beispiel wird das Image hello-world aus Microsoft Container Registry gepullt.
