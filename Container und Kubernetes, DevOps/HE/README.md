@@ -1,12 +1,12 @@
 Projekt-Future Container und Kubernetes, DevOps
 ========
 
-## Inhaltsverzeichnis
+# Inhaltsverzeichnis
 - [HE](/01_Kompetenzen/HE/)
 
     Container Technologien = HE1: Ich kann die Technologien hinter Container mit Beispielen erklären
 
-### Historie (HG1)
+# Historie (HG1)
 
 Container sind ein altes Konzept, welches erst in den letzen Jahren an relevanz gewann. 
 
@@ -21,7 +21,7 @@ Seit Juni 2015 existiert die OCI (Open Container Initiative) welche von führend
 * Spezifizierung der image-spec 
 
 
-### Container Technologien (HF1)
+# Container Technologien (HF1)
 
 Die Container Technologie erlaubt es Applikationen mit all ihren Abhängigkeiten isoliert von anderen Prozessen auszuführen. 
 
