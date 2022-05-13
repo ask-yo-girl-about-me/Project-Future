@@ -389,6 +389,10 @@ Hier für erstellen wir wie folgt eine VM mit Ubuntu:
 
                 ssh -i <Pfad zum privaten Schlüssel> leandro_goetzer@52.174.61.137
 
+![Anmeldung](/Container%20und%20Kubernetes,%20DevOps/IE/IE2/Azure-Containerregistrierung/6.png)
+
+![Anmeldung](/Container%20und%20Kubernetes,%20DevOps/IE/IE2/Azure-Containerregistrierung/7.png)
+
 Quelle: [Schnellstart für Bash in Azure Cloud Shell](https://docs.microsoft.com/de-de/azure/cloud-shell/quickstart)
 
 **Docker installieren**
@@ -438,6 +442,8 @@ Nun den Befehl ``docker build`` . -t webapp_one nochmals ausführen.
 Nun schauen wir was für Images am laufen sind:
 
                 docker images
+
+![Anmeldung](/Container%20und%20Kubernetes,%20DevOps/IE/IE2/Azure-Containerregistrierung/8.png)
 
 Nun login wir uns ein.
 
