@@ -455,5 +455,10 @@ Hier Tagen und Pushen wir den docker in das ACR
 
                 docker push registryforcnt.azurecr.io/webapp_one
 
+![Anmeldung](/Container%20und%20Kubernetes,%20DevOps/IE/IE2/Azure-Containerregistrierung/10.png)
+
+![Anmeldung](/Container%20und%20Kubernetes,%20DevOps/IE/IE2/Azure-Containerregistrierung/11.png)
+
+
 Quelle: [How to Create Azure Container Registry | Create Docker image and push into Azure Container Registry](https://www.youtube.com/watch?v=New8K6R0hz8)
 
