@@ -363,7 +363,99 @@ Notieren Sie sich den Registrierungsnamen und den Wert des Anmeldeservers, bei d
 
 **Anmelden bei der Registrierung**
 
-Bevor Sie Push- und Pullvorgänge für Containerimages ausführen können, müssen Sie sich bei der Registrierungsinstanz anmelden. [Melden Sie sich auf dem lokalen Computer bei der Azure CLI an](https://docs.microsoft.com/de-DE/cli/azure/get-started-with-azure-cli), und führen Sie dann den Befehl [az acr login](https://docs.microsoft.com/de-DE/cli/azure/acr#az_acr_login) aus. Geben Sie beim Anmelden bei der Azure CLI nur den Namen der Registrierungsressource an. Verwenden Sie nicht den vollqualifizierten Namen des Anmeldeservers.
+Bevor Sie Push- und Pullvorgänge für Containerimages ausführen können, müssen Sie sich bei der Registrierungsinstanz anmelden. [Melden Sie sich auf dem lokalen Computer bei der Azure CLI an](https://docs.microsoft.com/de-DE/cli/azure/get-started-with-azure-cli)
+
+**VM erstellen**
+
+Nun für das ganze brauchen wir eine Virtuelle Maschine mit Ubuntu.
+Dies wir hier manuelle eingerichtet mit Docker und nicht wie oben mit einem Cloud.init File.
+
+Hier für erstellen wir wie folgt eine VM mit Ubuntu:
+
+                az vm create -n myVM -g <Ressourcengruppe> --image UbuntuLTS --generate-ssh-keys
+
+**Herstellen einer SSH-Verbindung mit Ihrem virtuellen Linux-Computer**
+
+1. Suchen Sie über die Suchleiste des Azure-Portals nach dem Namen Ihres virtuellen Computers.
+
+2. Klicken Sie auf „Verbinden“, um Ihren VM-Namen und die öffentliche IP-Adresse abzurufen.
+
+3. Stellen Sie mit dem Befehl ssh eine SSH-Verbindung mit Ihrer VM her.
+   In meinem Fall jetzt
+
+                ssh -i <Pfad zum privaten Schlüssel> leandro_goetzer@52.174.61.137
+
+Quelle: [Schnellstart für Bash in Azure Cloud Shell](https://docs.microsoft.com/de-de/azure/cloud-shell/quickstart)
+
+**Docker installieren**
+
+1. Schritt 1 — Installieren von Docker
+
+                sudo apt update
+
+                sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+                curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+                sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+                sudo apt update
+                
+                apt-cache policy docker-ce
+
+                sudo apt install docker-ce
+
+                sudo systemctl status docker
+
+Quelle: [Installieren und Verwenden von Docker unter Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-de)
+
+**Einrichtung und Umsetzung**
+
+                git clone https://github.com/ask-yo-girl-about-me/Project-Future.git
+
+                cd Project-Future/Container\ und\ Kubernetes\,\ DevOps/IE/IE2/APP01/
+
+                docker build . -t webapp_one
+
+Hier kommt nun eine Fehlermeldung. 
+
+                *How to fix docker: Got permission denied while trying to connect to the Docker daemon socket*
+
+                Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json: dial unix /var/run/docker.sock: connect: permission denied
+
+Da musste ich folgenden fix ausführen:
+
+                sudo chmod 666 /var/run/docker.sock      
+
+[How to fix docker](https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket)
+
+Nun den Befehl ``docker build`` . -t webapp_one nochmals ausführen.
+
+Nun schauen wir das für Images am laufen sind:
+
+                docker images
+
+Nun login wir uns ein.
+
+                docker login registryforcnt.azurecr.io
+
+Hier Tagen und Pushen wir den docker in das ACR
+
+                docker tag webapp_one:latest registryforcnt.azurecr.io/webapp_one
+
+                docker push registryforcnt.azurecr.io/webapp_one
+
+Quelle: [How to Create Azure Container Registry | Create Docker image and push into Azure Container Registry](https://www.youtube.com/watch?v=New8K6R0hz8)
+
+
+
+
+
+
+
+
+
+
 
 Azure CLI
 
@@ -398,3 +490,8 @@ Nun können Sie das Image mit docker push per Pushvorgang an die Registrierungsi
 Nachdem das Image in Ihre Containerregistrierung gepusht wurde, entfernen Sie das Image hello-world:v1 aus Ihrer lokalen Docker-Umgebung. (Beachten Sie, dass der Befehl docker rmi nicht das Image aus dem Repository hello-world in Ihrer Azure-Containerregistrierung entfernt.)
 
                 docker rmi <login-server>/hello-world:v1
+
+
+
+
+
