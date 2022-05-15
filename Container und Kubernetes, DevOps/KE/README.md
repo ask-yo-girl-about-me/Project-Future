@@ -77,5 +77,25 @@ Nach dem die VM fertig deployt ist, kann man mit den folgenden Links auf das Kub
 - Kubernetes:   http://10.1.38.36:8443 
 - Jupiter:      http://10.1.38.36:32188
 
-Nun haben wir eine einzelnen VM mit Kubernetes. Um damit ein Cluster zu erstellen können mehrere VM noch hinzugefügt werden.
+Nun haben wir eine einzelnen VM mit Kubernetes. Um ein Cluster zu erstellen können mehrere VM noch hinzugefügt werden.
+Dafür werden wir uns per Bitvise mit dem Termnial der bestehende Kubernets VM verbinden. Mit dem kommendnen Befehl bestimmt man den Master des Klaster, in unserem Falle ist es die bestehnde VM.
 
+                microk8s add-node
+
+Nach dem Ausführen erhält man die  beitritts Instruktionen ausgaben.
+
+![Bild1](/Container%20und%20Kubernetes,%20DevOps/KE/img/1microk8sa_add_node.png)
+
+In unserem Falle könenn die "Worker" mit dem folgendem Befehl dem Kubernetes Cluster beitreten:
+
+                microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
+
+Nun sucht der Worker die Verbindung zum Master und wenn diese erstellt ist tritt der Worker dem Cluster bei.
+
+Das ganze kann nun auf dem Master überpfüt werden. Dafür den folgenden Befehl im Terminal eingeben.
+
+                microk8s kubectl get no
+
+Die ausgabe sieht wie folgt aus:
+
+![Bild1](/Container%20und%20Kubernetes,%20DevOps/KE/img/2get_no.png)
