@@ -15,6 +15,48 @@ Container Laufzeitumgebungen (Runtimes) werden auf jeden Nodes eines Container C
 In den einzelnen Umgebungen befinden sich keine kompletten Betriebssysteme wie das bei virtuellen Maschinen der Fall ist, sondern nur das Hostsystem welches die benötigten Komponenten der jeweiligen Applikation enthalten. Dies führt dazu das Container einiges weniger an Ressourcen benötigen. 
 In der Laufzeitumgebung enthalten sind also nur die benötigten Ressourcen & das Hostsystem. 
 
+Docker manuell installieren:
+
+                sudo apt update
+
+                sudo apt install apt-transport-https ca-certificates curl software-properties-common
+
+                curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+                sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+                sudo apt update
+                
+                apt-cache policy docker-ce
+
+                sudo apt install docker-ce
+
+                sudo systemctl status docker
+
+Docker per Cloud-init installieren:
+
+                #cloud-config
+                users:
+                - name: ubuntu
+                sudo: ALL=(ALL) NOPASSWD:ALL
+                groups: users, admin
+                home: /home/ubuntu
+                shell: /bin/bash
+                lock_passwd: false
+                plain_text_passwd: 'password'        
+                # login ssh and console with password
+                ssh_pwauth: true
+                disable_root: false    
+                packages:
+                - docker.io
+                runcmd:
+                - sudo usermod -aG docker ubuntu 
+
+**Einfacher Container Nutzen**
+
+[Docker Apache](https://hub.docker.com/_/httpd)
+
+
 
 # Container Images
 
@@ -106,8 +148,6 @@ Dies wird direkt mit folgendem Cloud-init File vom Unterricht gemacht.
                 - docker.io
                 runcmd:
                 - sudo usermod -aG docker ubuntu 
-
-
 
 Zuerst im Home-Verzeichnis ein Unterverzeichnis TEMP_Docker erstellen und reinhüpfen
 
@@ -244,7 +284,9 @@ Hier noch Angaben zu den jeweiligen Parametern:
 
         IP-Adresse:8080
 
-``10.4.43.32:8080``  *Auf Host Browser starten und IP:Port des Webdienstes (Container) eingeben*
+``10.1.38.41:8080``  *Auf Host Browser starten und IP:Port des Webdienstes (Container) eingeben*
+
+[10.1.38.41:8080](http://10.1.38.41:8080/)
 
 ## Container Manipulationen (starten / überprüfen / stoppen / löschen)
 
@@ -369,6 +411,8 @@ Bevor Sie Push- und Pullvorgänge für Containerimages ausführen können, müss
 
 ![Anmeldung](/Container%20und%20Kubernetes,%20DevOps/IE/IE2/Azure-Containerregistrierung/5.png)
 
+[Azure Registry](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerRegistry%2Fregistries)
+
 **VM erstellen**
 
 Nun für das ganze brauchen wir eine Virtuelle Maschine mit Ubuntu.
@@ -377,6 +421,8 @@ Dies wir hier manuelle eingerichtet mit Docker und nicht wie oben mit einem Clou
 Hier für erstellen wir wie folgt eine VM mit Ubuntu:
 
                 az vm create -n myVM -g <Ressourcengruppe> --image UbuntuLTS --generate-ssh-keys
+
+[Azure Virtual Machines](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Compute%2FVirtualMachines)
 
 **Herstellen einer SSH-Verbindung mit Ihrem virtuellen Linux-Computer**
 
