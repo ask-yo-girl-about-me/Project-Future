@@ -37,35 +37,35 @@ Um nachfolgende Services zu betreiben wir eine Kubernetes Umgebung gebraucht.
 Dazu erstellen wir eine VM mit mindestens 8 GB RAM, 2 CPUs und 32 GB HD
 Als Cloud-init Script, verwenden folgendes Skript.
 
-  #cloud-config
-  users:
-    - name: ubuntu
-      sudo: ALL=(ALL) NOPASSWD:ALL
-      groups: users, admin
-      home: /home/ubuntu
-      shell: /bin/bash
-      lock_passwd: false
-      plain_text_passwd: 'password'        
-  # login ssh and console with password
-  ssh_pwauth: true
-  disable_root: false    
-  packages: 
-    - unzip
-  runcmd:
-    - sudo snap install microk8s --classic
-    - sudo usermod -a -G microk8s ubuntu
-    - sudo microk8s enable dns ingress
-    - sudo mkdir -p /home/ubuntu/.kube
-    - sudo microk8s config >/home/ubuntu/.kube/config
-    - sudo chown -f -R ubuntu /home/ubuntu/.kube
-    - sudo snap install kubectl --classic   
-    - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml
-    - su - ubuntu -c "git clone https://gitlab.com/ch-tbz-hf/Stud/cnt.git"
-    - sudo mkdir /data
-    - sudo chown ubuntu:ubuntu /data
-    - su - ubuntu -c "cp -rp cnt/2_Unterrichtsressourcen/K/jupyter /data"
-    - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lernkube/master/data/DataVolume.yaml
-    - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/jupyter/jupyter-base-microk8s.yaml
+    #cloud-config
+    users:
+      - name: ubuntu
+        sudo: ALL=(ALL) NOPASSWD:ALL
+        groups: users, admin
+        home: /home/ubuntu
+        shell: /bin/bash
+        lock_passwd: false
+        plain_text_passwd: 'password'        
+    # login ssh and console with password
+    ssh_pwauth: true
+    disable_root: false    
+    packages: 
+      - unzip
+    runcmd:
+      - sudo snap install microk8s --classic
+      - sudo usermod -a -G microk8s ubuntu
+      - sudo microk8s enable dns ingress
+      - sudo mkdir -p /home/ubuntu/.kube
+      - sudo microk8s config >/home/ubuntu/.kube/config
+      - sudo chown -f -R ubuntu /home/ubuntu/.kube
+      - sudo snap install kubectl --classic   
+      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/addons/dashboard-skip-login-no-ingress.yaml
+      - su - ubuntu -c "git clone https://gitlab.com/ch-tbz-hf/Stud/cnt.git"
+      - sudo mkdir /data
+      - sudo chown ubuntu:ubuntu /data
+      - su - ubuntu -c "cp -rp cnt/2_Unterrichtsressourcen/K/jupyter /data"
+      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/lernkube/master/data/DataVolume.yaml
+      - sudo microk8s kubectl apply -f https://raw.githubusercontent.com/mc-b/duk/master/jupyter/jupyter-base-microk8s.yaml
 
 **Testen der Umgebung auf der Kommandozeile**
 
