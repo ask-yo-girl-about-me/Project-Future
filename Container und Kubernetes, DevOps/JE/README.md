@@ -85,6 +85,7 @@ Die IP-Adresse der VM und der anzeigte Port ergibt den URL wo der Apache Webserv
 Das Beispiel besteht aus drei Microservices: Order, Customer und Catalog. Order nutzt Catalog und Customer mit der REST-Schnittstelle. Ausserdem bietet jeder Microservice einige HTML-Seiten an.Zusätzlich ist im Beispiel ein Apache-Webserver installiert, der dem Benutzer mit einer Webseite einen einfachen Einstieg in das System ermöglicht.
 
 **Asynchrone Microservices**
+
 Das System besteht aus einem Microservice order, der eine Bestellung über die Weboberfläche entgegennimmt. Die Bestellung schickt der Bestellprozess dann als Record über Kafka an den Microservice für den Versand shipping und den Microservice für die Erstellung der Rechnung invoicing.Die Bestellung wird als JSON übertragen. So können der Rechnungs-Microservice und der Versand-Microservice aus der Datenstruktur jeweils die Daten auslesen, die für den jeweiligen Microservice relevant sind.Der Versand-Microservice und der Rechnungs-Microservice speichern die Informationen aus den Records in ihren eigenen Datenbank-Schemata. Alle Microservices nutzen eine gemeinsame Postgres-Datenbank.
 
 **Umsetzung**
