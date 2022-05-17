@@ -20,6 +20,8 @@ Seit Juni 2015 existiert die OCI (Open Container Initiative) welche von führend
 * Spezifizierung der runtime-spec Image erstellt & entpackt wird)
 * Spezifizierung der image-spec 
 
+Heute hat Kubernetes sich als allumfängliche Container Management Lösung durchgesetzt. 
+
 
 # Container Technologien (HF1)
 
@@ -30,6 +32,17 @@ Die Idee hinter der Erstellung eines Container Images ist es die Ressource isoli
 Jeder Container verfügt über ein eigenes DateiSystem, in dieses wird die Software installiert. Einen eigenen Netzwerk Adapter und eine eigene Prozesshirarchie. 
 
 Ein weiterer Vorteil von Container Umgebungen sind die Out of the Box Features die automatisch bereitgestellt werden wie Portmapping, DNS, DHCP.
+
+
+# HE1 Ich kann die Technologie hinter Containern mit Beispielen erklären
+
+Container sind eine Form der Betriebssystemvirtualisierung. Dabei werden Linux Laufzeitumgebungen verwendet.
+Ein einzelner Container beinhaltet alle benötigten Komponenten wie, Executables, binary Codes, Libraries und Konfigurationsfiles. 
+Der Container selbst beinhaltet kein Betriebsystem, sondern verwendet das Betriebssystem auf dem der Container läuft. Somit können auf einem Rechner / Betriebssystem verschiedene Container isoliert voneinander betrieben werden. Dadurch können Container einfach von einem Host System auf ein anderes verschoben werden.
+
+Eine weitere Besonderheit der Container Technologie ist, das es keine richtigen Laufwerke gibt, dazu kommt das in der Regel mehrere Filesysteme unterstütz werden. 
+Die Flexibilität der Container Technologie eignet sich besonders für Applikationen, bei denen mehrere Instanzen gleichzeitig ausgeführt werden müssen. Somit kann eine einfache Skalierbarkeit erreicht werden. Ein Beispiel ist hier zum Beispiel der Cloudbasierte MailService von Google, GMAIL. Jedes mal wenn am sich mit seiner GMail adresse an seiner Mailbox einloggt wird im Hintergund ein Container geladen mit der Mailbox des Users. 
+
 
 
 
