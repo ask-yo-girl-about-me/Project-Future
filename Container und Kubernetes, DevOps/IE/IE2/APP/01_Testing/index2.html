@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getarraynumber() {
+            for (let i of countrys) {
+                if (i.name == x) {
+                    index = countrys.indexOf(i);
+                    return index;
+
+                }
+            }
+        }
+
+        countrys = [{
+            name: "Swiss",
+            timedifference: 0
+        }, {
+            name: "New York",
+            timedifference: -6
+        }, {
+            name: "Hong Kong",
+            timedifference: +6
+        }, {
+            name: "Berlin",
+            timedifference: 0
+        }, {
+            name: "Tokyo",
+            timedifference: +8
+        }, {
+            name: "Moscow",
+            timedifference: +2
+        }, {
+            name: "Sidney",
+            timedifference: +10
+        }, ];
+
+        let x = "Swiss";
+
+
+        let arrayposition = getarraynumber();
+        console.log(arrayposition);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Times</title>
+    <link rel="stylesheet" href="../04_stylesheet/stylesheet-world-times.css">
+</head>
+
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <p>Wählen Sie ein Land aus von der sie die Zeit wissen wollen.</p>
+        <div class="dropdownsector">
+            <form>
+                <select id="dropdown">
+                    <option>Choose a Country</option>
+                    <script src="/02_scripts/world-times.js"></script>
+                </select>
+            </form>
+            <script src="/02_scripts/world-times.js"></script>
+            <button onclick="getOption()"> Check option </button>
+        </div>
+
+        <p> The value of the option selected is:
+            <span class="output"></span>
+        </p>
+        <h2>Time: <span id="time"></span></h2>
+
+        <div class="hex-colors">
+            <h2>The hex code of the color is #<span id="hex-code">00000</span></h2>
+            <script src="/02_scripts/HEX-Color.js"></script>
+            <input type="button" id="btn2" value="Change HEX Code" onclick="changeColor()" />
+            <input type="button" id="btn3" value="Set to White" onclick="setbackgroundtowhite()" />
+            <input type="button" id="btn4" value="Go Back" onclick="goback('index.html')" />
+        </div>
+    </div>
+
+
+    <script>
+        function goback(docName) {
+            location.href = docName;
+        }
+    </script>
+
+</body>
+
+</html>

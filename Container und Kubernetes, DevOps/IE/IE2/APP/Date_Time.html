@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time</title>
+    <link rel="stylesheet" href="/04_stylesheet/stylesheet-date_time.css">
+</head>
+
+<body>
+    <div style="display:none">
+        <audio id="myAudio" controls autoplay loop>
+        <source src="/03_sounds/alarm-digital-clock.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div id="clock"></div>
+
+    <div class="container">
+        <div class="hex-colors-text">
+            <h2>The hex code of the color is #<span id="hex-code">00000</span></h2>
+        </div>
+        <div class="hex-colors">
+            <script src="/02_scripts/HEX-Color.js"></script>
+            <input type="button" id="btn4" value="Change HEX Code" onclick="changeColor()" />
+            <input type="button" id="btn5" value="Set to White" onclick="setbackgroundtowhite()" />
+            <input type="button" id="btn2" value="Go Back" onclick="goback('index.html')" />
+        </div>
+    </div>
+
+    <script src="/02_scripts/current_date-time.js"></script>
+
+    <script>
+        function goback(docName) {
+            location.href = docName;
+        }
+    </script>
+
+</body>
+
+</html>
