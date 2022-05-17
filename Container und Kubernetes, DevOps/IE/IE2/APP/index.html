@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TOOL</title>
+    <link rel="stylesheet" href="/04_stylesheet/stylesheet-index.css">
+</head>
+
+<body>
+    <div class="bg-image"></div>
+
+    <div class="container">
+        <div class="Sites">
+            <input type="button" id="btn1" value="Show Date/Time" onclick="opensite('Date_Time.html')" />
+            <input type="button" id="btn2" value="Timer" onclick="opensite('Timer.html')" />
+            <input type="button" id="btn3" value="World Clocks" onclick="opensite('World_Times.html')" />
+        </div>
+        <div class="hex-colors-text">
+            <h2>The hex code of the color is #<span id="hex-code">00000</span></h2>
+        </div>
+        <div class="hex-colors">
+            <script src="/02_scripts/HEX-Color.js"></script>
+            <input type="button" id="btn4" value="Change HEX Code" onclick="changeColor()" />
+            <input type="button" id="btn5" value="Set to White" onclick="setbackgroundtowhite()" />
+        </div>
+    </div>
+
+    <script>
+        function opensite(docName) {
+            location.href = docName;
+        }
+    </script>
+
+</body>
+
+</html>

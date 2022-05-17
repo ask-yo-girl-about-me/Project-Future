@@ -52,7 +52,7 @@ Docker per Cloud-init installieren:
                 runcmd:
                 - sudo usermod -aG docker ubuntu 
 
-**Einfacher Container Nutzen**
+**Einfacher Container Nutzen APACHE**
 
 [Docker Apache](https://hub.docker.com/_/httpd)
 
@@ -67,6 +67,36 @@ Dockerfile erstellen mit folgendem Content:
 
                 $ docker build -t my-apache2 .
                 $ docker run -dit --name my-running-app -p 8080:80 my-apache2
+
+**Einfacher Container Nutzen APP Projekt**
+
+1. Im APP Ordner ein Dockerfile erstellen mit folgendem Inhalt. Hier verwenden wir als Webserver nginx.
+
+                FROM nginx
+                COPY . /usr/share/nginx/html
+
+2. Auf der Virtuellen Ubuntu Umgebung das Repo clonen
+
+                git clone https://github.com/ask-yo-girl-about-me/Project-Future.git
+
+3. In den entsprechenden Order wechseln, in dem die Website Inhalte vorhanden sind.
+
+4. Nun Builden wir den Container
+
+                docker image build -t leandrogoetzer/webapp_app:1.0 .
+
+5. Nun sollte das Image vorhanden sein. Dies können wir wie folgt kontrollieren
+
+                docker image ls
+
+6. Nun starten wir den Container
+
+                 docker container run -d --name len-web -p 80:80 leandrogoetzer/webapp_app:1.0
+
+7. Nun können wir per IP und dem Port 80 auf das Index File zugreifen.
+
+[APP Projekt](http://10.1.38.41:80)
+
 
 # Container Images
 
