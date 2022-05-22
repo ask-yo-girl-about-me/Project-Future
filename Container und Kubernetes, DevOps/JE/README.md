@@ -110,6 +110,6 @@ Order Processing: ``10.1.38.34:32280``
 
 ___
 
-[Nächstes Lernziel IE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes%2C%20DevOps/KE/README.md)
+[Nächstes Lernziel KE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes%2C%20DevOps/KE/README.md)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
