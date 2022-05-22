@@ -139,6 +139,6 @@ Eine Bereitstellung bietet deklarative Aktualisierungen für Pods und ReplicaSet
 Sie beschreiben in einer Bereitstellung einen gewünschten Zustand, und der Bereitstellungs-Controller ändert den tatsächlichen Zustand in den gewünschten Zustand mit einer kontrollierten Rate. Sie können Einsätze definieren, um neue ReplicaSets zu erstellen oder um bestehende Einsätze zu entfernen und alle ihre Ressourcen mit neuen Einsätzen zu übernehmen.
 ___
 
-[Nächstes Lernziel IE](../main/Container%20und%20Kubernetes%2C%20DevOps/LE.md)
+[Nächstes Lernziel IE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes%2C%20DevOps/LE/README.md)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

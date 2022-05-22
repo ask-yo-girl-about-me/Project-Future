@@ -45,6 +45,7 @@ Die Flexibilität der Container Technologie eignet sich besonders für Applikati
 
 ___
 
-[Nächstes Lernziel IE](../main/Container%20und%20Kubernetes%2C%20DevOps/IE.md)
+[Nächstes Lernziel IE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes,%20DevOps/IE/README.md)
 
 [Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
+
