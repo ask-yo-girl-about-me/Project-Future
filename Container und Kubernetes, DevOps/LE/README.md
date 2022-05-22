@@ -30,7 +30,7 @@ Als erstes haben wir einen Namespace erstellt:
 
                 kubectl create namespace project-f
 
-![Create Namespace](/Container%20und%20Kubernetes%2C%20DevOps/LE/create_namespaces.png)
+![Create Namespace](/Container%20und%20Kubernetes%2C%20DevOps/LE/create_namespace.png)
 
 Danach die Container mittels bash-Script:
 
@@ -78,13 +78,13 @@ Danach die Container mittels bash-Script:
                         name: bpmn-frontend
                 %EOF%
 
-![Create Pods](/Container%20und%20Kubernetes%2C%20DevOps/LE/Create_pods.png)
+![Create Pods](/Container%20und%20Kubernetes%2C%20DevOps/LE/Create_Pods.png)
 
 Danach kontrollieren wir kurz ob die Pods erstellt worden sind:
 
                 kubectl get pod,deployment,replicaset,service --namespace project-f -o wide
 
-![View Pods](/Container%20und%20Kubernetes%2C%20DevOps/LE/View_pods.png)
+![View Pods](/Container%20und%20Kubernetes%2C%20DevOps/LE/View_Pods.png)
 
 Momentan läuft die Version 0.2, nun wollen wir auf die Version 1.0 umschalten:
 
