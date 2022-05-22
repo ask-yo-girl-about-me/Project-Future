@@ -26,4 +26,5 @@ Kurz gesagt die Continous delivery geht noch einen Schritt weiter als die Contin
 
 # Hands on Continous Integration / Delivery 
 
-[Continous Integration & Delivery](Container und Kubernetes, DevOps/LE/kub_get_depl_pods.png)
+![Get depl Pods](Container und Kubernetes, DevOps/LE/kub_get_depl_pods.png)
+
