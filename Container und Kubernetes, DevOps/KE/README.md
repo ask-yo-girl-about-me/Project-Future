@@ -84,7 +84,7 @@ Dafür werden wir uns per Bitvise mit dem Termnial der bestehende Kubernets VM v
 
 Nach dem Ausführen erhält man die  beitritts Instruktionen ausgaben.
 
-![Bild1](/Container%20und%20Kubernetes,%20DevOps/KE/img/1microk8sa_add_node.png)
+![Add node](/Container%20und%20Kubernetes,%20DevOps/KE/img/1microk8sa_add_node.png)
 
 In unserem Falle könenn die "Worker" mit dem folgendem Befehl dem Kubernetes Cluster beitreten:
 
@@ -98,4 +98,4 @@ Das ganze kann nun auf dem Master überpfüt werden. Dafür den folgenden Befehl
 
 Die ausgabe sieht wie folgt aus:
 
-![Bild1](/Container%20und%20Kubernetes,%20DevOps/KE/img/2get_no.png)
+![Get node](/Container%20und%20Kubernetes,%20DevOps/KE/img/2get_no.png)
