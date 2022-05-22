@@ -26,3 +26,4 @@ Kurz gesagt die Continous delivery geht noch einen Schritt weiter als die Contin
 
 # Hands on Continous Integration / Delivery 
 
+
