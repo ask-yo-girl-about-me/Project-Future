@@ -121,7 +121,7 @@ Ingress stellt HTTP- und HTTPS-Routen von außerhalb des Clusters zu Diensten in
 
 Ingress kann man sich wie folgt vorstellen:
 
-![Get node](/Container%20und%20Kubernetes,%20DevOps/KE/img/2get_no.png)
+![Get node](/Container%20und%20Kubernetes%2C%20DevOps/KE/img/ingress.png)
 
 Ein Ingress kann so konfiguriert werden, dass er Dienste mit extern erreichbaren URLs versieht, den Datenverkehr ausgleicht, SSL/TLS terminiert und namensbasiertes virtuelles Hosting anbietet. Ein Ingress-Controller ist für die Ausführung des Ingress verantwortlich, normalerweise mit einem Load Balancer, obwohl er auch Ihren Edge-Router oder zusätzliche Frontends konfigurieren kann, um den Verkehr zu bewältigen.
 
