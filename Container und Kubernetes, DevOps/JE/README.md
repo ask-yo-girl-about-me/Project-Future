@@ -107,3 +107,9 @@ Jupyter Oberfläche: ``10.1.38.34:32188``
 Order Processing: ``10.1.38.34:32280``
 
 ![Bild1](/Container%20und%20Kubernetes,%20DevOps/JE/img/4.png)
+
+___
+
+[Nächstes Lernziel IE](../main/Container%20und%20Kubernetes%2C%20DevOps/KE.md)
+
+[Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
