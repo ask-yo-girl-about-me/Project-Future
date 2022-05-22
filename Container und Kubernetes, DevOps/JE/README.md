@@ -7,6 +7,9 @@ Projekt-Future Container und Kubernetes, DevOps
 
 # Einleitung / Erklärung
 
+Microservices sind ein architektonischer und organisatorischer Ansatz für die Softwareentwicklung, bei dem Software aus kleinen unabhängigen Diensten besteht, die über klar definierte APIs kommunizieren. Diese Dienstleistungen befinden sich im Besitz kleiner, in sich geschlossener Teams.
+Microservices-Architekturen machen Anwendungen einfacher zu skalieren und schneller zu entwickeln, ermöglichen Innovationen und beschleunigen die Markteinführungszeit für neue Funktionen.
+
 Bei den Microservices gibt es zwei verschieden Konzepte:
 
 **Synchrone Microservices (REST)**
