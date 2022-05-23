@@ -548,3 +548,8 @@ Hier Tagen und Pushen wir den docker in das ACR
 
 Quelle: [How to Create Azure Container Registry | Create Docker image and push into Azure Container Registry](https://www.youtube.com/watch?v=New8K6R0hz8)
 
+___
+
+[Nächstes Lernziel JE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes%2C%20DevOps/JE/README.md)
+
+[Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

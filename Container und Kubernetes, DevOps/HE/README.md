@@ -43,7 +43,9 @@ Der Container selbst beinhaltet kein Betriebsystem, sondern verwendet das Betrie
 Eine weitere Besonderheit der Container Technologie ist, das es keine richtigen Laufwerke gibt, dazu kommt das in der Regel mehrere Filesysteme unterstütz werden. 
 Die Flexibilität der Container Technologie eignet sich besonders für Applikationen, bei denen mehrere Instanzen gleichzeitig ausgeführt werden müssen. Somit kann eine einfache Skalierbarkeit erreicht werden. Ein Beispiel ist hier zum Beispiel der Cloudbasierte MailService von Google, GMAIL. Jedes mal wenn am sich mit seiner GMail adresse an seiner Mailbox einloggt wird im Hintergund ein Container geladen mit der Mailbox des Users. 
 
+___
 
+[Nächstes Lernziel IE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes,%20DevOps/IE/README.md)
 
-
+[Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
 

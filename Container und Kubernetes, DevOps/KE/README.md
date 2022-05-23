@@ -84,7 +84,7 @@ Dafür werden wir uns per Bitvise mit dem Termnial der bestehende Kubernets VM v
 
 Nach dem Ausführen erhält man die  beitritts Instruktionen ausgaben.
 
-![Bild1](/Container%20und%20Kubernetes,%20DevOps/KE/img/1microk8sa_add_node.png)
+![Add node](/Container%20und%20Kubernetes,%20DevOps/KE/img/1microk8sa_add_node.png)
 
 In unserem Falle könenn die "Worker" mit dem folgendem Befehl dem Kubernetes Cluster beitreten:
 
@@ -98,4 +98,47 @@ Das ganze kann nun auf dem Master überpfüt werden. Dafür den folgenden Befehl
 
 Die ausgabe sieht wie folgt aus:
 
-![Bild1](/Container%20und%20Kubernetes,%20DevOps/KE/img/2get_no.png)
+![Get node](/Container%20und%20Kubernetes,%20DevOps/KE/img/2get_no.png)
+
+# Kubernetes Ressourcen
+
+## Pod
+
+Ein Pod modelliert einen anwendungsspezifischen "logischen Host": Er enthält einen oder mehrere Anwendungscontainer, die relativ eng gekoppelt sind. In Nicht-Cloud-Kontexten sind Anwendungen, die auf demselben physischen oder virtuellen Rechner ausgeführt werden, mit Cloud-Anwendungen vergleichbar, die auf demselben logischen Host ausgeführt werden.
+
+Der gemeinsame Kontext eines Pods besteht aus einer Reihe von Linux-Namespaces und möglicherweise anderen Isolierungsaspekten - denselben Dingen, die auch einen Docker-Container isolieren. Innerhalb des Kontexts eines Pods können für die einzelnen Anwendungen weitere Teilisolierungen vorgenommen werden.
+
+In Bezug auf Docker-Konzepte ähnelt ein Pod einer Gruppe von Docker-Containern mit gemeinsamen Namespaces und gemeinsamen Dateisystem-Volumes.
+
+## Services
+
+Eine abstrakte Methode, um eine Anwendung, die auf einer Reihe von Pods läuft, als Netzwerkdienst darzustellen.
+Mit Kubernetes muss die Anwendung nicht geändert werden, um einen ungewohnten Mechanismus zur Service-Erkennung zu verwenden. Kubernetes weist den Pods eine eigene IP-Adressen und einen einzigen DNS-Namen für eine Gruppe von Pods zu und kann einen Lastausgleich zwischen ihnen herstellen.
+
+## Ingress
+
+Ingress stellt HTTP- und HTTPS-Routen von außerhalb des Clusters zu Diensten innerhalb des Clusters zur Verfügung. Das Routing des Datenverkehrs wird durch Regeln gesteuert, die in der Ingress-Ressource definiert sind.
+
+Ingress kann man sich wie folgt vorstellen:
+
+![Get node](/Container%20und%20Kubernetes%2C%20DevOps/KE/img/ingress.png)
+
+Ein Ingress kann so konfiguriert werden, dass er Dienste mit extern erreichbaren URLs versieht, den Datenverkehr ausgleicht, SSL/TLS terminiert und namensbasiertes virtuelles Hosting anbietet. Ein Ingress-Controller ist für die Ausführung des Ingress verantwortlich, normalerweise mit einem Load Balancer, obwohl er auch Ihren Edge-Router oder zusätzliche Frontends konfigurieren kann, um den Verkehr zu bewältigen.
+
+## ReplicaSet
+
+Ein ReplicaSet dient dazu, einen stabilen Satz von Replikaten von Pods aufrechtzuerhalten, die zu einem bestimmten Zeitpunkt laufen. Daher wird es häufig verwendet, um die Verfügbarkeit einer bestimmten Anzahl identischer Pods zu gewährleisten.
+
+Ein ReplicaSet wird mit Feldern definiert, darunter ein Selektor, der angibt, wie die zu erwerbenden Pods zu identifizieren sind, eine Anzahl von Replikaten, die angibt, wie viele Pods es verwalten soll, und eine Pod-Vorlage, die die Daten neuer Pods angibt, die es erstellen soll, um die Kriterien für die Anzahl der Replikate zu erfüllen. Ein ReplicaSet erfüllt dann seinen Zweck, indem es nach Bedarf Pods erstellt und löscht, um die gewünschte Anzahl zu erreichen.
+
+## Deployment
+
+Einsätze
+Eine Bereitstellung bietet deklarative Aktualisierungen für Pods und ReplicaSets.
+
+Sie beschreiben in einer Bereitstellung einen gewünschten Zustand, und der Bereitstellungs-Controller ändert den tatsächlichen Zustand in den gewünschten Zustand mit einer kontrollierten Rate. Sie können Einsätze definieren, um neue ReplicaSets zu erstellen oder um bestehende Einsätze zu entfernen und alle ihre Ressourcen mit neuen Einsätzen zu übernehmen.
+___
+
+[Nächstes Lernziel LE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes%2C%20DevOps/LE/README.md)
+
+[Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)

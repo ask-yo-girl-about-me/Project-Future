@@ -7,6 +7,9 @@ Projekt-Future Container und Kubernetes, DevOps
 
 # Einleitung / Erklärung
 
+Microservices sind ein architektonischer und organisatorischer Ansatz für die Softwareentwicklung, bei dem Software aus kleinen unabhängigen Diensten besteht, die über klar definierte APIs kommunizieren. Diese Dienstleistungen befinden sich im Besitz kleiner, in sich geschlossener Teams.
+Microservices-Architekturen machen Anwendungen einfacher zu skalieren und schneller zu entwickeln, ermöglichen Innovationen und beschleunigen die Markteinführungszeit für neue Funktionen.
+
 Bei den Microservices gibt es zwei verschieden Konzepte:
 
 **Synchrone Microservices (REST)**
@@ -107,3 +110,9 @@ Jupyter Oberfläche: ``10.1.38.34:32188``
 Order Processing: ``10.1.38.34:32280``
 
 ![Bild1](/Container%20und%20Kubernetes,%20DevOps/JE/img/4.png)
+
+___
+
+[Nächstes Lernziel KE](https://github.com/ask-yo-girl-about-me/Project-Future/blob/main/Container%20und%20Kubernetes%2C%20DevOps/KE/README.md)
+
+[Startseite](https://github.com/ask-yo-girl-about-me/Project-Future)
